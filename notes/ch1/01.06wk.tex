@@ -1,0 +1,177 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage{etex} % resolves \count error with multicol
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{multicol, enumerate}
+\usepackage[pdftitle={Calc 1
+  Information},colorlinks=true,urlcolor=blue]{hyperref}
+
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Polynomials and Rational Functions}
+\renewcommand{\dateinfo}{section 1.6}
+
+\begin{document}
+\drawtitle
+
+\begin{enumerate}
+\item Find possible formulas for the graphs of the polynomials given
+  below.  \vfill
+  \begin{center}
+    \begin{tabular}{ccccc}
+      \begin{tikzpicture}
+        \def\xmin{-3}\def\xmax{3} \def\ymin{-3}\def\ymax{3} 
+        \foreach \i in {-2,...,2} {\ifnum\i=0{} \else{\draw[-]
+            (\i,.1) -- (\i,-.1) node[below] {$\i$};}\fi}
+        
+        \draw[<->] (\xmin,0) -- (\xmax,0); \draw[<->] (0,\ymin) --
+        (0,\ymax);
+        
+        \draw[thick, domain=-2:\xmax, <->] plot[samples=31]
+        function{(-.33*(x-1)*(x-1))} node[left]{$f(x)$};
+      \end{tikzpicture}
+      &&&&
+      \begin{tikzpicture}
+        \def\xmin{-3}\def\xmax{3} \def\ymin{-3}\def\ymax{3} 
+        \foreach \i in {-2,...,2} {\ifnum\i=0{} \else{\draw[-]
+            (\i,.1) -- (\i,-.1) node[below] {$\i$};}\fi}
+        
+        \draw[<->] (\xmin,0) -- (\xmax,0); \draw[<->] (0,\ymin) --
+        (0,\ymax);
+        
+        \draw[thick, domain=\xmin:2, <->] plot[samples=31]
+        function{(.25*(x+2)*(x+1)*(x-1))} node[right]{$g(x)$};
+      \end{tikzpicture}
+      \\[20ex]
+      \begin{tikzpicture}
+        \def\xmin{-3}\def\xmax{3} \def\ymin{-3}\def\ymax{3} 
+        \foreach \i in {-2,...,2} {\ifnum\i=0{} \else{\draw[-]
+            (\i,.1) -- (\i,-.1) node[below] {$\i$};}\fi}
+        
+        \draw[<->] (\xmin,0) -- (\xmax,0); \draw[<->] (0,\ymin) --
+        (0,\ymax);
+        
+        \draw[thick, domain=-2.1:2.1, <->] plot[samples=31]
+        function{(.25*(x-1)*(x-1)*(x+1)*(x+1))} node[right]{$h(x)$};
+      \end{tikzpicture}
+      &&&&
+      \begin{tikzpicture}
+        \def\xmin{-3}\def\xmax{3} \def\ymin{-3}\def\ymax{3} 
+        \foreach \i in {-2,...,2} {\ifnum\i=0{} \else{\draw[-]
+            (\i,.1) -- (\i,-.1) node[below] {$\i$};}\fi}
+        \draw[-] (-.1, -1) -- (.1, -1);
+        \draw[fill=black] (0,-1) circle (.1cm);
+        \node at (-.7,-1.3) {$(0,-1)$};
+        \draw[<->] (\xmin,0) -- (\xmax,0); \draw[<->] (0,\ymin) --
+        (0,\ymax);
+        
+        \draw[thick, domain=-1.8:\xmax, <->] plot[samples=31]
+        function{(-.25*(x-2)*(x-2)*(x+1))} node[left]{$\ell(x)$};
+      \end{tikzpicture}
+      \\[15ex]
+    \end{tabular}
+  \end{center}
+  \vfill
+  \newpage
+  
+\item List each of the following descriptions that apply to the
+  functions $f(x)$, $g(x)$, and $h(x)$.
+  \begin{enumerate}[{\bf i.}]
+  \item Horizontal asymptote at $y=1$.
+  \item The $x$-axis is a horizontal asymptote.
+  \item Symmetric about the $y$-axis.
+  \item An odd function.
+  \item Vertical asymptotes at $x=\pm 1$.
+  \end{enumerate}
+
+  \begin{enumerate}
+  \item $f(x) = \dfrac{x-1}{x^2+1}$
+    \vfill
+  \item $g(x) = \dfrac{x^2-1}{x^2+1}$
+    \vfill
+  \item $h(x) = \dfrac{x^2+1}{x^2-1}$
+    \vfill
+  \end{enumerate}
+
+  \newpage
+
+\item A box of fixed volume $V$ has a square base with side length
+  $x$.  Write a formula for the height, $h$, of the box in terms of
+  $x$ and $V$.  Draw a graph of $h$ as a function of $x$.
+
+  \vfill
+
+\item Values of three functions are given in the table below, rounded
+  to two decimal places.  One function is of the form $y=ab^t$, one is
+  of the form $y=ct^2$, and one is of the form $y=kt^3$.  Which
+  function is which?
+  \[
+  \begin{array}{c|c||c|c||c|c}
+    \hline
+    t & f(t) & t & g(t) & t  & h(t) \\ \hline
+    2.0 & 4.40 & 1.0 & 3.00  & 0.0 & 2.04  \\ \hline
+    2.2 & 5.32 & 1.2 & 5.18  & 1.0 & 3.06  \\ \hline
+    2.4 & 6.34 & 1.4 & 8.23  & 2.0 & 4.59  \\ \hline
+    2.6 & 7.44 & 1.6 & 12.29 & 3.0 & 6.89  \\ \hline
+    2.8 & 8.62 & 1.8 & 17.50 & 4.0 & 10.33 \\ \hline
+    3.0 & 9.90 & 2.0 & 24.00 & 5.0 & 15.49 \\ \hline
+  \end{array}
+  \]
+
+  \vfill
+
+  \newpage
+  
+\item Use your method of choice to graph $y=x^4$ and $y=e^x$.
+  Determine appropriate domains and ranges that give each of the
+  following graphs.
+
+  \begin{enumerate}
+  \item 
+    \begin{tikzpicture}[xscale = 5/2, yscale = 5/16]
+      \def\xmin{0}\def\xmax{2} \def\ymin{0}\def\ymax{16} 
+      \draw[->] (\xmin,0) -- (\xmax,0); \draw[->] (0,\ymin) --
+      (0,\ymax);
+      
+      \draw[thick, domain=\xmin:\xmax, ->] plot[samples=31]
+      function{(x*x*x*x)} node[right]{$x^4$};
+      \draw[thick, domain=\xmin:\xmax, ->] plot[samples=31]
+      function{(exp(x))} node[right]{$e^x$};
+    \end{tikzpicture}
+    \vfill
+  \item 
+    \begin{tikzpicture}[xscale = 5/1, yscale = 5/3]
+      \def\xmin{0}\def\xmax{1} \def\ymin{0}\def\ymax{3} 
+      \draw[->] (\xmin,0) -- (\xmax,0); \draw[->] (0,\ymin) --
+      (0,\ymax);
+      
+      \draw[thick, domain=\xmin:\xmax, ->] plot[samples=31]
+      function{(x*x*x*x)} node[right]{$x^4$};
+      \draw[thick, domain=\xmin:\xmax, ->] plot[samples=31]
+      function{(exp(x))} node[right]{$e^x$};
+    \end{tikzpicture}
+    \vfill
+  \item 
+    \begin{tikzpicture}[xscale = 5/12, yscale = 5/162]
+      \def\xmin{0}\def\xmax{12} \def\ymin{0}\def\ymax{162} 
+      \draw[->] (\xmin,0) -- (\xmax,0); \draw[->] (0,\ymin) --
+      (0,\ymax);
+      
+      \draw[thick, domain=\xmin:\xmax, ->] plot[samples=31]
+      function{(.001*x*x*x*x)} node[right]{$x^4$};
+      \draw[thick, domain=\xmin:\xmax, ->] plot[samples=31]
+      function{(.001*exp(x))} node[right]{$e^x$};
+    \end{tikzpicture}
+    \vfill
+  \end{enumerate}
+
+
+
+
+\end{enumerate}
+
+\end{document}

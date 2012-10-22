@@ -1,0 +1,59 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Information},colorlinks=true,urlcolor=blue]{hyperref}
+
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Logarithms}
+\renewcommand{\dateinfo}{section 1.4}
+
+\def\ww{WeBWorK }
+
+\begin{document}
+\drawtitle
+
+\section*{Doubling Time Example}
+
+\begin{description}
+\item[Problem]\textit{Suppose a town has a population that grows at a
+    rate of 10\% per year.  Find the doubling time for the population
+    of the town.}
+
+\vspace{.3in}
+
+We know that the equation for the population of the town is given by
+\[
+P(t)=P_0 (1.1)^t,
+\]
+where $P_0$ is the initial population of the town.  Then the doubling
+time will be the value for $t$ where the following equations holds:
+\[
+2P_0=P_0(1.1)^t.
+\]
+We can divide both sides of the above equation by $t$ to get
+\[
+2=(1.1)^t.
+\]
+Note that the above equation does not involve $P_0$.  This means that
+the initial population is not needed for determining doubling time!
+Now we just have to solve for $t$.  We can do so using logarithms.  We
+have
+
+\begin{align*}
+  2 &= (1.1)^t\\
+  \ln(2) &= \ln\left((1.1)^t\right)\\
+  \ln(2) &= t\cdot\ln\left(1.1\right)\\
+  t &= \frac{\ln(2)}{\ln(1.1)}\approx 7.273,
+\end{align*}
+
+so the doubling time for the population of the town is about $7.273$
+years.
+
+
+\end{description}
+
+\end{document}
