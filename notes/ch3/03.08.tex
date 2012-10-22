@@ -1,0 +1,53 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Hyperbolic Functions}
+\renewcommand{\dateinfo}{section 3.8}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Preliminary}
+\begin{description}
+\item[Definitions] In terms of $e^x$
+  \[
+  \begin{array}{cc}
+    \cosh(x)=\dfrac{e^x+e^{-x}}{2} & \sinh(x)=\dfrac{e^x-e^{-x}}{2}
+  \end{array}
+  \]
+\item[Properties] even, odd, $\cosh(0)=1$, $\sinh(0)=0$, as $x$ gets
+  big/small...
+\item[Identity] $\cosh^2(x)-sinh^2(x)=1$
+\item[Tangent] $\tanh(x)=\dfrac{\sinh(x)}{\cosh(x)}=
+  \dfrac{e^x+e^{-x}}{e^x-e^{-x}}$
+\end{description}
+
+\section*{Derivatives}
+\begin{description}
+\item[Familiar] Show some
+  \[
+  \begin{array}{ccc}
+    \dfrac{d}{dx}(\cosh(x))=\sinh(x), & \dfrac{d}{dx}(\sinh(x))= \cosh(x),
+    & \dfrac{d}{dx}(\tanh(x))=\dfrac{1}{\cosh^2(x)}.
+  \end{array}
+  \]
+\end{description}
+
+\section*{Examples}
+\begin{description}
+\item[Limit] $\ds\lim_{x\rightarrow\infty}\dfrac{\sinh(2x)}{\cosh(3x)}$.
+\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[Section 3.8] 5, 15, 26
+\end{description}
+\end{document}

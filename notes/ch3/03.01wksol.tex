@@ -1,0 +1,219 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{multicol}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Derivatives of Polynomials}
+\renewcommand{\dateinfo}{section 3.1}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+\begin{enumerate}
+\item For the following problems determine if the derivative rules
+  covered in this section apply.  If they do, find the derivative.  If
+  they don't, state why not.
+  \begin{enumerate}
+  \item $f(x)=x^{\ln{3}}$
+    \vfill
+    {\color{blue}
+      \[
+      f'(x) = \ln(3)x^{\ln(3)-1}
+      \]
+    }
+    \vfill
+  \item $g(x)=4^x$
+    \vfill
+    {\color{blue} The derivative rules in this section do not apply
+      because there is a variable in the exponent.  }
+    \vfill
+  \item $h(x)=x^x$
+    \vfill
+    {\color{blue} The derivative rules in this section do not apply
+      because there is a variable in the exponent.  }
+    \vfill
+  \item $y=x^{\sqrt{2}}$
+    \vfill
+    {\color{blue}
+      \[
+      \frac{dy}{dx} = \sqrt{2} x^{\sqrt{2}-1}
+      \]
+    }
+    \vfill
+  \end{enumerate}
+\newpage  
+
+\item Find the derivative of the given functions.
+  \begin{enumerate}
+  \item $f(x)=x^{-\sin(4)}$
+    \vfill
+    {\color{blue}
+      \[
+      f'(x) = -\sin(x)x^{-\sin(4)-1}
+      \]
+    }
+    \vfill
+  \item $\ds y=\frac{3}{x^3}$
+    \vfill
+    {\color{blue}
+      $y = 3x^{-3}$ so $\frac{dy}{dx} = 3\cdot(-3)x^{-4}$.
+    }
+    \vfill
+  \item $y=\sqrt[7]{x}$
+    \vfill
+    {\color{blue}
+      $y = x^{\frac{1}{7}}$, so $\frac{dy}{dx} = \frac{1}{7}x^{-\frac{6}{7}}$.
+    }
+    \vfill
+  \item $\ds g(x)=\sqrt{\frac{3}{x^{11}}}$
+    \vfill
+
+    {\color{blue} $g(x) = \sqrt{3}\cdot x^{-\frac{11}{2}}$, so $g'(x)
+      = \sqrt{3}\cdot \left(-\frac{11}{2}\right)x^{-\frac{13}{2}}$.}
+
+    \vfill
+    \newpage
+  \item $\ds y=x^2-\frac{1}{x}+x^\pi-\frac{4}{\sqrt{x}}$
+    \vfill
+    {\color{blue}
+      \[
+      \frac{dy}{dx} = 2x-(-1)x^{-2} + \pi
+      x^{\pi-1}-4\cdot\left(-\frac{1}{2}\right)x^{-\frac{3}{2}}
+      \]
+    }
+    \vfill
+  \item $y=x^{5}(7x+3)^2$
+    \vfill
+    {\color{blue}
+      $y = x^5(49x^2+42x+9) = 49x^7+42x^6+9x^5$, so $\frac{dy}{dx} =
+      49\cdot 7x^6 + 42\cdot 6 x^5 + 9\cdot 5 x^4$.
+    }
+    \vfill
+  \item $\ds h(x)=x\cdot\frac{x^2-16}{x+4}$
+    \vfill
+    {\color{blue}
+      $h(x) = x\cdot\frac{(x+4)(x-4)}{x+4} = x(x-4) = x^2-4x$, so
+      $h'(x) = 2x-4$.
+    }
+    \vfill
+  \item $\ds y=\frac{6x^{\pi+3}-2x^{\ln(4)}+x^{-\sin(47)}}{x^2}$
+    \vfill
+    {\color{blue}
+
+      $y=6x^{\pi+1}-2x^{\ln(4)-2}+x^{-\sin(47)-2}$, so
+      \[
+      \frac{dy}{dx} = 6(\pi+1) x^{\pi} - 2(\ln(4)-2) x^{\ln(4)-3} +
+      (-\sin(47)-2) x^{-\sin(47) - 3}.
+      \]
+
+    }
+    \vfill
+  \end{enumerate}
+  \newpage
+  
+\item Let $f(x)=x^9-3x^7+8x^4-42x+2$.
+  \begin{enumerate}
+  \item Find $\ds f^{(10)}(x)$ (the tenth derivative of $f$!).
+    \vfill
+    {\color{blue}
+      Each time we take a derivative, the degree of the polynomial
+      decreases by one, so $f^{(9)}(x)$ must be of degree zero, and
+      thus constant.  Then $f^{(10)}(x) = 0$.
+    }
+    \vfill
+  \item Find $\ds f^{(9)}(x)$.
+    \vfill
+    {\color{blue}
+      
+      As above, we know that $f^{(9)}(x)$ is constant.  Then we can
+      recognize a pattern:
+      \begin{align*}
+        f'(x) &= 10x^9 - \cdots\\
+        f''(x) &= 10\cdot 9x^8 - \cdots\\
+        f^{(3)}(x) &= 10\cdot 9\cdot 8x^7 - \cdots\\
+        f^{(4)}(x) &= 10\cdot 9\cdot 8\cdot 7x^6 - \cdots\\
+        &\vdots\\
+        f^{(9)}(x) &= 10\cdot 9\cdot 8\cdot 7\cdot 6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1 = 10!\\
+      \end{align*}
+
+    }
+    \vfill
+  \end{enumerate}
+
+\item A ball is thrown straight up off the roof of a building.  Its
+  height in feet after $t$ seconds is given by
+  $f(t)=-8t^2+32t+96$. Answer the following questions.
+  \begin{enumerate}
+  \item How tall is the building?
+    \vfill
+    {\color{blue}
+      The ball is on the roof of the building at $t = 0$, so the
+      height of the building is equal to $f(0)$.  The building is 96
+      feet tall.
+    }
+    \vfill
+    \newpage
+  \item When does the ball hit the ground?
+    \vfill
+    {\color{blue}
+      The ball hits the ground on the first $t$-value where $f(t)=0$.
+      If we solve $-8t^2+32t+96 = 0$ we get $t=-2$ and $t=6$, so the
+      ball hits the ground after 6 seconds.
+    }
+    \vfill
+  \item How hard was the ball thrown?
+    \vfill
+    {\color{blue}
+      Another way to ask this question is to ask for the velocity of
+      the ball at $t=0$, or $v(0)$.  Using shortcuts we find that
+      $v(t) = f'(t) = -16t+32$, so $v(0) = 32$.  Then the ball was
+      thrown with a velocity of $32$ feet per second.
+    }
+    \vfill
+  \item When does the ball reach the maximum height?  \vfill
+    {\color{blue} 
+      The ball reaches its maximum height when it stops rising and
+      starts falling to the earth.  When this happens, the velocity of
+      the ball is zero, so we want to know the $t$-value where $v(t) =
+      0$.  If we solve $-16t+32 = 0$ we get $t=2$, so the ball reaches
+      its maximum height after 2 seconds.
+    }
+    \vfill
+  \end{enumerate}
+  
+  \newpage
+
+\item Using a graph to help you, find the equations of all line
+  through the origin tangent to the parabola $y = x^2 + 9$.
+    \vfill
+    {\color{blue}
+
+      If we draw a graph of the parabola, we see that there are two
+      possible lines that could go through the origin and be tangent
+      to the graph (Make sure to draw a picture of this).  Since these
+      lines go through the origin their $y$-intercept is zero, so they
+      are of the form $y=mx$.
+
+      Since the lines are tangent to the graph, they must have the
+      same slope where they touch.  The derivative of the parabola is
+      $\frac{dy}{dx} = 2x$, so we must have $m=2x$ where the line and
+      the graph meet.
+
+      The graphs also must have the same $y$-coordinate where they
+      meet, so we must have $mx=x^2+9$.  Then we can substitute $m=2x$
+      from above to get $2x^2=x^2+9$.  If we solve this for $x$ we get
+      $x=\pm 3$, so the lines $y=-3x$ and $y=3x$ must go through the
+      origin and be tangent to the graph of $y=x^2+9$.
+      
+    }
+    \vfill
+
+
+\end{enumerate}  
+\end{document}

@@ -1,0 +1,185 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Chapters 2 and 3},
+colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{graphicx, tikz}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Chapters 2 and 3 Worksheet}
+\renewcommand{\dateinfo}{fall 2012}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\noindent Please answer the following questions completely, showing
+all work.  Clearly state each answer.
+
+\begin{enumerate}
+\item The temperature $H$, in degrees Celsius, of a cup of coffee
+  placed on the kitchen counter is given by $H=f(t)$, where $t$ is in
+  minutes since the hot cup of coffee was placed on the counter.
+  \begin{enumerate}
+  \item Is $f'(t)$ positive or negative? Why?\vfill
+  \item Is $f''(t)$ positive or negative? Why?\vfill
+  \end{enumerate}
+
+\item Identify any $x$-values at which the absolute value function,
+  $f(x)=7|x+3|$, is not differentiable.
+
+\vfill
+\newpage
+
+\item The depth of the water, $f(t)$, in meters, in the Bay of Fundy,
+  Canada, is given as a function of time, $t$, in hours after
+  midnight, by the function
+  \[
+  f(t)=10+6\cos\left(\frac{\pi}{6}t\right).
+  \]
+  \begin{enumerate}
+  \item What is the depth of the water at 1:00\textsc{am}?
+    Include units in your answer. \vfill
+  \item How quickly is the tide rising or falling at 1:00\textsc{am}?  Include
+    units in your answer. \vfill
+  \item Using {\bf only} your answers for parts (a) and (b), {\bf estimate} the depth
+    of the water at 2:00\textsc{am}. Include units in your answer. \vfill
+  \end{enumerate}
+
+\newpage
+
+\item Find constants $m$ and $b$ so that the function
+  \[
+  f(x) = \begin{cases} 3x^2-10 &\mbox{if } x\geq 2\\
+    mx+b &\mbox{if } x < 2 \end{cases}
+  \]
+  is differentiable.
+
+\vfill
+\newpage
+
+\item Find the equation of the tangent line of
+  \[
+  f(x)=\frac{1}{1+3x}
+  \]
+  at $x=0$.
+
+\vfill
+\newpage
+
+\item For each of the parts (a)-(e) use the values of $g(x)$ given by
+  the table below to compute each of the following derivatives.
+  \[
+  \begin{array}{|c||c|c|c|c|c|}
+    \hline
+    x&-2&-1&0&1&2\\
+    \hline
+    \hline
+    g(x)&0&1&2&6&12\\
+    \hline
+    g'(x)&1&2&3&5&7\\
+    \hline
+  \end{array}
+  \]
+
+  \begin{enumerate}
+  \item Let $f(x)=x^5+4g(x)$. Find $f'(2)$.
+    \vfill
+  \item Let $f(x)=g(x)^2$. Find $f'(-2)$.
+    \vfill
+  \item Let $f(x)=3^{g(x)}$. Find $f'(2)$.
+    \vfill
+    \newpage
+    \[
+    \begin{array}{|c||c|c|c|c|c|}
+      \hline
+      x&-2&-1&0&1&2\\
+      \hline
+      \hline
+      g(x)&0&1&2&6&12\\
+      \hline
+      g'(x)&1&2&3&5&7\\
+      \hline
+    \end{array}
+    \]
+  \item Let $f(x)=\cos(g(x))$. Find $f'(2)$.
+    \vfill
+  \item Let $f(x)=g^{-1}(x)\cdot x^2$.  Find $f'(1)$.
+    \vfill
+
+  \end{enumerate}
+
+\newpage
+
+\item Calculate the derivatives of the following functions.  Show all
+  work and state all rules used.
+  \begin{enumerate}
+  \item $f(x)=\dfrac{x}{2^x+\sin(x)}$
+    \vfill
+  \item $g(x)=\sqrt[7]{\arctan(x)\ln(x)}$
+    \vfill
+    \newpage
+  \item $h(x)=e^{\ln(3)^{\pi}} + x\cdot e^{\tan(x)}$
+    \vfill
+  \item $p(x)=\cos^2\left(\ln(x\arcsin(x))\right)+\sin^2(\ln(x\arcsin(x)))$
+    \vfill
+    \newpage
+  \item $q(x)=\ln\left(e^{4x}\right)$
+    \vfill
+  \item $r(x)=\sin(\cos(x))$
+    \vfill
+  \end{enumerate}
+
+\newpage
+
+\item Given the graph of $f(x)$ below, sketch graphs of $f'(x)$ and $f''(x)$.
+
+\begin{center}
+  \begin{tikzpicture}[scale=.9]
+    \def\xmin{-6}
+    \def\xmax{6}
+    \def\ymin{-3}
+    \def\ymax{3}
+    
+    \draw[->] (\xmin,0) -- (\xmax,0) node[right] {$x$};
+    \draw[->] (0,\ymin) -- (0,\ymax) node[above] {$f(x)$};
+    
+    \draw[<->, color=black, thick, domain=\xmin:\xmax] plot[samples=201 ]
+    function{.04*(x+5)*(x+1)*(x-5)};
+  \end{tikzpicture}
+\end{center}
+\vfill
+\begin{center}
+  \begin{tikzpicture}[scale=.9]
+    \def\xmin{-6}
+    \def\xmax{6}
+    \def\ymin{-3}
+    \def\ymax{3}
+    
+    \draw[->] (\xmin,0) -- (\xmax,0) node[right] {$x$};
+    \draw[->] (0,\ymin) -- (0,\ymax) node[above] {$f'(x)$};
+    
+%    \draw[color=blue, thick, domain=\xmin:\xmax] plot[id=deriv]
+%    function{.12*x*x+.08*x-1} node[right] {$f'(x)$};
+  \end{tikzpicture}
+\end{center}
+\vfill
+\begin{center}
+  \begin{tikzpicture}[scale=.9]
+    \def\xmin{-6}
+    \def\xmax{6}
+    \def\ymin{-3}
+    \def\ymax{3}
+    
+    \draw[->] (\xmin,0) -- (\xmax,0) node[right] {$x$};
+    \draw[->] (0,\ymin) -- (0,\ymax) node[above] {$f''(x)$};
+    
+  \end{tikzpicture}
+\end{center}
+\vfill
+\end{enumerate}
+
+\end{document}

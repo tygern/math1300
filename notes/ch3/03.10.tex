@@ -1,0 +1,58 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Differentiable Function Theorems}
+\renewcommand{\dateinfo}{section 3.10}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Mean Value Theorem}
+\begin{description}
+\item[Idea] toll booth example, or airplanes
+\item[Theorem] If $f$ is continuous on $[a,b]$ and differentiable on
+  $(a,b)$, then there exists a $c$, $a<c<b$, such that
+\[
+f'(c)=\dfrac{f(b)-f(a)}{b-a}
+\]
+
+\end{description}
+
+\section*{Increasing/Constant Function Theorem}
+\begin{description}
+\item[State converse] If $f$ is differentiable then $f$ increasing means
+  $f'>0$.
+\item[Theorem] $f$ differentiable on $(a,b)$, then $f'>0$ means $f$
+increasing, $f'\geq 0$ means $f$ non-decreasing.
+\item[Others] Talk about constant, decreasing, etc.
+\end{description}
+
+\section*{Racetrack Principle}
+\begin{description}
+\item[Idea] Car race.  Start/end at the same time, what happens if one car
+  is faster (both travel for the same amount of time.
+\item[Theorem] Suppose that $g$ and $h$ are continuous on $[a,b]$ and
+  differentiable on $(a,b)$.  Suppose further that $g'(x)\leq h'(x)$ for
+  $a<x<b$.
+  \begin{itemize}
+    \item If $g(a)=h(a)$ then $g(x)\leq h(x)$ for $a<x<b$.  
+    \item If $g(b)=h(b)$ then $g(x)\geq h(x)$ for $a<x<b$.  
+  \end{itemize}
+
+\item[Example] Let $g(x)=\ln(x)$ and let $h(x)=x-1$. Show $\ln(x)\leq x-1$
+  for all $x\geq 1$.
+\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[Section 3.10] 6, 7, 14
+\end{description}
+\end{document}

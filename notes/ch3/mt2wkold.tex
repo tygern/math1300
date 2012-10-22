@@ -1,0 +1,199 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{graphicx}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Practice Midterm 2}
+\renewcommand{\dateinfo}{\today}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\noindent Please answer the following questions completely, showing all work.
+If you use your calculator please indicate how it was used.  Clearly
+state each answer.
+
+\begin{enumerate}
+\item The temperature $H$, in degrees Celsius, of a cup of coffee
+  placed on the kitchen counter is given by $H=f(t)$, where $t$ is in
+  minutes since the coffee was put on the counter.  Is $f'(t)$
+  positive or negative?
+\vfill
+$f(t)$ is decreasing, so $f'(t)$ is negative.
+\vfill
+
+\item Identify any $x$-values at which the absolute value function,
+  $f(x)=7|x+3|$, is not differentiable.
+\vfill
+$f(x)$ has a sharp corner at $x=-3$, so $f(x)$ is not differentiable
+at $x=-3$.  It is differentiable for all other values of $x$.
+\vfill
+\newpage
+
+\item The depth of the water, $y$, in meters, in the Bay of Fundy,
+  Canada, is given as a function of time, $t$, in hours after
+  midnight, by the function
+  \[
+  y=10+7.5\cos(0.507t).
+  \]
+  How quickly is the tide rising or falling (in meters/hour) at each
+  of the following times?
+  \begin{enumerate}
+  \item 6:00am
+    \vfill
+    \begin{align*}
+      \dfrac{dy}{dx} &=-.507(7.5)\sin(.507t)\\
+      \left.\dfrac{dy}{dx}\right|_{x=6} &=-.378\mbox{ ft/hr}.\\
+    \end{align*}
+    \vfill
+  \item 9:00am
+    \vfill
+    3.76 ft/hr
+    \vfill
+  \item Noon
+    \vfill
+    .752 ft/hr
+    \vfill
+  \item 6:00pm
+    \vfill
+    -1.119 ft/hr
+    \vfill
+  \end{enumerate}
+
+\newpage
+
+\item Find the quadratic polynomial $g(x)=ax^2+bx+c$ which best fits
+  the function $f(x)=e^x$ at $x=0$, in the sense that $g(0)=f(0)$,
+  $g'(0)=f'(0)$ and $g''(0)=f''(0)$.
+
+\vfill
+We need the following to be true:
+\[
+\begin{array}{{rcrclcl}}
+  c&=&g(0)&=&f(0)&=& 1\\
+  b&=&g'(0)&=&f'(0)&=& 1\\
+  2a&=&g''(0)&=&f''(0)&=& 1\\
+\end{array}
+\]
+so $g(x)=\dfrac{1}{2}x^2+bx+c$.
+\vfill
+\newpage
+
+\item Find $\dfrac{dy}{dx}$ in terms of $x$ and $y$ if
+  $(x-a)^8+y^8=a^8$. Assume that $a$ is constant.
+\vfill
+\[
+\begin{array}{rcl}
+  8(x-a)^7+8y^7\dfrac{dy}{dx}&=&0\\
+  8y^7\dfrac{dy}{dx}&=&-8(x-a)^7\\
+  \dfrac{dy}{dx}&=&\dfrac{-8(x-a)^7}{8y^7}\\  
+\end{array}
+\]
+\vfill
+
+\item Find the local linearization of
+  \[
+  f(x)=\frac{1}{1+3x}
+  \]
+  near $x=0$.
+\vfill
+We are looking for the tangent line $y=mx+b$.
+\[
+f'(x)=\frac{-3}{(1+3x)^2},
+\]
+so $m=f'(0)=-3$.  Then the point $(0,f(0))=(0,1)$ is on the line, so
+the tangent line is
+\[
+y=-3x+1.
+\]
+\vfill
+\newpage
+
+\item For each of the parts (a)-(e) use the values of $g(x)$ given by
+  the table below to compute each of the following derivatives.
+  \[
+  \begin{array}{|c||c|c|c|c|c|}
+    \hline
+    x&-2&-1&0&1&2\\
+    \hline
+    \hline
+    g(x)&0&0&2&6&12\\
+    \hline
+    g'(x)&-1&1&3&5&7\\
+    \hline
+  \end{array}
+  \]
+
+  \begin{enumerate}
+  \item Let $f(x)=x^5+4g(x)$. Find $f'(2)$.
+    \vfill
+    \[
+    \begin{array}{rcl}
+      f'(x)&=&5x^4+g'(x)\\
+      f'(2)&=&5\cdot 16+4\cdot 7\\
+      f'(2)&=&108
+    \end{array}
+    \]
+    \vfill
+  \item Let $f(x)=g(x)^2$. Find $f'(-2)$.
+    \vfill
+    \[
+    \begin{array}{rcl}
+      f'(x)&=&2g(x)\cdot g'(x)\\
+      f'(-2)&=&0
+    \end{array}
+    \]
+    \vfill
+  \item Let $f(x)=3^{g(x)}$. Find $f'(2)$.
+    \vfill
+    \[
+    \begin{array}{rcl}
+      f'(x)&=&g'(x)\cdot\ln(3)\cdot 3^{g(x)}\\
+      f'(2)&=&7\ln(3)\cdot 3^{12}
+    \end{array}
+    \]
+    \vfill
+    \newpage
+    \[
+    \begin{array}{|c||c|c|c|c|c|}
+      \hline
+      x&-2&-1&0&1&2\\
+      \hline
+      \hline
+      g(x)&0&0&2&6&12\\
+      \hline
+      g'(x)&-1&1&3&5&7\\
+      \hline
+    \end{array}
+    \]
+  \item Let $f(x)=\cos(g(x))$. Find $f'(2)$.
+    \vfill
+    \[
+    \begin{array}{rcl}
+      f'(x)&=&g'(x)(-\sin(g(x)))\\
+      f'(2)&=&-7\sin(12)
+    \end{array}
+    \]
+    \vfill
+  \item Let $f(x)=g(x)^2+g(x)+2$.  Find $f'(0)$.
+    \vfill
+    \[
+    \begin{array}{rcl}
+      f'(x)&=&2g'(x)g(x)+g'(x)\\
+      f'(0)&=&15
+    \end{array}
+    \]
+    \vfill
+
+  \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

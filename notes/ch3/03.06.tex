@@ -1,0 +1,75 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Inverse Function Derivatives}
+\renewcommand{\dateinfo}{section 3.6}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Preliminary}
+\begin{description}
+\item[Goal] Derivatives of inverse functions: $f(x)=\ln(x)$,
+  $g(x)=\arcsin(x)$.
+\item[Abstract] Differentiate
+  \[
+  f(f^{-1}(x))=x
+  \]
+  to get
+  \[
+  \frac{d}{dx}(f^{-1}(x))=\frac{1}{f'(f^{-1}(x))}.
+  \]
+\end{description}
+
+\section*{Others}
+\begin{description}
+\item[Log] Apply formula
+\item[Trig] Draw Triangles
+\end{description}
+
+\section*{Examples}
+\begin{description}
+\item[Table] Find $\left.\dfrac{d}{dx}(g^{-1}(x))\right|_{x=4}$ given
+  \[
+  \begin{array}{c|c|c}
+    x & g & g' \\
+    \hline
+    \hline
+    1 & 4 &  2 \\
+    \hline
+    2 & 8 & -1 \\
+    \hline
+    3 & 6 &  3 \\
+    \hline
+  \end{array}
+  \]
+\item[Specific] Make up examples
+\item[Tangent] approximate $\ln(1.1)$
+
+Let $g(v)$ be the fuel efficiency, in miles per gallon, of a car traveling at a velocity of $v$ miles per hour. Answer the following questions using complete sentences.
+\begin{enumerate}
+  \item What are the units of $g(60)$?
+  \item What is the practical meaning of the statement $g(60) = 30$?
+  \item What are the units of $g'(60)$?
+  \item What is the practical meaning of the statement $g'(60) = -1.2$?
+% We could add some or all of the following parts if we want to make the question longer or harder.
+  \item Using the above information, estimate $g'(62)$.
+  \item What are the units of $\left(g^{-1}\right)'(35)$?
+  \item What is the practical meaning of the statement $\left(g^{-1}\right)'(35) = -2$?
+\end{enumerate}
+
+\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[section 3.6] 6, 15, 26, 38
+\end{description}
+\end{document}

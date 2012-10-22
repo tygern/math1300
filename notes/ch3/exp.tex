@@ -1,0 +1,76 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage{amsmath,graphicx}
+\usepackage[letterpaper,margin=1in,includehead=true]{geometry}
+\def\ww{WeBWorK }
+\def\crz{\cr\noalign{\smallskip}}
+\usepackage{fancyhdr}
+\usepackage{verbatim}
+\pagestyle{fancy}
+
+
+
+\begin{document}
+
+\lhead{Math 1300: Calculus I}
+\chead{\bf The Derivative of $f(x)=b^x$}
+\rhead{\today}
+
+\begin{enumerate}
+\item Using the \verb nDeriv  function on your calculator, graph each function and its derivative below.  Try using $x$-window $[-2,4]$ and $y$-window $[-2,20]$.
+\[
+f(x)=2^x\hspace{1.5in} g(x)=3^x\hspace{1.5in} h(x)=e^x
+\]
+\vfill
+%\begin{center}
+ % \includegraphics{figure.jpg}
+%\end{center}
+\item What can you say about the similar shapes of $h(x)$ and $h'(x)$.  Use the table or the trace function to verefy your answer.
+\vfill
+\item To investigate the derivative of $f(x) = b^x$, we consider the ratio of the derivative to
+the function itself.
+
+We begin with the specific case where $b=2$.  On the \verb y=  screen, let
+\verb Y1 $= 2^x$, \verb Y2 = \verb nDeriv $(\verb Y1 , \verb X , \verb X )$  (TI-83),  and \verb Y3 =\verb Y2 /\verb Y1 .
+Use \verb Table .  What is true about \verb Y3 ?  What is its value?
+\vfill
+
+\newpage
+\item This implies that the derivative of $y = 2^x$ is a multiple of the function itself.  This can be
+seen analytically as well.  Using $f(x) = 2^x$, set up the limit definition of derivative for $f'(x)$.  Simplify a bit by factoring out $2^x$.  The limit which remains should be a
+constant.  It may be thought of as the derivative of $f$ at what specific value of $x$?  Use
+\verb nDeriv  on the \verb Home  screen to verify this.
+
+\vfill
+\item But what is this constant multiple?  While it is a constant for all $x$ in the function $f(x) =2^x$
+ as you found above, it is a different constant for each $b$ in the function $f(x) = b^x$.
+The limit you found in (3) was of the form $\displaystyle\lim_{h\rightarrow 0}\frac{b^h-1}{h}$.  Now, $b$ is the variable, and we need to evaluate this limit for different values of $b$.  Choose an appropriately small
+value of $h$.  On your calculator, plot  \verb Y1 $=\displaystyle\frac{x^h-1}{h}$, substituting your value of $h$.  What
+function does this resemble?
+\vfill
+
+In other words, we get that the limit above looks like $\displaystyle\lim_{h\rightarrow 0}\frac{b^h-1}{h}=\underline{\hspace{.7in}}$.
+
+This means that the ratio $\displaystyle\frac{\frac{\rm d}{{\rm d} x}(b^x)}{b^x}=\underline{\hspace{.7in}}$, so the derivative of $f(x)=b^x$ is 
+\begin{center}
+\framebox{$\displaystyle\frac{\rm d}{{\rm d} x}(b^x)=\underline{\hspace{1in}}$.}
+\end{center}
+\newpage
+\item Find the derivatives of the following functions using the rule you found above and any other derivative rules that we have discussed.
+	\begin{enumerate}
+	\item $f(x)=e^x$
+\vfill
+	\item $f(x)=10^x$
+\vfill
+	\item $f(x)=\frac{3^x}{5^x}+2^4$
+\vfill
+\newpage
+	\item $f(x)=4\cdot 7^x+\frac{1}{x}$
+\vfill
+	\item $f(x)=4^{x+2}+x^{2e}$
+\vfill
+	\item $f(x)=4e^{x+7}+(\ln 4)^x$
+	\end{enumerate}
+\vfill
+\end{enumerate}
+
+\end{document}

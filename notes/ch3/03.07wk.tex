@@ -1,0 +1,126 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{chngcntr}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Implicit Differentiation}
+\renewcommand{\dateinfo}{section 3.7}
+
+\newcommand{\ds}{\displaystyle}
+
+\counterwithout{equation}{section}
+
+\begin{document}
+\drawtitle
+
+\noindent \textit{The following problem is on the next homework assignment.  It
+  is very difficult, so we will tackle it in parts on today's
+  worksheet.}
+
+\noindent \textbf{Problem 3.7.34:} Sketch the circles
+\begin{align*}
+  y^2+x^2 &= 1\\
+  y^2 + (x-3)^2 & = 4
+\end{align*}
+There is a line with positive slope that is tangent to both circles.
+Determine the points at which this tangent line touches each circle.
+
+\begin{enumerate}
+\item Sketch a graph of the two circles and the tangent line described
+  above.  Label the point where the tangent line touches circle
+  \ref{circ1} $(a,b)$ and the point where it touched circle
+  \ref{circ2} $(c,d)$.
+
+  \vfill 
+
+  We can relate $a$ with $b$ and $c$ with $d$ as shown below.
+  \begin{align}
+    \label{circ1}
+    b^2+a^2 &= 1\\
+    \label{circ2}
+    d^2 + (c-3)^2 & = 4
+  \end{align}
+  
+  \newpage
+  
+\item Use equation \ref{circ1} to find $b$ in terms of $a$. Use
+  equation \ref{circ2} to find $d$ in terms of $c$.
+  
+  \vfill
+  \begin{align}
+    \label{ba}
+    b &= \hspace{3in}\\ 
+    \label{dc}
+    d &= \hspace{3in}
+  \end{align}
+  
+\item Find $\dfrac{dy}{dx}$ for equations \ref{circ1} and \ref{circ2}.
+
+  \vfill
+  
+  \begin{align}
+    \label{slope1}
+    \dfrac{dy}{dx} &= \hspace{3in}\\ 
+    \label{slope2}
+    \dfrac{dy}{dx} &= \hspace{3in}
+  \end{align}
+  
+  \newpage
+
+\item From our picture, we know that slope of the first circle at
+  $(a,b)$ must equal the slope of the second circle at $(c,d)$.  Set
+  up an equation that describes this.  Using this equation and
+  equations \ref{ba} and \ref{dc}, solve for $c$ in terms of
+  $a$. 
+
+  \textit{Hint: Use your picture to resolve problems with absolute
+    value.}
+  
+  
+  \vfill
+  
+  \begin{equation}\label{ca}
+    c = \hspace{3in}
+  \end{equation}
+  
+  \newpage
+  
+\item Use equation \ref{ca} to substitute for $c$ in equation
+  \ref{circ2} to find $d$ in terms of a.  Then use equation \ref{ba}
+  to find $d$ in terms of $b$.
+  \vfill
+  \begin{equation}\label{db}
+    d =\hspace{3in}
+  \end{equation}
+\item Calculate the slope between the two points, $(a,b)$ and
+  $(c,d)$.  We know that this must be equal to the slope of the
+  tangent line to circle \ref{circ1} at $(a,b)$.  Use equation
+  \ref{slope1} to help set up this equality.
+  \vfill
+  \begin{equation}\label{slopes}
+    =
+  \end{equation}
+  \newpage
+  
+\item Use equations \ref{ba}, \ref{db}, and \ref{ca} to get equation
+  \ref{slopes} completely in terms of $a$.  Solve for $a$.
+  
+  \vfill
+  
+  \begin{equation}\label{a}
+    a = \hspace{3in}
+  \end{equation}
+  
+\item Now use equations \ref{ba}, \ref{ca}, and \ref{db} to find
+  $b$, $c$, and $d$.
+  
+  \vfill
+  
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,358 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Chapters 2 and 3 Worksheet},urlcolor=blue]{hyperref}
+\usepackage{graphicx, tikz}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Chapters 2 and 3 Worksheet}
+\renewcommand{\dateinfo}{fall 2012}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\noindent Please answer the following questions completely, showing
+all work.  Clearly state each answer.
+
+\begin{enumerate}
+\item The temperature $H$, in degrees Celsius, of a cup of coffee
+  placed on the kitchen counter is given by $H=f(t)$, where $t$ is in
+  minutes since the hot cup of coffee was placed on the counter.
+  \begin{enumerate}
+  \item Is $f'(t)$ positive or negative? Why?
+    \vfill
+    {\color{blue}
+      $f(t)$ is decreasing, so $f'(t)$ is negative.
+    }
+    \vfill
+  \item Is $f''(t)$ positive or negative? Why?
+    \vfill
+    {\color{blue}
+      $f'(t)$ is increasing, so $f''(t)$ is positive.
+    }
+    \vfill
+  \end{enumerate}
+
+\item Identify any $x$-values at which the absolute value function,
+  $f(x)=7|x+3|$, is not differentiable.
+  \vfill
+  {\color{blue}
+  $f(x)$ has a sharp corner at $x=-3$, so $f(x)$ is not differentiable
+  at $x=-3$.  It is differentiable for all other values of $x$.}
+  \vfill
+\newpage
+
+\item The depth of the water, $f(t)$, in meters, in the Bay of Fundy,
+  Canada, is given as a function of time, $t$, in hours after
+  midnight, by the function
+  \[
+  f(t)=10+6\cos\left(\frac{\pi}{6}t\right).
+  \]
+  \begin{enumerate}
+  \item What is the depth of the water at 1:00\textsc{am}?
+    Include units in your answer.
+    \vfill
+    {\color{blue}
+      The depth of the water at 1\textsc{am} is $f(1) =
+      10+6\cos\left(\frac{\pi}{6}\right) = 10+3\sqrt{3}$ meters.
+    }
+    \vfill
+  \item How quickly is the tide rising or falling at 1:00\textsc{am}?  Include
+    units in your answer. \vfill
+    {\color{blue}
+      $f'(t) = -\pi\sin\left(\frac{\pi}{6} t\right)$, so the tide is
+      changing at a rate of $f'(1) =
+      -\pi\sin\left(\frac{\pi}{6}\right) = -\frac{\pi}{2}$
+      meters per hour.  Thus, the depth of the water is falling at a
+      rate of $\frac{\pi}{2}$ meters per hour.
+    }
+    \vfill
+  \item Using {\bf only} your answers for parts (a) and (b), {\bf estimate} the depth
+    of the water at 2:00\textsc{am}. Include units in your answer.
+    \vfill
+    {\color{blue}
+      From part be we know that the depth of the water will fall by
+      approximately $\frac{\pi}{2}$ meters between
+      1\textsc{am} and 2\textsc{am}, so
+      \[
+      f(2) \approx 10+3\sqrt{3} - \frac{\pi}{2},
+      \]
+      and the depth at 2\textsc{am} is approximately $10+3\sqrt{3} -
+      \frac{\pi}{2}$ meters.
+    }
+    \vfill
+    
+  \end{enumerate}
+
+\newpage
+
+\item Find constants $m$ and $b$ so that the function
+  \[
+  f(x) = \begin{cases} 3x^2-10 &\mbox{if } x\geq 2\\
+    mx+b &\mbox{if } x < 2 \end{cases}
+  \]
+  is differentiable.
+  \vfill
+  {\color{blue}
+  
+    We know that a function must be continuous to be differentiable,
+    so the two pieces of the function must have the same \(y\)-value
+    at \(x=2\).  This tells us that
+    \[
+    3\cdot2^2 - 10 = m\cdot 2 +b.
+    \]
+    
+    Furthermore, if \(f(x)\) is differentiable, its graph must not contain
+    any sharp corners.  This means that the two pieces must have the
+    same derivative where they meet up at \(x=2\).  The derivative of
+    the first piece is \(6x\) and the derivative of the second piece
+    is \(m\), so \[6\cdot 2 = m\] and thus \(m=12\).  Then we can
+    substitute \(m=12\) into the first equation to get \[2 = 12\cdot 2 +
+    b\] so \(b=-22\).  Then the function
+    \[
+    f(x)=\begin{cases}
+      3x^2 - 10 &\mbox{if } x\geq 2\\
+      12x - 22  &\mbox{if } x < 2
+    \end{cases}
+    \]
+    is differentiable.
+
+  }
+  \vfill
+
+\newpage
+
+\item Find the equation of the tangent line of
+  \[
+  f(x)=\frac{1}{1+3x}
+  \]
+  at $x=0$.
+\vfill
+{\color{blue}
+  We are looking for the tangent line $y=mx+b$.
+  \[
+  f'(x)=\frac{-3}{(1+3x)^2},
+  \]
+  so $m=f'(0)=-3$.  Then the point $(0,f(0))=(0,1)$ is on the line, so
+  the tangent line is
+  \[
+  y=-3x+1.
+  \]
+}
+\vfill
+\newpage
+
+\item For each of the parts (a)-(e) use the values of $g(x)$ given by
+  the table below to compute each of the following derivatives.
+  \[
+  \begin{array}{|c||c|c|c|c|c|}
+    \hline
+    x&-2&-1&0&1&2\\
+    \hline
+    \hline
+    g(x)&0&1&2&6&12\\
+    \hline
+    g'(x)&1&2&3&5&7\\
+    \hline
+  \end{array}
+  \]
+
+  \begin{enumerate}
+  \item Let $f(x)=x^5+4g(x)$. Find $f'(2)$.
+    \vfill
+    {\color{blue}
+      \[
+      \begin{array}{rcl}
+        f'(x)&=&5x^4+4\cdot g'(x)\\
+        f'(2)&=&5\cdot 16+4\cdot 7\\
+        f'(2)&=&108
+      \end{array}
+      \]
+    }
+    \vfill
+  \item Let $f(x)=g(x)^2$. Find $f'(-2)$.
+    \vfill
+    {\color{blue}
+      \[
+      \begin{array}{rcl}
+        f'(x)&=&2g(x)\cdot g'(x)\\
+        f'(-2)&=&0
+      \end{array}
+      \]
+    }
+    \vfill
+  \item Let $f(x)=3^{g(x)}$. Find $f'(2)$.
+    \vfill
+    {\color{blue}
+      \[
+      \begin{array}{rcl}
+        f'(x)&=&g'(x)\cdot\ln(3)\cdot 3^{g(x)}\\
+        f'(2)&=&7\ln(3)\cdot 3^{12}
+      \end{array}
+      \]
+    }
+    \vfill
+    \newpage
+    \[
+    \begin{array}{|c||c|c|c|c|c|}
+      \hline
+      x&-2&-1&0&1&2\\
+      \hline
+      \hline
+      g(x)&0&1&2&6&12\\
+      \hline
+      g'(x)&1&2&3&5&7\\
+      \hline
+    \end{array}
+    \]
+  \item Let $f(x)=\cos(g(x))$. Find $f'(2)$.
+    \vfill
+    {\color{blue}
+      \[
+      \begin{array}{rcl}
+        f'(x)&=&g'(x)(-\sin(g(x)))\\
+        f'(2)&=&-7\sin(12)
+      \end{array}
+      \]
+    }
+    \vfill
+  \item Let $f(x)=g^{-1}(x)\cdot x^2$.  Find $f'(1)$.
+    \vfill
+    {\color{blue}
+      \begin{align*}
+        f'(x) & = 2x\cdot g^{-1}(x)+x^2\cdot\dfrac{1}{g'\left(g^{-1}(x)\right)}\\
+        f'(1) & = 2\cdot 1\cdot g^{-1}(1)+1^2\cdot\dfrac{1}{g'\left(g^{-1}(1)\right)}\\
+        f'(1) & = 2\cdot (-1)+\dfrac{1}{g'\left(-1\right)}\\
+        f'(1) & = 2\cdot (-1)+\dfrac{1}{2}\\
+        f'(1) & = -\dfrac{3}{2}\\
+      \end{align*}
+    }
+    \vfill
+
+  \end{enumerate}
+
+\newpage
+
+\item Calculate the derivatives of the following functions.  Show all
+  work and state all rules used.
+  \begin{enumerate}
+  \item $f(x)=\dfrac{x}{2^x+\sin(x)}$
+    \vfill
+    {\color{blue}
+      \[
+      f'(x) = \frac{(2^x+\sin(x))-x(\ln(2)2^x+\cos(x))}{(2^x+\sin(x))^2}
+      \]
+    }
+    \vfill
+  \item $g(x)=\sqrt[7]{\arctan(x)\ln(x)}$
+    \vfill
+    {\color{blue}
+      \[
+      g'(x) =
+      \left(\ln(x)\frac{1}{1+x^2}+\frac{1}{x}\arctan(x)\right)\cdot
+      \frac{1}{7}\left(\arctan(x)\ln(x)\right)^{-\frac{6}{7}}
+      \]
+    }
+    \vfill
+    \newpage
+  \item $h(x)=e^{\ln(3)^{\pi}} + x\cdot e^{\tan(x)}$
+    \vfill
+    {\color{blue}
+      \[
+      h'(x) = e^{\tan(x)} + x\cdot\frac{1}{\cos^2(x)}e^{\tan(x)}
+      \]
+    }
+    \vfill
+  \item $p(x)=\cos^2\left(\ln(x\arcsin(x))\right)+\sin^2(\ln(x\arcsin(x)))$
+    \vfill
+    {\color{blue}
+      We can simplify the above equation:
+      \[
+      p(x)=1,
+      \]
+      so,
+      \[
+      p'(x)=0.
+      \]
+    }
+    \vfill
+    \newpage
+  \item $q(x)=\ln\left(e^{4x}\right)$
+    \vfill
+    {\color{blue}
+      We can simplify the above equation:
+      \[
+      q(x)=4x,
+      \]
+      so,
+      \[
+      q'(x)=4.
+      \]
+    }
+    \vfill
+  \item $r(x)=\sin(\cos(x))$
+    \vfill
+    {\color{blue}
+      \[
+      r'(x) = -\sin(x)\cdot\cos(\cos(x))
+      \]
+    }
+    \vfill
+  \end{enumerate}
+
+\newpage
+
+\item Given the graph of $f(x)$ below, sketch graphs of $f'(x)$ and $f''(x)$.
+
+\begin{center}
+  \begin{tikzpicture}[scale=.9]
+    \def\xmin{-6}
+    \def\xmax{6}
+    \def\ymin{-3}
+    \def\ymax{3}
+    
+    \draw[->] (\xmin,0) -- (\xmax,0) node[right] {$x$};
+    \draw[->] (0,\ymin) -- (0,\ymax) node[above] {$f(x)$};
+    
+    \draw[<->, color=black, thick, domain=\xmin:\xmax] plot[samples=201]
+    function{.04*(x+5)*(x+1)*(x-5)};
+  \end{tikzpicture}
+\end{center}
+\vfill
+\begin{center}
+  \begin{tikzpicture}[scale=.9]
+    \def\xmin{-6}
+    \def\xmax{6}
+    \def\ymin{-3}
+    \def\ymax{3}
+    
+    \draw[->] (\xmin,0) -- (\xmax,0) node[right] {$x$};
+    \draw[->] (0,\ymin) -- (0,\ymax) node[above] {$f'(x)$};
+    
+    \draw[color=blue, thick, domain=\xmin:\xmax] plot[samples=201]
+    function{.12*x*x+.08*x-1};
+  \end{tikzpicture}
+\end{center}
+\vfill
+\begin{center}
+  \begin{tikzpicture}[scale=.9]
+    \def\xmin{-6}
+    \def\xmax{6}
+    \def\ymin{-3}
+    \def\ymax{3}
+    
+    \draw[->] (\xmin,0) -- (\xmax,0) node[right] {$x$};
+    \draw[->] (0,\ymin) -- (0,\ymax) node[above] {$f''(x)$};
+    
+    \draw[color=blue, thick, domain=\xmin:\xmax] plot[samples=201]
+    function{.24*x+.08};
+  \end{tikzpicture}
+\end{center}
+\vfill
+\end{enumerate}
+
+\end{document}

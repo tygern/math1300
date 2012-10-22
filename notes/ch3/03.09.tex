@@ -1,0 +1,61 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Linear Approximation}
+\renewcommand{\dateinfo}{section 3.9}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Preliminary}
+\begin{description}
+\item[Idea] The tangent line to a function $f$ at $x=a$ approximates
+  the $y$-values of the function near $x=a$.
+\item[Draw] picture, talk about locally linear
+\item[Vocabulary] tangent line = local linearization
+\item[Formula] point-slope form
+  \[
+  f(x) \approx \ell(x) = f'(a)(x-a)+f(a).
+  \]
+\end{description}
+
+\section*{Error}
+\begin{description}
+\item[How Good] is our approximation?
+\item[Visualize] error and find exact formula.  Talk about positive
+  and negative.
+  \[
+  E(x) = f(x) - \text{approx}
+  \]
+\item[Example] $f(x)=x^3$ at $x=2$.  Approximate $f(2.2)$.
+  \begin{itemize}
+  \item $f(2.2)\approx 10.4$, $f(2.2)= 10.648$, $E(3.3) = .248$.
+  \end{itemize}
+\end{description}
+
+\section*{Concavity}
+\begin{description}
+\item[Picture] What determines error? Concavity and proximity.
+\item[Over/Underestimate] $f''>0$ under, $f''<0$ over.
+\item[Formula]
+  \[
+  E(x)\approx\frac{f''(a)}{2}(x-a)^2
+  \]
+\item[Example] $f(x)=\ln(x)$.  Approximate $\ln(1.1)\approx .1$
+  ($E(x)\approx -.05$, $ln(1.1) = .9531\dots$, $E(x) = .0046\dots$).
+\item[Example] Solution to $e^x+x=2$ near $x=0$. Approx $x=\frac{1}{2}$, actual $x=.44285\dots$.
+\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[Section 3.9] 12, 16
+\end{description}
+\end{document}

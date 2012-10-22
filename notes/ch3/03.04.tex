@@ -1,0 +1,48 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Chain Rule}
+\renewcommand{\dateinfo}{section 3.4}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Preliminary}
+\begin{description}
+\item[Goal] Derivatives of composed functions: $f(x)=3^{x^2}$
+\item[Idea] $\ds\frac{d}{dx}(f(g(x)))$.  As $x$ changes $g(x)$
+  changes.  As $g(x)$ changes $f(g(x))$ changes.
+\item[Sketchy Proof] Call $z=g(x)$, then $y=f(z)$.
+  \[
+  \begin{array}{rcl}
+    \ds\frac{\Delta y}{\Delta x} &=&
+    \ds\frac{\Delta y}{\Delta z}\cdot \frac{\Delta z}{\Delta x}\\
+    \\
+    \ds\frac{dy}{dx} &=&
+    \ds\frac{dy}{dz}\cdot \frac{dz}{dx}\\
+    \\
+    &=& f'(z)\cdot g'(x)
+  \end{array}
+  \]
+  so $\ds\frac{d}{dx}(f(g(x)))=f'(g(x))\cdot g'(x)$.
+\end{description}
+
+\section*{Examples}
+\begin{description}
+\item[Only Chain Rule] one or two
+\item[Combined] at least two
+\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[On Board] Some easy ones, also combinations.
+\end{description}
+\end{document}

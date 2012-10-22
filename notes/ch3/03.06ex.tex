@@ -1,0 +1,52 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Information},colorlinks=true,urlcolor=blue]{hyperref}
+
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Derivatives of Inverse Functions}
+\renewcommand{\dateinfo}{section 3.6}
+
+\def\ww{WeBWorK }
+
+\begin{document}
+\drawtitle
+
+\section*{Inverse Derivative Example}
+
+\begin{description}
+\item[Problem] Find $\left.\dfrac{d}{dx}\left((g^{-1}(x)\right)\right|_{x=4}$ given
+  \[
+  \begin{array}{c|c|c}
+    x & g & g' \\
+    \hline
+    \hline
+    1 & 4 &  2 \\
+    \hline
+    2 & 8 & -1 \\
+    \hline
+    3 & 6 &  3 \\
+    \hline
+  \end{array}
+  \]
+
+\item[Solution]
+  We need to find $\left(g^{-1}\right)'(4)$.  We know that
+    \[
+    \left(g^{-1}\right)'(x) = \frac{1}{g'\left(g^{-1}(x)\right)},
+    \]
+    so we can use the table above to show
+    \begin{align*}
+      \left(g^{-1}\right)'(4) & = \frac{1}{g'\left(g^{-1}(4)\right)}\\
+      & = \frac{1}{g'(1)}\text{ since }g(1)=4\\
+      & = \frac{1}{2}.
+    \end{align*}
+
+
+\end{description}
+
+\end{document}

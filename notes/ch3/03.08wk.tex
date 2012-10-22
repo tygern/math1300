@@ -1,0 +1,113 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{graphicx}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Hyperbolic Functions}
+\renewcommand{\dateinfo}{section 3.8}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+Two functions that are used commonly in engineering are the
+hyperbolic sine and hyperbolic cosine functions. These functions share
+many properties with the familiar sine and cosine functions. They are
+defined below:
+
+\begin{center}
+  \framebox{ $\cosh(x)=\dfrac{e^x+e^{-x}}{2},\:
+    \sinh(x)=\dfrac{e^x-e^{-x}}{2}$ }
+\end{center}
+
+\begin{enumerate}
+\item Using the above definitions, find the following:
+  \begin{enumerate}
+  \item $\sinh(0)=$
+    \vfill
+  \item $\cosh(0)=$
+    \vfill
+  \item $\sinh(-x)=$
+    \vfill
+  \item $\cosh(-x)=$
+    \vfill
+  \item What do parts (c) and (d) tell you about the symmetry (even,
+    odd, etc.) of $\sinh(x)$ and $\cosh(x)$?  Note the similarities
+    with sine and cosine.
+    \vfill\vfill
+  \end{enumerate}
+
+  \newpage
+
+\item Note that as $x\rightarrow\infty$, $e^{-x}$ becomes very small,
+  so
+  \[
+  \sinh(x) = \dfrac{e^x-e^{-x}}{2} = \dfrac{e^x}{2}-\dfrac{e^{-x}}{2}
+  \approx \dfrac{e^x}{2}.
+  \]
+  Similarly, as $x\rightarrow -\infty$, $e^x$ becomes very small, so
+  \[
+  \sinh(x) = \dfrac{e^x-e^{-x}}{2} = \dfrac{e^x}{2}-\dfrac{e^{-x}}{2}
+  \approx -\dfrac{e^{-x}}{2}.
+  \]
+  Use this same method to find the behavior of $\cosh(x)$ as
+  \begin{enumerate}
+  \item $x\to\infty$
+    \vfill
+  \item $x\to -\infty$
+    \vfill
+  \end{enumerate}
+
+\item Using questions 1 and 2 sketch the graphs of $\sinh(x)$ and
+  $\cosh(x)$ below.
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=3in]{cosh.png} &
+      \includegraphics[width=3in]{sinh.png}
+    \end{tabular}
+  \end{center}
+
+  \newpage
+
+\item When working with trigonometric functions, it is often useful to
+  use the identity $\sin^2 (x) + \cos^2 (x) = 1$. We can find a similar
+  identity for hyperbolic functions. Use the facts that
+  \[
+  \cosh^2(x)=\dfrac{e^{2x}+2+e^{-2x}}{4},\:
+  \sinh^2(x)=\dfrac{e^{2x}-2+e^{-2x}}{4},
+  \]
+  to find an identity for $\cosh^2(x)-\sinh^2(x)$
+  \vfill
+
+  \newpage
+
+\item Similar to trigonometric functions, we can define the hyperbolic
+  tangent function:
+  \begin{center}
+    \framebox{
+      $\tanh(x)=\dfrac{\sinh(x)}{\cosh(x)}=\dfrac{e^x-e^{-x}}{e^x+e^{-x}}$
+    }
+  \end{center}
+  Use the facts that $\dfrac{d}{dx}\left(e^x\right)=e^x$ and
+  $\dfrac{d}{dx}\left(e^{-x}\right)=-e^{-x}$ to find the following
+  derivatives.
+  \begin{enumerate}
+  \item $\dfrac{d}{dx}(\sinh(x))$
+    \vfill
+  \item $\dfrac{d}{dx}(\cosh(x))$
+    \vfill
+  \item $\dfrac{d}{dx}(\tanh(x))$
+    \vfill
+  \end{enumerate}
+
+\end{enumerate}
+
+If you still have time try exercises 23 and 26 in section 3.8.
+
+\end{document}
