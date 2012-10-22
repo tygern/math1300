@@ -1,0 +1,180 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Information},colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{tikz, array}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{The Derivative at a Point}
+\renewcommand{\dateinfo}{section 2.2}
+
+\begin{document}
+\drawtitle
+
+\begin{enumerate}
+\item Let $f(x) = 3x^2-8x+3$.  Find $f'(2)$.
+  \vfill
+  {\color{blue}
+    Using the definition of the derivative we obtain
+    \begin{align*}
+      f'(2) &= \lim_{h\to 0} \frac{f(2+h)-f(2)}{h}\\
+      &= \lim_{h\to 0} \frac{3(2+h)^2-8(2+h)+3 - (-1)}{h}\\
+      &= \lim_{h\to 0} \frac{3h^2+4h}{h}\\
+      &= \lim_{h\to 0} \frac{h(3h+4)}{h}\\
+      &= \lim_{h\to 0} 3h+4\\
+      &= 4
+    \end{align*}
+  }
+  \vfill
+\item Let $g(x)$ be given by the graph below.  Match the derivatives
+  in the table with the points $a$, $b$, $c$, $d$, and $e$.
+
+  \begin{center}
+    \begin{tabular}{m{3.5in}m{1in}}
+      \begin{tikzpicture}[scale = 1.5]
+        \draw[<->] (-1,0) -- (3.75,0);
+        \draw[<->] (0,-2) -- (0,3);
+        \draw[-] (.27,.1) -- (.27,-.1) node[below] {$a$};
+        \draw[-] (.45,.1) -- (.45,-.1) node[below] {$b$};
+        \draw[-] (2,.1) -- (2,-.1) node[below] {$d$};
+        \draw[-] (2.5,.1) -- (2.5,-.1) node[below] {$e$};
+        \draw[-] (1,.1) -- (1,-.1) node[below] {$c$};
+        
+        \draw[thick, domain=-.5:3.25, <->] plot[samples=200]
+        function{-x*(x-1)*(x-3)} node[right]{$g(x)$};
+      \end{tikzpicture}
+      &
+      \begin{tabular}{c|c}
+        $x$ & $g'(x)$\\
+        \hline
+        {\color{blue} $b$}&$0$\\
+        {\color{blue} $d$}&$1$\\
+        {\color{blue} $c$}&$2$\\
+        {\color{blue} $a$}&$-0.5$\\
+        {\color{blue} $e$}&$-2$
+      \end{tabular}
+    \end{tabular}
+  \end{center}
+
+  \newpage
+
+\item Let $h(x) = \sqrt{x}$.
+  \begin{enumerate}
+  \item Find $h'(4)$.
+  \vfill
+  {\color{blue}
+    Using the definition of the derivative we obtain
+    \begin{align*}
+      h'(4) &= \lim_{h\to 0} \frac{h(4+h)-h(4)}{h}\\
+      &= \lim_{h\to 0} \frac{\sqrt{4+h}-2}{h}\\
+      &= \lim_{h\to 0} \frac{\sqrt{4+h}-2}{h}\cdot\frac{\sqrt{4+h}+2}{\sqrt{4+h}+2}\\
+      &= \lim_{h\to 0} \frac{4+h-4}{h\left(\sqrt{4+h}+2\right)}\\
+      &= \lim_{h\to 0} \frac{h}{h\left(\sqrt{4+h}+2\right)}\\
+      &= \lim_{h\to 0} \frac{1}{\sqrt{4+h}+2}\\
+      &= \frac{1}{4}
+    \end{align*}
+  }
+    \vfill
+  \item Find the equation of the tangent line to $h(x)$ at $x=4$ and
+    use this to estimate $\sqrt{4.1}$.
+    \vfill
+
+    {\color{blue}
+      We know the slope of the tangent line to $h(x)$ at $x=4$ is
+      $h'(4)$, so the tangent line if of the form $y= \frac{1}{4}x+b$.
+      Then the tangent line must go through the point
+      $(4,h(4))=(4,2)$, so
+      \begin{align*}
+        2 &= \frac{1}{4}\cdot 4 + b\\
+        2 &= 1 + b\\
+        b &= 1.
+      \end{align*}
+      Then the tangent line is given by $y=\frac{1}{4}x+1$, so
+      \[
+      \sqrt{4.1}=f(4.1)\approx \frac{1}{4}\cdot 4.1 + 1 = 2.025.
+      \]
+    }
+
+    \vfill
+  \end{enumerate}
+  
+  \newpage
+
+\item Estimate the derivative of $f(x) = x^x$ at $x=2$.
+  \vfill
+  {\color{blue}
+    We know that
+    \[
+    f'(2) = \lim_{h\to 0} \frac{f(2+h)-f(2)}{h} = \lim_{h\to 0}
+    \frac{(2+h)^{2+h} - 4}{h}.
+    \]
+    We do not have the tools to solve this limit algebraically, so we
+    can estimate its value by plugging in very small numbers for $h$.
+    A reasonable is
+    \[
+    f'(2) \approx 6.77259.
+    \]
+  }
+  \vfill
+
+\item Suppose that $f(x)$ is a function with $f(-5) = 7$ and $f'(-5) =
+  6$.  Estimate $f(-5.5)$.
+  \vfill
+  {\color{blue}
+
+    We will estimate $f(-5.5)$ by finding the tangent line to $f(x)$
+    at $x=5$, then plugging in $x=-5.5$. We know that the tangent line
+    has a slope of $6$ and goes through the point $(-5,7)$, so
+    \begin{align*}
+      7 &= 6\cdot (-5) + b\\
+      b &= 37.
+    \end{align*}
+    Then the equation for the tangent line is given by $y = 6x+37$, so
+    \[
+    f(-5.5)\approx 6\cdot (-5.5) + 37 = 4.
+    \]
+
+  }
+  \vfill
+
+  \newpage
+
+\item Find the derivative of $f(x) = \frac{1}{x^2}$ at $x=-1$.
+  \vfill
+  {\color{blue}
+
+    Using the definition of the derivative we obtain
+    \begin{align*}
+      f'(-1) &= \lim_{h\to 0} \frac{f(-1+h)-f(-1)}{h}\\
+      &= \lim_{h\to 0} \frac{\frac{1}{(-1+h)^2}-1}{h}\\
+      &= \lim_{h\to 0} \frac{\frac{1}{(-1+h)^2}-\frac{(-1+h)^2}{(-1+h)^2}}{h}\\
+      &= \lim_{h\to 0} \frac{\frac{2h-h^2}{(-1+h)^2}}{h}\\
+      &= \lim_{h\to 0} \frac{\frac{h(2-h)}{(-1+h)^2}}{h}\\
+      &= \lim_{h\to 0} \frac{(2-h)}{(-1+h)^2}\\
+      &= 2
+    \end{align*}
+
+  }
+  \vfill
+
+\item On the axes below, draw a graph of a population function $P(t)$
+  such that the average population growth between $t=2$ and $t=7$ is
+  equal to the instantaneous population growth at $t=6$.  Justify your
+  answer.
+  \begin{center}
+    \begin{tikzpicture}[scale = 1]
+      \draw[->] (0,0) -- (8,0) node[below] {$t$};
+      \draw[->] (0,0) -- (0,6.5) node[left] {$P(t)$};
+    \end{tikzpicture}
+  \end{center}
+  {\color{blue}
+    Answers will vary.  The key is that the slope of the tangent line
+    to $P(t)$ at $x=6$ must be equal to the slope of the secant line
+    between $t=2$ and $t=7$.
+  }
+\end{enumerate}
+
+\end{document}

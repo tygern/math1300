@@ -1,0 +1,178 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={2.5 Worksheet},colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{tikz,array}
+
+\renewcommand{\theclass}{\textsc{math} 1300-013: Calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{The Second Derivative}
+\renewcommand{\dateinfo}{Fall 2013}
+
+\def\ww{WeBWorK }
+
+\begin{document}
+\drawtitle
+\begin{enumerate}
+
+\item Find the second derivative of $f(x)=2x^2-x$ {\bf using the limit
+    definition of derivative}.
+
+  \newpage
+  
+\item On the axes given below draw the second derivatives of the
+  following functions.
+  \begin{center}
+    \begin{tabular}{cc}
+      \begin{tikzpicture}[xscale = 7/8, yscale = 5/55]
+        \draw[<->] (-4,0) -- (4,0);
+        \draw[<->] (0,-35) -- (0,20);
+        
+        \draw[thick, domain=-4:4, <->] plot[samples=200]
+        function{(x+3)*(x-1)*(x-3)};
+      \end{tikzpicture}
+      &
+      \begin{tikzpicture}[xscale = 7/13, yscale = 5/3]
+        \draw[<->] (-6.5,0) -- (6.5,0);
+        \draw[<->] (0,-1.5) -- (0,1.5);
+        
+        \draw[thick, domain=-6.5:6.5, <->] plot[samples=200]
+        function{sin(x)};
+      \end{tikzpicture}
+      \\
+      \begin{tikzpicture}[xscale = 7/8, yscale = 5/17]
+        \draw[<->] (-4,0) -- (4,0);
+        \draw[<->] (0,-1) -- (0,16);
+        
+        \draw[thick, domain=-4:4, <->] plot[samples=200]
+        function{2**x};
+      \end{tikzpicture}
+      &
+      \begin{tikzpicture}[xscale = 7/6, yscale = 5/3]
+        \draw[<->] (-3,0) -- (3,0);
+        \draw[<->] (0,-1.5) -- (0,1.5);
+        
+        \draw[thick, domain=-3:3, <->] plot[samples=200]
+        function{1/(x**2+1)};
+      \end{tikzpicture}
+      \\
+    \end{tabular}
+  \end{center}
+
+\item Let $f(x)$ be a continuous function.  Draw a possible graph of
+  $f(x)$ that satisfies \textbf{all} of the following conditions.
+ 	\begin{itemize}
+ 	\item $f(0)=2$
+ 	\item $f'(x)> 0$ when $x<-1$, and $f'(x)< 0$ for $x>-1$.
+ 	\item $f''(x)<0$ when $-3 < x < 3$.
+ 	\item $f''(x)>0$ otherwise.
+ 	\end{itemize}
+  \begin{center}
+    \begin{tikzpicture}[scale = 1.2]
+      \def\xmin{-5.5}\def\xmax{5.5} \def\ymin{-2}\def\ymax{3}
+      \draw (-5,.1) -- (-5,-.1) node[below] {$-5$};
+      \draw ( 5,.1) -- ( 5,-.1) node[below]  {$5$};
+      \draw (.1, 2.75) -- (-.1, 2.75) node[left]   {$3$};
+      \draw (.1,-1.75) -- (-.1,-1.75) node[left]  {$-2$};
+      \draw[<->, thick] (\xmin,0) -- (\xmax,0); \draw[<->, thick] (0,\ymin) --
+      (0,\ymax);
+    \end{tikzpicture}
+  \end{center}
+
+\newpage
+\item Suppose that $f(x)$ is a function with the following properties:
+  \begin{itemize}
+  \item $f$ is decreasing
+  \item $f$ is concave down
+  \item $f(2)=4$
+  \item $f'(2)=-\frac{1}{2}$
+  \end{itemize}
+
+  \begin{enumerate}
+  \item Find the tangent line to $f$ at $x=2$.
+    \vfill
+  \item Draw a possible graph of $f$ and the tangent line from part
+    (a).
+    \vfill
+  \item How many zeros does $f(x)$ have on the following intervals?
+   \[
+     \begin{array}{|c|c|}
+       \hline
+       \mbox{interval} & \mbox{zeros}\\
+       \hline
+       (-\infty,0)&\\
+       \hline
+       (0,2)&\\
+       \hline
+       (2,10)&\\
+       \hline
+       (10,\infty)&\\
+       \hline
+     \end{array}
+   \]
+   \end{enumerate}
+  \newpage
+\item Suppose that $g(x)$ is a function with the following
+   properties:
+  \begin{itemize}
+  \item $g(3)=5$
+  \item $g'(3)=-2$
+  \item $g''(x)>0$ for all $x$
+  \end{itemize}
+
+  \begin{enumerate}
+  \item Find the tangent line to $g$ at $x=3$.
+    \vfill
+  \item Draw a possible graph of $g$ and the tangent line from part
+    (a).
+    \vfill
+  \item Which of the following $y$-values are possible for $g(0)$ and $g(4)$?
+    \begin{center}
+      \begin{tabular}{|c|c|c|}
+        \hline
+        $y$-value & possible for $g(0)$ & possible for $g(4)$\\
+        \hline
+        $0$&&\\
+        \hline
+        $3$&&\\
+        \hline
+        $7$&&\\
+        \hline
+        $11$&&\\
+        \hline
+        $1000$&&\\
+        \hline
+      \end{tabular}
+    \end{center}
+  \end{enumerate}
+
+  \newpage
+
+\item Let $P(t)$ represent the price of a share of stock of a
+  corporation at time $t$. What does each of the following statements
+  tell us about the signs of the first and second derivatives of
+  $P(t)$? Draw a graph to explain each situation.
+  \begin{enumerate}
+  \item ``The price of the stock is rising faster and faster.''
+    \vfill
+  \item ``The price of the stock is close to bottoming out.''
+    \vfill
+  \end{enumerate}
+
+\newpage
+
+\item ``Winning the war on poverty'' has been described cynically as
+  slowing the rate at which people are slipping below the poverty
+  line. Assuming that this is happening:
+  \begin{enumerate}
+  \item Graph the total number of people in poverty against time.
+    \vfill
+  \item If $N$ is the number of people below the poverty line at time
+    $t$, what are the signs of $\dfrac{dN}{dt}$ and
+    $\dfrac{d^2N}{dt^2}$? Explain.
+    \vfill
+  \end{enumerate}
+
+\end{enumerate}
+\end{document}

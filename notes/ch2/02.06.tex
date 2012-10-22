@@ -1,0 +1,45 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Differentiability}
+\renewcommand{\dateinfo}{section 2.6}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Preliminary}
+\begin{description}
+\item[Definition] $f(x)$ is differentiable at $x$ if $f'(x)$ exists.
+  \begin{itemize}
+  \item limit exists
+  \item tangent line exists and is nonzero
+  \end{itemize}
+\item[Examples] $f(x)=|x|$, $g(x)=x^{\frac{1}{3}}$,
+  $h(x)=x^{\frac{2}{3}}$.
+\item[Problems] Not continuous, corners, cusps, vertical tangent lines.
+\end{description}
+
+\section*{Advanced}
+\begin{description}
+\item[Always Diff.] constants, lines, polys, more to come
+\item[Piecewise] Must meet up
+\item[Example] $\ds f(x)= \left\{ \begin{array}{ll} x^2,&\mbox{ if } x\geq 2\\ mx+b,&\mbox{ if } x<2\end{array}\right.$
+\item[Proof] differentiable $\Rightarrow$ continuous
+  \[
+  \ds f(x)-f(a)=(x-a)\cdot\frac{f(x)-f(a)}{x-a}
+  \]
+\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[Section 2.6] 5, 8, 14
+\end{description}
+\end{document}

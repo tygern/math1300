@@ -1,0 +1,89 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Information},colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{tikz, array}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{The Derivative at a Point}
+\renewcommand{\dateinfo}{section 2.2}
+
+\begin{document}
+\drawtitle
+
+\begin{enumerate}
+\item Let $f(x) = 3x^2-8x+3$.  Find $f'(2)$.
+  \vfill
+\item Let $g(x)$ be given by the graph below.  Match the derivatives
+  in the table with the points $a$, $b$, $c$, $d$, and $e$.
+
+  \begin{center}
+    \begin{tabular}{m{3.5in}m{1in}}
+      \begin{tikzpicture}[scale = 1.5]
+        \draw[<->] (-1,0) -- (3.75,0);
+        \draw[<->] (0,-2) -- (0,3);
+        \draw[-] (.27,.1) -- (.27,-.1) node[below] {$a$};
+        \draw[-] (.45,.1) -- (.45,-.1) node[below] {$b$};
+        \draw[-] (2,.1) -- (2,-.1) node[below] {$d$};
+        \draw[-] (2.5,.1) -- (2.5,-.1) node[below] {$e$};
+        \draw[-] (1,.1) -- (1,-.1) node[below] {$c$};
+        
+        \draw[thick, domain=-.5:3.25, <->] plot[samples=200]
+        function{-x*(x-1)*(x-3)} node[right]{$g(x)$};
+      \end{tikzpicture}
+      &
+      \begin{tabular}{c|c}
+        $x$ & $g'(x)$\\
+        \hline
+        &$0$\\
+        &$1$\\
+        &$2$\\
+        &$-0.5$\\
+        &$-2$
+      \end{tabular}
+    \end{tabular}
+  \end{center}
+
+  \newpage
+
+\item Let $h(x) = \sqrt{x}$.
+  \begin{enumerate}
+  \item Find $h'(4)$.
+    \vfill
+  \item Find the equation of the tangent line to $h(x)$ at $x=4$ and
+    use this to estimate $\sqrt{4.1}$.
+    \vfill
+  \end{enumerate}
+  
+  \newpage
+
+\item Estimate the derivative of $f(x) = x^x$ at $x=2$.
+
+  \vfill
+
+\item Suppose that $f(x)$ is a function with $f(-5) = 7$ and $f'(-5) =
+  6$.  Estimate $f(-5.5)$.
+  \vfill
+
+  \newpage
+
+\item Find the derivative of $f(x) = \frac{1}{x^2}$ at $x=-1$.
+  \vfill
+
+\item On the axes below, draw a graph of a population function $P(t)$
+  such that the average population growth between $t=2$ and $t=7$ is
+  equal to the instantaneous population growth at $t=6$.  Justify your
+  answer.
+  \begin{center}
+    \begin{tikzpicture}[scale = 1]
+      \draw[->] (0,0) -- (8,0) node[below] {$t$};
+      \draw[->] (0,0) -- (0,6.5) node[left] {$P(t)$};
+    \end{tikzpicture}
+  \end{center}
+  
+\end{enumerate}
+
+\end{document}
