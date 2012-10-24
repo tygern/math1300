@@ -1,0 +1,63 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Local Minima/Maxima}
+\renewcommand{\dateinfo}{section 4.1}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Local Extrama}
+\begin{description}
+\item[Picture] $f(x)=x^3+6x^2-36x+8$, $(-6,224)$, $(2, -32)$
+\item[Definition] maximum of $f(a)$ at $x=a$\dots ``values near $a$'' 
+
+\end{description}
+
+\section*{Finding Extrema}
+\begin{description}
+\item[Picture] With horizontal tangent lines and corners
+\item[Definition] critical point at $x=a$ if $f(a)$ is defined and
+  $f'(a)=0$ or $f'(a)$ DNE.
+\item[Caution] Not all CP are extrama. $f(x)= x^3$, $g(x)=
+  \sqrt[3]{x}$, $h(x)= \dfrac{1}{x^2}$ ($f$ must be defined at extrema)
+\end{description}
+
+\section*{First Derivative Test}
+\begin{description}
+%\item[Picture] What distinguishes extrema from other CP?
+\item[Test] First derivative test
+\item[Example] above example, $f(x)=|x|$, $g(x)=x^3$,
+  $h(x)=\dfrac{1}{x(x-2)}$.
+\end{description}
+
+\section*{Second Derivative Test}
+
+\begin{description}
+\item[Concavity] make connection with picture
+\item[Test] Second derivative test. $f'(a)=0$, $>$, $<$, $=$ 0
+\item[Example] $f(x)=x^3-3x^2-72x-3$, $g(x) = x^3$, $h(x) = x^4$.
+\end{description}
+
+\section*{Inflection Points}
+
+\begin{description}
+\item[Definition] Change in concavity
+\item[Finding] $f''(a)=0$ or DNE, changes from positive to negative
+\item[Connection] Local min/max of $f'$, above example
+%\item[Example] See above.
+\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[Section 4.1] 7, 17, 19, 27
+\end{description}
+\end{document}
