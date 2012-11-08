@@ -1,0 +1,57 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Families of Functions}
+\renewcommand{\dateinfo}{section 4.3}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Motion Under Gravity}
+You already know many families of functions.  Here are some more that
+are useful for modeling.
+\begin{description}
+\item[Example] $y= -4.9t^2+v_0t+y_0$ (in m/s)
+\end{description}
+
+\section*{Bell Curve}
+\begin{description}
+\item[Basic] Talk about probability distribution, histogram
+  \[
+  y=e^{-(x-a)^2/b}
+  \]
+\item[Sage] Change variables
+\end{description}
+
+\section*{Exponential With Limit}
+\begin{description}
+\item[Examples] Temperature, terminal velocity
+\item[Sage] Change variables
+  \[
+  y=a\left(1-e^{-bx}\right)
+  \]
+\end{description}
+
+\section*{Logistic Model}
+\begin{description}
+\item[Examples] Population on an island
+\item[Sage] Change variables
+  \[
+  y=\dfrac{L}{1+Ae^{-kt}}
+  \]
+\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[Other] Find gravitational constant, find inflection points for
+  bell curve and logistic model.  What do these mean?
+\end{description}
+\end{document}

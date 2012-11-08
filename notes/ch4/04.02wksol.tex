@@ -1,0 +1,227 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Global Extrema}
+\renewcommand{\dateinfo}{section 4.2}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+\begin{enumerate}
+\item Find all global extrema, if they exist, for the following
+  functions on the given intervals.
+  \begin{enumerate}
+  \item $f(x)=3x^{1/3}-x$ on $[-1,8]$
+
+    \vfill
+    {\color{blue}
+      
+      We have $f'(x)=x^{-\frac{2}{3}}-1$, so $f'(x) = 0$ when $x=\pm
+      1$ and $f'(x)$ is undefined when $x=0$.  Then $f(x)$ has
+      critical points at $x=-1$, 0, and 1.  Also, $x=-1$ and 8 are
+      included endpoints.  We have
+      \begin{align*}
+        f(-1) &= -2\\
+        f(0) &= 0\\
+        f(1) &= 2\\
+        f(8) &= -2
+      \end{align*}
+      so $f(x)$ has a global max of 2 at $x=1$ and a global min of
+      $-2$ at $x=-1$ and $x=8$.
+
+    }
+    \vfill
+  
+  \item $g(x)=xe^{-x}$ on $(0,\infty)$
+
+    \vfill
+    {\color{blue}
+      
+      We have $g'(x)=e^{-x}-xe^{-x}= e^{-x}(1-x)$, so $g'(x) = 0$ when
+      $x=1$.  Then $f(x)$ has a critical point at $x=1$. We have
+      \begin{align*}
+        g(0) &= 0\\
+        g(1) &= \frac{1}{e}\\
+        \lim_{x\to\infty}g(x) &= 0
+      \end{align*}
+      so $g(x)$ has a global max of $\frac{1}{e}$ at $x=1$ and no
+      global min.
+
+    }
+    \vfill
+    
+    \newpage
+
+  \item $h(x)=\dfrac{1}{x^2}$ on $(0,\infty)$
+    \vfill
+    {\color{blue}
+      
+      We have $h'(x)=\frac{-2}{x^3}$, $h'(x)$ is undefined when $x=0$.
+      However, 0 is not in our interval and we have no included
+      endpoints, so $h(x)$ has no global extrema.
+
+    }
+    \vfill
+
+  \item $P(x)=\dfrac{x^2}{x^2+1}+2$ on the whole real line
+    \vfill
+    {\color{blue}
+
+      We have $P'(x) = \frac{2x}{(x^2+1)^2}$ so $P'(x) = 0$ at $x=0$.
+      Then $P(x)$ has one critical point at $x=0$, and
+      \begin{align*}
+        \lim_{x\to -\infty}P(x) &= 3\\
+        P(0) &= 2\\
+        \lim_{x\to \infty}P(x) &= 3
+      \end{align*}
+      so $P(x)$ has a global min of 2 at $x=0$ and no global max.
+
+    }
+    \vfill
+
+    \newpage
+
+  \item $\displaystyle Q(x)=e^{\left(e^x\right)}$ on $[-4,7]$
+    \vfill
+    {\color{blue}
+      
+      We have $Q'(x)=e^x\cdot e^{\left(e^x\right)} > 0$, so $Q(x)$ has
+      no critical points and is always increasing.  Then $Q(x)$ has a
+      global min of $e^{e^{-4}}$ at $x=-4$ and a global max of
+      $e^{e^7}$ at $x=7$.
+
+    }
+    \vfill
+
+  \item $R(x)=3$ on $(1,4]$.
+    \vfill
+    {\color{blue}
+
+      Since $R(x)$ is constant, it has a global max of 3 and a global
+      min of 3 occurring at every value of $x$ in the interval
+      $(1,4]$.
+      
+    }
+    \vfill 
+  \end{enumerate}
+
+\newpage
+
+
+\item A grapefruit is straight up with an initial velocity of 50
+  ft/sec.  The grapefruit is 5 feet above the ground when it is
+  released.  It's height at time $t$ is given by
+  \[
+  y=-16t^2+50t+5.
+  \]
+  \begin{enumerate}
+  \item What is the grapefruits maximum height? minimum height?
+    \vfill
+    {\color{blue}
+
+      We see that $v(t) = -32t+50$, so $v(t) = 0$ when
+      $t=\frac{50}{32}=\frac{25}{16}$. Then the maximum height occurs
+      at $h\left(\frac{25}{16}\right) = \frac{705}{16}$.  The minimum
+      height of 0 occurs when the grapefruit hits the ground at
+      $t\approx 3.22$
+      
+    }
+    \vfill
+    
+  \item What is the grapefruits maximum velocity? minimum velocity?
+    \vfill
+    {\color{blue}
+
+      The velocity $v(t) = -32t+50$ is a decreasing function, so the
+      max velocity must occur when the grapefruit is thrown and the
+      min must occur when the grapefruit hits the ground. Then there
+      is a max velocity of 50 at $t=0$ and a min velocity of $\approx
+      53.1$ at $t\approx 3.22$.
+
+    }
+    \vfill
+    
+  \item What is the grapefruits maximum speed? minimum speed?
+    \vfill
+    {\color{blue}
+
+      We know that speed is the absolute value of velocity, so the
+      maximum speed of $\approx 53.1$ occurs at $t\approx 3.22$.  The
+      minimum speed of 0 occurs at the top of the grapefruit's flight
+      at $t=\frac{25}{16}$.
+
+    }    
+    \vfill
+    
+  \end{enumerate}
+
+  \newpage
+  
+\item When an electric current passes through two resistors with
+  resistance $r_1$ and $r_2$, connected in parallel, the combined
+  resistance, $R$, can be calculated from the equation
+  \[
+  \frac{1}{R}=\frac{1}{r_1}+\frac{1}{r_2},
+  \]
+  Where $R$, $r_1$, and $r_2$ are positive.  Assume $r_2$ is constant.
+  \begin{enumerate}
+  \item Show that $R$ is an increasing function of $r_1$.
+    \vfill
+    {\color{blue}
+
+      We can solve for $R$ to get $R=\frac{r_1r_2}{r_1+r_2}$.  Then
+      $\frac{dR}{dr_1} = \frac{r_2^2}{(r_1+r_2)^2} > 0$, thus $R$ is
+      an increasing function of $r_1$.
+
+    }
+    \vfill
+  \item Assume that $a$ and $b$ are positive numbers.  Where on the interval
+    $[a,b]$ does $R$ take its maximum value?
+    \vfill
+    {\color{blue}
+
+      Since $R$ is increasing, the max occurs at the end of the
+      interval, at $r_1 = b$.
+
+    }
+    \vfill
+  \end{enumerate}
+
+  \newpage
+
+\item Let $f(x)=ax^2+bx+c$, where $a$, $b$, and $c$ are constants.
+
+  \begin{enumerate}
+  \item Find the $x$-value of the critical point of $f(x)$.
+    \vfill
+    {\color{blue}
+
+      $f'(x) = 2ax+b = 0$ when $x=-\frac{b}{2a}$, so $f(x)$ has a
+      critical point at $x=-\frac{b}{2a}$.
+
+    }
+    \vfill
+
+  \item Under what conditions on $a$, $b$, and $c$ is the critical
+    value a minimum? a maximum?
+    \vfill
+    {\color{blue}
+
+      $f''(x) = 2a$, so by the second derivative test the critical
+      point is a local maximum when $a < 0$ and is a local minimum
+      when $a > 0$.
+
+    }
+    \vfill
+  \end{enumerate}
+
+
+\end{enumerate}
+\end{document}

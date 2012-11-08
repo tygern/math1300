@@ -1,0 +1,49 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{L'Hopital's Rule}
+\renewcommand{\dateinfo}{section 4.7}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Motivation}
+\begin{description}
+\item[Example] $\ds \lim_{x\rightarrow 0}\frac{e^{3x}-1}{x}$,
+  $\ds\lim_{x\to 0}x\ln|x|$.
+\item[Indeterminate Form] $\ds\frac{0}{0}, \frac{\infty}{\infty},
+  0\cdot\infty, \infty-\infty, 1^\infty, 0^0, \infty^0$.
+\item[Rule] Consider $\ds\lim_{x\to a}\dfrac{f(x)}{g(x)}$ or
+  $\ds\lim_{x\to a}\dfrac{f(x)}{g(x)}$.  If limit is of the form
+  $\dfrac{0}{0}$ or $\dfrac{\infty}{\infty}$ then
+  \begin{align*}
+    \ds\lim_{x\to a}\dfrac{f(x)}{g(x)} &=\ds\lim_{x\to a}
+      \dfrac{f'(x)}{g'(x)}\\
+    \ds\lim_{x\to\infty}\dfrac{f(x)}{g(x)} &=\ds\lim_{x\to
+      \infty}\dfrac{f'(x)}{g'(x)}
+  \end{align*}
+
+\end{description}
+
+\section*{Examples}
+\begin{description}
+\item[Easy] $\ds \lim_{x\rightarrow 0}\frac{e^{3x}-1}{x}$,
+  $\ds\lim_{x\to 0}\frac{\sin(x)}{x}$, $\ds\lim_{x\to\infty}
+  \frac{x^p}{e^{kx}}$.
+\item[Hard] $\ds\lim_{x\to 0}x\ln|x|$, $\ds\lim_{x\to \infty}x^{1/x}$,
+  $\ds\lim_{x\to 0}\frac{1}{t}-\frac{1}{e^t-1}$.
+\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[Section 4.7] 16, 17, 22, 24, 29, 37
+\end{description}
+\end{document}
