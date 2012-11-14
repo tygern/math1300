@@ -1,0 +1,190 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+%\usepackage{mathpazo}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Properties of Definite Integrals}
+\renewcommand{\dateinfo}{section 5.4}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+For the following notes, let $f(x)$ and $g(x)$ be continuous
+functions, and let $a$, $b$, and $c$ be constants.
+
+\section*{Rules}
+\begin{description}
+\item[Warm up] What is $\int_a^a f(x)\;dx$?
+
+  This is the area under the curve from $a$ to $a$, or the area under
+  the curve at one point.  Since the area we are looking for has a
+  width of zero, it must be zero (see figure 1).  Then
+  \begin{center}
+    \framebox{$\displaystyle \int_a^a f(x)\;dx = 0$.}
+  \end{center}
+
+\item[Limits of Integration] What happens if we switch the limits of
+  integration?
+
+  We are used to looking at $\int_a^b f(x)\; dx$ when $a\leq b$, but
+  what about $\int_b^a f(x)\; dx$?  To compute this consider the
+  definition of the integral:
+  \[
+  \int_a^b f(x)\; dx = \lim_{n\to\infty} \sum_{i=1}^n f(x_i)\Delta x =
+  \lim_{n\to\infty} \sum_{i=1}^n f(x_i)\cdot\frac{b-a}{n}.
+  \]
+  When we switch $b$ and $a$, we see that the only part of the formula
+  that changes is the ``$\Delta x$'' part:
+  \[
+  \int_b^a f(x)\; dx = \lim_{n\to\infty} \sum_{i=1}^n f(x_i)
+  \cdot\frac{a-b}{n} = -\left(\lim_{n\to\infty} \sum_{i=1}^n f(x_i)
+    \cdot\frac{a-b}{n}\right)=-\int_a^b f(x)\; dx,
+  \]
+  so
+  \begin{center}
+    \framebox{$\displaystyle\int_b^a f(x)\; dx = -\int_b^a f(x)\; dx$}
+  \end{center}
+
+\item[Adding] How can we break apart and combine integrals?
+
+  We have the following fact:
+  \begin{center}
+    \framebox{$\displaystyle \int_a^c f(x)\;dx + \int_c^b f(x)\;dx = \int_a^b
+    f(x)\;dx.$}
+  \end{center}
+  This fact is fairly easy to see if $a\leq c\leq b$ (refer to figure
+  2).
+
+  What if $a\leq b \leq c$?  The fact is still true, but it is a bit
+  harder to see.  Consider figure 3.  We see that $\int_a^c f(x)\; dx$
+  measures the area under $f$ from $a$ to $c$.  Then $\int_c^b f(x)\;
+  dx$ measures \emph{negative} the area under $f$ between $c$ and $b$
+  since $c<b$.  When we add them together, we get the area between $a$
+  and $b$.
+
+  Note that this fact is true regardless of the relationship between
+  $a$, $b$, and $c$.
+\item[Sum and Multiple] How do we deal with addition and scalar
+  multiplication of integrals?
+
+  We have the following rule:
+  \begin{center}
+    \framebox{$\displaystyle \int_a^b f(x)\; dx \pm \int_a^b g(x)\; dx =
+      \int_a^b \left(f(x)\pm g(x)\right)\; dx$.}
+  \end{center}
+  See figure 4 for a graphical depiction of this.  We also have this rule:
+  \begin{center}
+    \framebox{$\displaystyle \int_a^b (c\cdot f(x))\; dx
+      = c\cdot\int_a^b f(x)\; dx$.}
+  \end{center}
+  To see that this is true, we know that the graph of $c\cdot f(x)$ is
+  obtained by stretching the graph of $f$ by a factor of $c$, so the
+  area should be scaled by a factor of $c$ (see figure 5).
+  
+\item[Example] Compute $\int_2^7 (2x^2+3x-7)\;dx$.
+
+  To do this, we will use the rule from Wednesday that if $f(x) =
+  x^k$, then an antiderivative for $f$ is $F(x)=\frac{1}{k+1}x^{k+1}$.
+  Then we can use the rules above to split up the integral:
+  \[
+  \int_2^7 (2x^2+3x-7)\;dx =
+  \int_2^7 2x^2\; dx +\int_2^7 3x\; dx - \int_2^7 7\; dx = 
+  2\int_2^7 x^2\; dx +3\int_2^7 x\; dx - 7\int_2^7 x^0\; dx.
+  \]
+  Using what we know about antiderivatives we get
+  \[
+  \int_2^7 (2x^2+3x-7)\;dx
+  = 2\left(\frac{7^3}{3}-\frac{2^3}{3}\right) +
+  3\left(\frac{7^2}{2}-\frac{2^2}{2}\right) -
+  7\left(\frac{7^1}{1}-\frac{2^1}{1}\right)
+  = \frac{1535}{6} \approx 255.8333.
+  \]
+  
+\end{description}
+
+\section*{Applications}
+\begin{description}
+\item[Area Between Functions] If $f(x)\geq g(x)$ on the interval
+  $[a,b]$ then we can calculate the area in between $f(x)$ and $g(x)$
+  by
+  \begin{center}
+    \framebox{$\displaystyle\text{area} = \int_a^b (f(x)-g(x))\; dx$.}
+  \end{center}
+
+  Let's look at an example for how to calculate the area between two
+  functions. Let $f(x)=x^2$ and let $g(x)=x^3$, and suppose we are
+  asked to calculate the area between $f$ and $g$.  We should first
+  graph these function to get an idea for what area we are looking for
+  (see figure 6). We can see from the graph that we are looking for
+  the area between their two points of intersection.  To find these
+  points of intersection we can set the functions equal to each other:
+  \begin{align*}
+    g(x) &= f(x)\\
+    x^3 &= x^2\\
+    x^3 - x^2 &= 0\\
+    x^2(x-1) &= 0\\
+    x &= 0\text{, or }1.
+  \end{align*}
+
+  Then we see that $x^2\geq x^3$ on $[0,1]$, so
+  \[
+  \text{area} = \int_0^1 (x^2 - x^3)\; dx = \frac{1}{12} \approx .08333.
+  \]
+  
+\item[Symmetry] Recall the definitions of even and odd functions.
+
+  If $f(x)$ is an even function then we have
+  \begin{center}
+    \framebox{$\displaystyle\int_{-a}^a f(x)\; dx = 2\int_0^a f(x)\;
+      dx$.}
+  \end{center}
+  This works because $f(x)$ is symmetric about the $y$-axis, so the
+  area under the curve from $-a$ to 0 is the same as from 0 to $a$
+  (see figure 7).
+
+  If $g(x)$ is an odd function then we have
+  \begin{center}
+    \framebox{$\displaystyle\int_{-a}^a g(x)\; dx = 0$.}
+  \end{center}
+  This works because $g(x)$ is symmetric about the origin, so the area
+  under the curve from $-a$ to 0 is the same as from 0 to $a$, but is
+  negative (see figure 8).
+
+\item[Examples] Suppose that $f$ is even, and that $\int_{-2}^2
+  f(x)\;dx=6$ and $\int_{-5}^5 f(x)\;dx=14$.  Find $\int_2^5
+  f(x)\;dx$.
+
+  Since $\int_{-2}^2 f(x)\;dx=6$ then we can use the above fact to
+  show that $\int_{0}^2 f(x)\;dx=3$.  Similarly, we can use the fact
+  that $\int_{-5}^5 f(x)\;dx=14$ to show that $\int_{0}^5 f(x)\;dx=7$.
+  Then we can use what we know about splitting up integrals from above
+  to find
+  \begin{align*}
+    \int_{2}^5 f(x)\;dx &= \int_{2}^0 f(x)\;dx + \int_{0}^5 f(x)\;dx\\
+    &= -\int_{0}^2 f(x)\;dx + \int_{0}^5 f(x)\;dx\\
+    &= -3 + 7 = 4.
+  \end{align*}
+
+  
+\end{description}
+
+\section*{Theorems}
+\begin{description}
+\item[Comparison] If $f(x)\leq g(x)$ on $[a,b]$ then
+  \begin{center}
+    \framebox{$\displaystyle \int_a^b f(x)\;dx \leq \int_a^b
+      g(x)\;dx$.}
+  \end{center}
+  This makes sense due to the fact that if all the $y$-values of $g$
+  are larger than the $y$-values of $f$, then the area under $g$
+  should be larger than the area under $f$ (see figure 9).
+\end{description}
+
+\end{document}

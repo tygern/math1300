@@ -1,0 +1,63 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+%\usepackage{mathpazo}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Properties of Definite Integrals}
+\renewcommand{\dateinfo}{section 5.4}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Basic}
+\begin{description}
+\item[Warm up] What is $\int_a^a f(x)\;dx$?
+\item[Limits of Integration] Draw a picture with $\Delta
+  x=\frac{a-b}{n}=-\frac{b-a}{n}$.  Then
+  \[
+  \int_b^a f(x)\;dx = -\int_a^b f(x)\;dx.
+  \]
+\item[Adding]  Again, draw pictures.
+  \[
+  \int_a^c f(x)\;dx + \int_c^b f(x)\;dx = \int_a^b f(x)\;dx.
+  \]
+  What if $c\not\in [a,b]$?
+\item[Sum and Multiple] Again, draw pictures.
+\item[Compute] $\int_2^7 (2x^2+3x-7)\;dx$
+\end{description}
+
+\section*{Applications}
+\begin{description}
+\item[Area Between Functions] Example (with picture): area between
+  $f(x)=x^2$ and $g(x)=x^3$.  Write formula.
+\item[Symmetry] Draw pictures, even, odd.
+\item[Examples] First easy, then $f$ even, $\int_{-2}^2 f(x)\;dx=6$
+  and $\int_{-5}^5 f(x)\;dx=14$.  Find $\int_2^5 f(x)\;dx$.
+\end{description}
+
+\section*{Theorems}
+\begin{description}
+\item[Comparison] If $f(x)\leq g(x)$ on $[a,b]$ then
+  \[
+  \int_a^b f(x)\;dx \leq \int_a^b g(x)\;dx.
+  \]
+\item[Bounds (optional)] If $m$ is a lower bound and $M$ is an upper
+  bound for $f$ on $[a,b]$ then
+  \[
+  m(b-a)\leq \int_a^b f(x)\;dx \leq M(b-a).
+  \]
+\end{description}
+
+
+\section*{Group Work}
+\begin{description}
+\item[Section 5.4] 28, 31, 33, 36
+\end{description}
+\end{document}

@@ -1,0 +1,197 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{enumerate}
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Practice Final Exam}
+\renewcommand{\dateinfo}{spring 2012}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\noindent Please answer the following questions completely, showing all work.
+If you use your calculator please indicate how it was used.  Clearly
+state each answer.
+
+\begin{enumerate}
+\item Compute the following derivatives and indefinite integrals.  You
+  may \textbf{not} use your calculator on this portion of the exam.
+  \begin{enumerate}
+  \item $\ds\frac{d}{dx}\left(\sqrt{\frac{\sin(2x)}{\cos(2x)}}\right)$
+    \vfill
+    \[
+    \frac{2}{\cos^2(2x)}\cdot\frac{1}{2}(\tan(2x))^{-1/2}
+    \]
+    \vfill
+  \item $\ds\int\left(3e^x+\frac{4}{x}\right)\;dx$
+    \vfill
+    \[
+    3e^x+4\ln|x|+C
+    \]
+    \vfill
+    \newpage
+  \item $\ds\frac{d}{dx}\left(\tan^2\left(\ln\left(
+          x\right)\right)\right)$
+    \vfill
+    \[
+    \frac{1}{x}\cdot\frac{1}{\cos^2(\ln(x))}\cdot 2\tan(\ln(x))
+    \]
+    \vfill
+  \item $\ds\int\left(x+7\right)^3\;dx$
+    \vfill
+    \[
+    \frac{(x+7)^4}{4}+C
+    \]
+    \vfill
+    \newpage
+  \item $\ds\frac{d}{dx}\left(\sqrt{2^x}\cdot \frac{1}{x^2}\right)$
+    \vfill
+    \[
+    \sqrt{2^x}\cdot-\frac{2}{x^3}+\ln(2)\cdot2^x\cdot\frac{1}{2}\cdot
+    (2^x)^{-1/2}\cdot\frac{1}{x^2}
+    \]
+    \vfill
+  \item $\ds\int\left(\frac{x+2}{x}\right)\;dx$
+    \vfill
+    \[
+    =\int\left(1+\dfrac{2}{x}\right)\;dx=x+2\ln|x|+C
+    \]
+    \vfill
+  \end{enumerate}
+
+  \newpage
+  
+\item Let $f(x)$ be a continuous function such that $f(0)=0$, and let
+  the graph below represent $\mathbf{f'(x)}$.  Draw the graphs of
+  $f(x)$ and $f''(x)$ on the axes given below.
+  \begin{itemize}
+  \item $f'(x)$
+    \begin{center}
+      \includegraphics[width=3.5in]{fprime.pdf}
+    \end{center}
+    \vfill
+  \item[(a)] $f(x)$
+    \begin{center}
+      \includegraphics[width=3.5in]{f.pdf}
+    \end{center}
+    \vfill
+  \item[(b)] $f''(x)$
+    \begin{center}
+      \includegraphics[width=3.5in]{fdoubleprime.pdf}
+    \end{center}
+    \vfill
+  \end{itemize}
+
+  \newpage
+
+\item Suppose that you are making a cylindrical can that will hold 21
+  cubic inches of liquid.  If you want to use the minimal amount of
+  material to make the can, what should the dimensions of the can be?
+
+  \vfill 
+  
+  The volume of the can is given by $V=\pi r^2h$ and the
+  surface area is given by $SA=2\pi r^2+2\pi r h$.  Then
+  \begin{align*}
+    21 &= \pi r^2 h\\
+    \frac{21}{\pi r^2} &= h,\\
+    \intertext{so}
+    SA &= 2\pi r^2 + \dfrac{42}{r}
+  \end{align*}
+  where $r$ is in the interval $[0,\infty)$. Then
+  \[
+  \frac{dSA}{dr} = 4\pi r-\frac{42}{r^2},
+  \]
+  so we have a critical point at $r=\sqrt[3]{\frac{42}{4\pi}}$.  Since
+  $SA\to \infty$ as $r\to 0$ or $r\to infty$ we know that this CP is a
+  minimum.  Then the can must have a radius of
+  $\sqrt[3]{\frac{42}{4\pi}}\approx 1.49$ inches and a height of
+  approximately $2.99$ inches.
+
+  \vfill \newpage
+
+\item Suppose that a car is traveling in a straight line with velocity
+  given by $v(t)=t^2$ meters per second after $t$ seconds.
+  \begin{enumerate}
+  \item How far does the car travel in the first 10 seconds?
+    \vfill
+    \[
+    \int_0^{10} t^2\;dt =
+    \frac{t^3}{3}\Big\vert_0^{10}=\frac{1000}{3}=333.33\text{ m}
+    \]
+    \vfill
+  \item When is the car's acceleration equal to $6$ m/s$^2$?
+    \vfill
+    \begin{align*}
+      a(t) &= v'(t) = 2t = 6\\
+      t &= 3\text{ s}
+    \end{align*}
+    \vfill
+  \end{enumerate}
+
+  \newpage
+
+\item Find the derivative of $f(x)=x^2-3$ using the limit definition
+  of the derivative.
+  \vfill
+  \begin{align*}
+    f'(x) &=\lim_{h\to 0} \frac{(x+h)^2-3-x^2+3}{h} \\
+    &=\lim_{h\to 0} \frac{2xh+h^2}{h}\\
+    &= \lim_{h\to 0} 2x+h = 2x
+  \end{align*}
+  \vfill
+
+\item Use the linear approximation of $f(x)=\sqrt{x}$ near $x=9$ to
+  estimate $\sqrt{9.2}$.
+
+  \vfill
+  $f'(x)=\dfrac{1}{2}x^{-1/2}$, so the
+  tangent line to $f(x)$ at $x=9$ is given by
+  \[
+  y=f(9)+f'(9)(x-9) = 3 + \frac{1}{6}(x-9) = \frac{1}{6} x + \frac{3}{2}
+  \]
+  \vfill
+
+  \newpage
+
+\item Suppose that the marginal cost of producing $q$ VCRs is given by
+  \[
+  MC = 6q.
+  \]
+  What is the difference between the cost of producing 100 VCRs and
+  the cost of producing 150 VCRs?
+  \vfill
+  \[
+  C(150)-C(100)=\int_{100}^{150} MC(q)\;dq = \int_{100}^{150} 6q\;dq =
+  3q^2\big\vert_{100}^{150} = \$ 37500
+  \]
+  \vfill
+
+\item On the axes below, draw a graph of a function with the following
+  properties:
+  \begin{multicols}{2}
+    \begin{enumerate}[(i)]
+    \item $f(x)$ is continuous everywhere except $x=1$
+    \item $f(x)$ is differentiable everywhere except $x=1$ and $x=-1$.
+    \item $\ds\lim_{x\to\infty} f(x) = 2$.
+    \item $f(x)$ is increasing and concave down on $[-1,1]$.
+    \item $f(x)$ has a critical point at $x=-2$.
+    \item $\ds\lim_{x\to 1} f(x)$ exists.
+    \end{enumerate}
+  \end{multicols}
+  \vfill
+  \begin{center}
+    Answers will vary.
+  \end{center}
+  \vfill
+\end{enumerate}
+
+\end{document}

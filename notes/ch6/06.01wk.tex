@@ -1,0 +1,112 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{The Antiderivative}
+\renewcommand{\dateinfo}{section 6.1}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\begin{enumerate}
+
+\item Give the values of the derivative $f'(x)$ in the table and that
+  $f(0)=50$, estimate $f(x)$ for $x=2,4,6$.
+  \[
+    \begin{array}{c|c|c|c|c}
+      \hline
+      x & 0 & 2 & 4 & 6\\
+      \hline
+      f'(x) & 10 & 18 & 23 & 25 \\
+      \hline
+   \end{array}
+    \]
+
+   \vfill
+
+  \item Given the graph of $f(x)$, below, sketch the graph of
+    \emph{two} different antiderivatives for $f$.
+    \begin{center}
+      \begin{tikzpicture}
+        \def\xmin{-4}
+        \def\xmax{4}
+        \def\ymin{-4}
+        \def\ymax{4}
+        \draw[->] (\xmin,0) -- (\xmax,0);
+        \draw[->] (0,\ymin) -- (0,\ymax);
+        \draw[thick, domain=\xmin:\xmax] plot[samples=100]
+      function{sin(x)};
+    \end{tikzpicture}
+  \end{center}
+
+\newpage
+
+\item Let $g(t)$ be defined as below.
+  \begin{center}
+    \includegraphics{graphofg.pdf}
+  \end{center}
+  Use this information to graph an antiderivative $G(t)$ of $g(t)$
+  satisfying $G(0)=5$.  Label each critical point of $G(t)$ with its
+  coordinates.
+
+  \vfill
+
+\item Use a graph of $f(x)=2\sin(x^2)$ to determine where an
+  antiderivative, $F$, of this function reaches its maximum on $0\leq
+  x\leq 3$. If $F(1)=5$, find the maximum $y$-value attained by $F$.
+
+  \vfill
+
+  \newpage
+
+\item Let $f''(x)$ be given below.
+  \begin{center}
+    \includegraphics{graphoff.pdf}
+  \end{center}
+  Draw graphs of $f(x)$ and $f'(x)$, assuming both go through the
+  origin, and use them to decide at which of the labeled $x$-values:
+  \begin{enumerate}
+  \item $f(x)$ is the greatest.
+    \vfill
+  \item $f(x)$ is the least.
+    \vfill
+  \item $f'(x)$ is the greatest.
+    \vfill
+  \item $f'(x)$ is the least.
+    \vfill
+  \item $f''(x)$ is the greatest.
+    \vfill
+  \item $f''(x)$ is the least.
+    \vfill
+  \end{enumerate}
+
+  \newpage
+
+\item The vertical velocity of a cork bobbing up and down on the waves
+  in the sea is given below.
+  \begin{center}
+    \includegraphics{corkgraph.pdf}
+  \end{center}
+  Upward is considered positive.
+  \begin{enumerate}
+  \item Describe the motion of the cork at each of the labeled points.
+    \vfill
+  \item At which point(s), if any, is the acceleration zero?
+    \vfill
+  \item Sketch a graph of the height of the cork above the sea floor
+    as a function of time.
+    \vfill
+  \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

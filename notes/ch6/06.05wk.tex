@@ -1,0 +1,106 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+%\usepackage{mathpazo}
+\usepackage{multicol}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Equations of Motion}
+\renewcommand{\dateinfo}{section 6.5}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\begin{enumerate}
+\item A ball that is dropped from a window hits the ground in five
+  seconds. How high is the window?
+
+  \vfill
+  
+\item On the moon the acceleration due to gravity is 5 ft/sec$^2$.  An
+  astronaut jumps into the air with an initial upward velocity of 10
+  ft/sec.  How high does he go? How long is the astronaut off the
+  ground?
+
+  \vfill\newpage
+
+\item While attempting to understand the motion of bodies under
+  gravity, Galileo stated that:
+
+  \begin{quote}
+    The time in which any space is traversed by a body starting at
+    rest and uniformly accelerated is equal to the time in which the
+    same space would be traversed by the same body moving at a uniform
+    speed whose value is the mean of the highest velocity and the
+    velocity just before acceleration began.
+  \end{quote}
+
+  \begin{enumerate}
+  \item Write Galileo's statement in symbols, defining all the symbols
+    you use.
+
+    \vfill
+    
+  \item Check Galileo's statement for a body dropped off a 100-foot
+    building accelerating from rest under gravity until it hits the
+    ground.
+
+    \vfill
+    
+  \item Show why Galileo's statement is true in general.
+
+    \vfill
+    
+  \end{enumerate}
+
+  \newpage
+
+\item Newton's law of gravity says that the gravitational force
+  between two bodies is attractive and given by
+  \[
+  F=\frac{GMm}{r^2},
+  \]
+  where $G$ is the gravitational constant, $m$ and $M$ are the masses
+  of the two bodies, and $r$ is the distance between them.  According
+  to Newton's second law,
+  \[
+  \text{Force}=\text{Mass}\times\text{Acceleration}.
+  \]
+  Let $s$ be the position of an object of mass $m$ that is being acted
+  upon by gravity.  Then
+  \begin{align*}
+    m\cdot a &= -\frac{GMm}{r^2} \\
+    m\frac{d^2s}{dt^2} &= -\frac{GMm}{r^2} \\
+    \frac{d^2s}{dt^2} &= -\frac{GM}{r^2},
+  \end{align*}
+  where $r$ is the distance between the object and the center of the
+  earth.  Since in everyday life $r$ does not change significantly
+  over the course of motion we usually assume $r$ is constant.
+  However let's see what happens as $r$ varies greatly.
+
+  The acceleration due to gravity 2 meters from the ground is 9.8
+  m/sec$^2$.  What is acceleration due to gravity 100 meters from the
+  ground? At 100,000 meters? (The radius of the earth is $6.4\cdot
+  10^6$ meters)
+
+  \newpage
+
+\item On a different sheet of paper, compute the following:
+  \begin{enumerate}
+  \item $\ds\frac{d}{dx}\int_3^x \frac{\ln(t)}{\sin(t)}\;dt$ \vfill
+  \item $\ds\frac{d}{dx}\int_x^6 \frac{\sqrt{t}}{\cos(t)}\;dt$ \vfill
+  \item $\ds\frac{d}{dx}\int_7^{\sin(x)} e^{t^8}\;dt$ \vfill
+  \item $\ds\frac{d}{dx}\int_{t^{-2}}^{\sin(x)} \tan(4t^2)\;dt$ \vfill
+  \item $\ds\int e^{x+1}\; dx$ \vfill
+  \item $\ds\int \sqrt{3x+4}\; dx$ \vfill
+  \item $\ds\int \frac{1}{2x-81}\; dx$ \vfill
+  \end{enumerate}
+
+\end{enumerate}
+\end{document}

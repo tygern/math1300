@@ -1,0 +1,63 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+%\usepackage{mathpazo}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Fundamental Theorem of Calculus}
+\renewcommand{\dateinfo}{section 5.3}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Introduction}
+\begin{description}
+
+\item[Units] of $\ds\int_a^b f(x)\;dx$.  Think
+  $(f\text{-units})\cdot(x\text{-units})$, use the ``$dx$'' as a clue.
+\item[Example] How do we interpret $\ds\int_a^b f(x)\;dx$, say, in a
+  word problem?
+  \begin{itemize}
+  \item Let $f(t)=v(t)=\text{velocity}$.
+  \item Then $\int_a^b f(t)\;dt$ is the distance traveled between
+    $t=a$ and $t=b$.
+  \item How else could we write this?  Let
+    $F(t)=s(t)=\text{position}$.  Then distance traveled is
+    $F(b)-F(a)$.
+  \item Note that $F'(t)=f(t)$, and in this case
+    \[
+    \int_a^b f(t)\;dt = F(b)-F(a).
+    \]
+  \end{itemize}
+
+\end{description}
+
+\section*{In General}
+\begin{description}
+\item[Arbitrary Function] If $f(x)$ is any function, we can use the
+  above example to say something about $\ds\int_a^b f(x)\;dx$.
+\item[Fundamental Theorem] If $f(x)$ is continuous on the interval
+  $[a,b]$ and $F(x)$ is a function such that $F'(x)=f(x)$ then
+  \[
+  \int_a^b f(x)\;dx = F(b)-F(a).
+  \]
+\end{description}
+
+\section*{Example}
+\begin{description}
+\item[Water Tank] water leaking. Volume changing at rate of
+  $f(t)=-\dfrac{t}{10}$ gal/hr.  How much water is lost after one day?
+\end{description}
+
+
+\section*{Group Work}
+\begin{description}
+\item[Section 5.3] 4-7, 27, 38
+\end{description}
+\end{document}

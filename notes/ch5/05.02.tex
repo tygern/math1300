@@ -1,0 +1,57 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Definite Integral}
+\renewcommand{\dateinfo}{section 5.2}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Introduction}
+\begin{description}
+\item[Goal] Generalize idea of area between the curve and the $x$-axis
+  from last class.
+\item[First] sigma notation
+  \begin{align*}
+    \sum_{i=1}^6 (i+2) &&& \sum_{i=2}^5 i^2
+  \end{align*}
+\item[Rectangles] $\Delta t=\dfrac{b-a}{n}$, $a=t_0,t_1,\dots, t_n=b$.
+  Then
+  \begin{align*}
+    \sum_{i=0}^{n-1}f(t_i)\Delta t &&& \sum_{i=1}^{n}f(t_i)\Delta t
+  \end{align*}
+\item[Limit] as $n\to\infty$ of sums will give us area
+\item[Definition]
+  \[
+  \int_{a}^{b}f(t)\;dt = \lim_{n\to\infty}\sum_{i=0}^{n-1}f(t_i)\Delta t
+  = \lim_{n\to\infty}\sum_{i=1}^{n}f(t_i)\Delta t
+  \]
+\end{description}
+
+\section*{Computing}
+\begin{description}
+\item[Approximation] Example: $\ds\int_{1}^{5}\dfrac{1}{x} \; dx$ with
+  $n=4$.
+\item[Calculator] \fbox{MATH} + \fbox{9}
+  \begin{center}
+    \verb#fnInt(f(X),X,a,b)#
+  \end{center}
+\item[Area] Talk about when positive or negative.  Compute
+  \begin{align*}
+    \int_1^8 (2x-6)\; dx &&& \int_{-3}^3 \sqrt{9-x^2}\; dx
+  \end{align*}
+\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[Section 5.2] 23, 31, 32
+\end{description}
+\end{document}

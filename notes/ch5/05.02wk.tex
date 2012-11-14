@@ -1,0 +1,78 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{The Definite Integral}
+\renewcommand{\dateinfo}{section 5.2}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\begin{enumerate}
+\item Compute the following definite integrals using geometry.
+  \begin{enumerate}
+  \item $\ds\int_1^8 (2x-6)\;dx$
+    \vfill
+  \item $\ds\int_{-7}^{12} (-2)\;dx$
+    \vfill
+    \newpage
+  \item $\ds\int_{-3}^3 \sqrt{9-x^2}\;dx$
+    \vfill
+  \item $\ds\int_{-8}^8 x^3\;dx$
+    \vfill
+  \end{enumerate}
+
+  \newpage
+
+\item Use the table below to estimate $\ds\int_0^{12} f(x)\;dx$
+  \[
+  \begin{array}{c|c|c|c|c|c|c|c}
+    \hline
+    x&0&2&4&6&8&10&12\\
+    \hline
+    f(x)&-4&-2&1&6&7&8&10\\
+    \hline
+  \end{array}
+  \]
+
+  \newpage
+
+\item Use a left hand sum with $n=6$ to approximate
+  $\ds\int_1^4\dfrac{1}{x}\;dx$.  Is your estimate an overestimate or
+  an underestimate?
+
+  \vfill
+
+\item Find the area of the region under the curve $f(x)=9-x^2$ and
+  above the $x$-axis.
+
+  \vfill
+
+  \newpage
+
+\item Let $f(x)$ be an even function.  Using the fact that
+  $\ds\int_0^3 f(x)\;dx = 4$ find the following definite integrals.
+  \begin{enumerate}
+  \item $\ds\int_{-3}^3 f(x)\;dx$
+    \vfill
+  \item $\ds\int_{-3}^0 f(x)\;dx$
+    \vfill
+  \end{enumerate}
+
+  \newpage
+
+\item Without directly computing the sums, find the differences between
+  the left- and right-hand Riemann sums if we use $n=200$ to
+  approximate $\ds\int_1^{27}\sqrt[3]{x}\;dx$.
+
+  
+\end{enumerate}
+
+\end{document}

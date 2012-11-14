@@ -1,0 +1,67 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+%\usepackage{mathpazo}
+\usepackage{multicol}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Second FTOC}
+\renewcommand{\dateinfo}{section 6.4}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Setup}
+\begin{description}
+\item[Recall] First FTOC
+  \[
+  F(b)-F(a)=\int_a^b f(x)\;dx
+  \]
+\item[Antiderivative] From before, if $f(x)=\sin(x^2)$ then hard to
+  find antiderivative.  How to find one?
+  \[
+  F(b)-F(a)=\int_a^b \sin(t^2)\;dt.
+  \]
+  Set $b=x$ and $a=0$.  Then
+  \[
+  F(x)-F(0)=\int_0^x \sin(t^2)\;dt,
+  \]
+  where $F'(x)=\sin(x^2)$.  Say want $F(0)=0$.  Then
+  \[
+  F(x)=\int_0^x \sin(t^2)\;dt
+  \]
+  is an antiderivative.
+
+\item[Example] Find antiderivative, $F$, of
+  $f(x)=\sqrt{\ln(x)\sin^4(x)}$ such that $F(7)=0$
+
+\end{description}
+
+\section*{Second FTOC}
+\begin{description}
+\item[Theorem] Let $f(x)$ be continuous on an interval.  Then if $a$
+  is any number on that interval, the function
+  \[
+  F(x)=\int_a^x f(t)\;dt,
+  \]
+  is an antiderivative for $f(x)$.  Equivalently,
+  \[
+  \frac{d}{dx}\left(\int_a^x f(t)\;dt\right)=f(x)
+  \]
+\item[Examples] A few without chain rule.  Some with chain rule.
+  Double.
+
+
+\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[Section 6.4] 8, 11, 16, 29, 36
+\end{description}
+\end{document}

@@ -1,0 +1,51 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Measuring Distance}
+\renewcommand{\dateinfo}{section 5.1}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Introduction}
+\begin{description}
+\item[Example] 60 mph for 2 hours.  How far did you travel?
+\item[Abstract] Draw velocity curve with labels (total 4
+  sec). Estimate every 2 seconds, then every second.
+\item[Area] More rectangles $\Rightarrow$ better estimate.  Imagine an
+  infinite amount of rectangles.  This gives the area under the curve.
+\item[Rule] If velocity is positive, then the area under the curve is
+  total distance traveled.
+\item[Negative?] Talk about displacement.  Show picture.
+\end{description}
+
+\section*{Sums}
+\begin{description}
+\item[Define] $n=$ number of intervals, $a=$ start, $b=$ end, $\Delta
+  t=\dfrac{b-a}{n}$.  Enumerate $t_0, t_1, \dots, t_n$.  Then
+  \begin{align*}
+    \mbox{left} &= f(t_0)\Delta t + f(t_1)\Delta t + \cdots +
+    f(t_{n-1})\Delta t\\
+    \mbox{right} &= f(t_1)\Delta t + f(t_2)\Delta t + \cdots +
+    f(t_{n})\Delta t
+  \end{align*}
+\item[Accuracy] Difference between upper and lower small $\Rightarrow$ more
+  accurate.  Draw picture, stack rectangles, then
+  \[
+  |f(b)-f(a)|\cdot\Delta t.
+  \]
+\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[Section 5.1] 1, 4, 14
+\end{description}
+\end{document}

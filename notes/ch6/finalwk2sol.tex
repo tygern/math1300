@@ -1,0 +1,272 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{enumerate}
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Practice Final Exam}
+\renewcommand{\dateinfo}{spring 2012}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\noindent Please answer the following questions completely,
+\textbf{showing all work}.  If you use your calculator please indicate
+how it was used.  Clearly state each answer.
+
+\begin{enumerate}
+\item Compute the following derivatives and indefinite integrals.  You
+  may \textbf{not} use your calculator on this portion of the exam.
+  \begin{enumerate}
+  \item $\ds\frac{d}{dx}\left(\sqrt[6]{\frac{\ln(x)}{x^{-1}}}\right)$
+    \vfill
+    \[
+    (1+\ln(x))\cdot\frac{1}{6}\cdot (x\ln(x))^{-5/6}
+    \]
+    \vfill
+  \item $\ds\int\left(\frac{1}{3x+1}\right)\;dx$
+    \vfill
+    \[
+    \frac{1}{3}\ln|3x+1|+C
+    \]
+    \vfill
+    \newpage
+  \item $\ds\frac{d}{dx}\left(\int_{x^2}^{\tan(x)}\tan^2(t)\;dt\right)$
+    \vfill
+    \[
+    \frac{1}{\cos^2(x)}\cdot\tan^2(\tan(x))-2x\cdot\tan^2(x^2)
+    \]
+    \vfill
+  \item $\ds\int\sin\left(-2x\right)\;dx$
+    \vfill
+    \[
+    \frac{1}{2}\cos(-2x)+C
+    \]
+    \vfill
+    \newpage
+  \item $\ds\frac{d}{dx}\left(e^{\pi}-\pi^e+\ln(4)^x\right)$
+    \vfill
+    \[
+    \ln(\ln(4))\ln(4)^x
+    \]
+    \vfill
+  \item $\ds\int\left(\frac{1}{\cos^2(x)}\right)\;dx$
+    \vfill
+    \[
+    \tan(x)+C
+    \]
+    \vfill
+  \end{enumerate}
+
+  \newpage
+
+\item Calculate the following limits.
+  \begin{enumerate}
+  \item $\ds\lim_{x\to \infty}\frac{4x^{-3}+7x^4-x}{8x^e-9x^4}$
+    \vfill
+    \[
+    -\frac{7}{9}
+    \]
+    \vfill
+  \item $\ds\lim_{x\to 2}\frac{x^2-5x+6}{x^2-3x+2}$
+    \vfill
+    \[
+    =\lim_{x\to 2}\frac{x-3}{x-1}=-1
+    \]
+    \vfill
+  \item $\ds\lim_{x\to \infty}\frac{5+6x}{e^x}$
+    \vfill
+    \[
+    =\lim_{x\to\infty} \frac{6}{e^x}=0
+    \]
+    \vfill\newpage
+  \item $\ds\lim_{x\to 0}\frac{x^3-3+7x}{2^x}$
+    \vfill
+    \[
+    -3
+    \]
+    \vfill
+  \item $\ds\lim_{x\to 0}\left(\frac{1}{x}-\frac{1}{e^x-1}\right)$
+    \vfill
+    \[
+    =\lim_{x\to 0}\frac{e^x-1-x}{xe^x-x} =\lim_{x\to
+      0}\frac{e^x-1}{xe^x+e^x-1} =\lim_{x\to
+      0}\frac{e^x}{xe^x+2e^x}=\frac{1}{2}
+    \]
+    \vfill
+  \end{enumerate}
+  
+  \newpage
+
+\item A cone with a height of 16 meters and a radius of 8 meters at
+  the top is leaking water at a rate of $-4$ meters$^3$/hour.  When
+  the water in the cone is 8 meters deep, how fast is the height of
+  the water dropping in meters/hour? (The volume of a cone is given by
+  $V=\frac{1}{3}\pi r^2 h$)
+
+  \vfill
+
+  By similar triangles we know $r=\frac{1}{2}h$.  Then
+  \begin{align*}
+    V &=\frac{\pi}{12}h^3 \\
+    \intertext{so}
+    \frac{dV}{dt} &=\frac{\pi}{4}h^2\frac{dh}{dt}\\
+    \intertext{then when $h=8$}
+    -4 &=\frac{\pi}{4}\cdot 64 \cdot \frac{dh}{dt}\\
+    \intertext{so}
+    \frac{dh}{dt} &= -0.079599 \text{ m/h}.
+  \end{align*}
+
+  \vfill
+
+  \newpage
+
+\item Let $f(x)$ and $g(x)$ be functions with values defined below.
+  \[
+  \begin{array}{c||c|c|c|c|c}
+    x & -2 & -1 & 0 & 1 & 2\\
+    \hline\hline
+    f(x) & -2 & -1 & 1 & 2 & 4\\ \hline
+    f'(x) & 1 & 2 & 2 & 1 & 2\\ \hline
+    g(x) & -1 & 0 & 1 & -1 & -2\\ \hline
+    g'(x) & 2 & 1 & 0 & -2 & -1\\ 
+  \end{array}
+  \]
+  Calculate the following.
+  \begin{enumerate}
+  \item Let $h(x)=f(x)g(x)$.  Find $h'(1)$.
+    \vfill
+    \[
+    h'(1)=f'(1)g(1)+g'(1)f(1)= -5
+    \]
+    \vfill
+  \item Let $h(x)=\dfrac{f(x)}{g(x)}$.  Find $h'(-2)$.
+    \vfill
+    \[
+    h'(-2)=\frac{g(-2)f'(-2)-f(-2)g'(-2)}{g(-2)^2}= 3
+    \]
+    \vfill
+  \item Let $h(x)=f(g(x))$.  Find $h'(-2)$.
+    \vfill
+    \[
+    h'(-2)=g'(-2)\cdot f'(g(-2)) = 4
+    \]
+    \vfill
+  \item Let $h(x)=f^{-1}(x)$.  Find $h'(1)$.
+    \vfill
+    \[
+    h'(1)=\frac{1}{f'(f^{-1}(1))}=\frac{1}{2}
+    \]
+    \vfill
+  \end{enumerate}
+
+  \newpage
+
+\item Let $\ds F(x)=\int_{\pi/2}^x \dfrac{\sin(t)}{t}\;dt$.  Find the
+  global min and global max of $F(x)$ on the interval
+  $\left[\frac{\pi}{2},\frac{3\pi}{2}\right]$.
+
+  \vfill
+
+  By the second FTOC we know that $F'(x)=\frac{\sin(x)}{x}$, so the
+  only critical point in the given interval is at $x=\pi$.  Then
+  \begin{align*}
+    F\left(\frac{\pi}{2}\right) &= \int_{\pi/2}^{\frac{\pi}{2}}
+    \dfrac{\sin(t)}{t}\;dt = 0\\
+    F\left(\pi\right) &= \int_{\pi/2}^{\pi}
+    \dfrac{\sin(t)}{t}\;dt \approx 0.481175\\
+    F\left(\frac{\pi}{2}\right) &= \int_{\pi/2}^{\frac{3\pi}{2}}
+    \dfrac{\sin(t)}{t}\;dt \approx 0.237611\\
+  \end{align*}
+  so $F$ has a max of $0.481175$ at $x=\pi$ and a min of $0$ at
+  $x=\frac{\pi}{2}$.
+
+  \vfill
+
+  \newpage
+
+\item A line goes through the origin and a point on the curve $y=x^2
+  e^{-3x}$, for $x\geq 0$.  Find the maximum slope of such a line.  At
+  what $x$-values does it occur?
+
+  \vfill
+
+  The slope of the line through the points $(0,0)$ and $(x,y)$ is
+  given by
+  \[
+  s(x)= \frac{\Delta y}{\Delta
+    x}=\frac{y}{x}=\frac{x^2e^{-3x}}{x}=xe^{-3x}.
+  \]
+  Then we have a critical point when
+  \[
+  s'(x)=e^{-3x}-3xe^{-3x}=(1-3x)e^{-3x}=0,
+  \]
+  so at $x=\frac{1}{3}$.  We see that $s(x)\to 0$ as $x\to 0$ or
+  $x\to\infty$, so the critical point is a max.  Then the line has a
+  maximum slope of $s(1/3)=\frac{1}{3e}\approx 0.122626$ at $x=\frac{1}{3}$.
+  
+  \vfill
+  \newpage
+
+\item If $V(r)$ represents the volume of a sphere with radius $r$ and
+  $S(r)$ represents its surface area, it can be shown that
+  $V'(r)=S(r)$.  Use the fact that $S(r)=4\pi r^2$ to obtain the
+  formula for $V(r)$.
+
+  \vfill
+
+  \[
+  V(r)=\int S(r)\;dr=\frac{4}{3}\pi r^3 +C.
+  \]
+  We know that $V(0)=0$, so $C=0$ and thus $V(r)=\frac{4}{3}\pi r^3$.
+
+  \vfill
+
+\item Find $\int_2^5 f(x)\;dx$ given the following.
+  \begin{enumerate}
+  \item $f(x)$ is even, $\int_{-2}^2 f(x)\;dx=7$, and $\int_{-5}^5 f(x)\;dx=15$
+
+    \vfill
+
+    Since $f(x)$ is even we know that
+    \begin{align*}
+      \int_0^2 f(x)\;dx &= \frac{1}{2}\int_{-2}^2 f(x)\;dx = \frac{7}{2}\\
+      \intertext{and}
+      \int_0^5 f(x)\;dx = \frac{1}{2}\int_{-5}^5 f(x)\;dx = \frac{15}{2}\\
+    \end{align*}
+    Then
+    \begin{align*}
+      \int_2^5 f(x)\;dx &= \int_2^0 f(x)\; dx +\int_0^5 f(x)\; dx\\
+      &= -\int_0^2 f(x)\; dx +\int_0^5 f(x)\; dx\\
+      &= -\frac{7}{2}+\frac{15}{2}\\
+      &= 4
+    \end{align*}
+    
+    \vfill
+
+  \item $\int_2^5 (3f(x)+4)\;dx = 18$
+
+    \vfill
+
+    \[
+    18=\int_2^5 (3f(x)+4)\;dx=3\int_2^5 f(x)\;dx+\int_2^5
+    4\;dx=3\int_2^5 f(x)\;dx+12,
+    \]
+    so
+    \[
+    \int_2^5 f(x)\;dx = 2.
+    \]
+    
+    \vfill
+  \end{enumerate}
+  
+\end{enumerate}
+
+\end{document}

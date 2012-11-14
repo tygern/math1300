@@ -1,0 +1,81 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+%\usepackage{mathpazo}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Average Value of a Function}
+\renewcommand{\dateinfo}{section 5.3}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Introduction}
+\begin{description}
+
+\item[Recall] FTOC.  If $f(x)$ is continuous on $[a,b]$ and $F(x)$ is
+  an anti-derivative for $f(x)$, then
+  \[
+  F(b)-F(a)=\int_a^b f(x)\;dx.
+  \]
+\item[Goal] Using this we can tell the average value of a function.
+\item[Simple] Storage costs.  Warehouse, cost of storage on day $x$ is
+  $C(x)=300-10x$.  What is the average daily storage cost?
+\item[Complicated] Suppose population is given by
+  $f(x)=10000(1.05)^x$, where $x$ is years since 2000.  What is the
+  average population between 2000 and 2010?
+\end{description}
+
+\section*{Average Value}
+
+\begin{description}
+\item[Finite Average] If we have a finite number of points then
+  \[
+  \text{average} = \frac{x_1 + x_2 + \cdots + x_n}{n}.
+  \]
+\item[Approximate] Average value of a function $f$
+  \begin{align*}
+    \text{average} &\approx \frac{f(x_1) + f(x_2) + \cdots + f(x_n)}{n}\\
+    &\approx \left(f(x_1) + f(x_2) + \cdots + f(x_n)\right)\cdot\frac{1}{n}
+  \end{align*}
+
+\item[Exact] Average value of a function $f$
+  \[
+  \text{average} = \lim_{n\to\infty} \sum_{i=1}^n f(x_i)\cdot\frac{1}{n}
+  = \frac{1}{b-a}\lim_{n\to\infty}\sum_{i=1}^n f(x_i)\cdot\frac{b-a}{n}
+  = \frac{1}{b-a}\int_a^b f(x)\; dx
+  \]
+
+\end{description}
+
+%\section*{Average Rate of Change}
+%\begin{description}
+%\item[Goal] Let $f(x)$ be a continuous function on $[a,b]$.  We want
+%  to find the average value of $f$ on $[a,b]$.
+%\item[Rate] Suppose $F(x)$ is an anti-derivative of $f(x)$.  Then
+%  \[
+%  \text{average rate of change of }F(x) = \text{average value of }f(x).
+%  \]
+%\item[Know] Average rate of change of $F(x)=\dfrac{F(b)-F(a)}{b-a}$.
+%  Then
+%  \begin{align*}
+%    \text{average value of }f(x) &= \text{average rate of change of }F(x)\\
+%    &= \dfrac{F(b)-F(a)}{b-a}\\
+%    \intertext{so by the FTOC}
+%    &= \dfrac{\int_a^b f(x)\;dx}{b-a}\\
+%    &= \dfrac{1}{b-a}\int_a^b f(x)\; dx
+%  \end{align*}
+%\item[Apply] to previous example.  Average value is $\approx 12,890$.
+%\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[Section 5.3] worksheet
+\end{description}
+\end{document}

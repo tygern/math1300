@@ -1,0 +1,66 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+%\usepackage{mathpazo}
+\usepackage{multicol}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Finding Antiderivatives}
+\renewcommand{\dateinfo}{section 6.2}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Intro}
+\begin{description}
+\item[Goal] Given a function $f(x)$ find all antiderivatives.  This is
+  \textbf{hard} in general.
+\item[Notation] Indefinite integral.  Let $f(x)$ be a continuous
+  function and let $F(x)$ be an antiderivative for $f(x)$.  Then
+  \[
+  \int f(x)\;dx = F(x)+C.
+  \]
+\item[Caution] Note the difference between the definite and indefinite
+  integrals.  One is a number, the other is a family of functions.
+\end{description}
+
+\section*{Rules}
+\begin{description}
+\item[Question] ``What is $\int f(x)\;dx$?'' is the same as ``Find all
+  antiderivatives for $f(x)$''.
+\item[Antiderivatives] Know these
+  \begin{multicols}{2}
+    \begin{itemize}
+    \item $f(x)=0$
+    \item $f(x)=k$
+    \item $f(x)=x^n$, $n\neq 1$
+    \item $f(x)=\dfrac{1}{x}$
+    \item $f(x)=e^x$
+    \item $f(x)=\sin(x)$
+    \item $f(x)=\cos(x)$
+    \end{itemize}
+  \end{multicols}
+\item[Properties] Sum and constant multiple.
+\item[Examples] Combinations of polynomials and others.
+\end{description}
+
+\section*{Application}
+\begin{description}
+\item[Compute] Use antiderivative to compute definite integral.
+  \[
+  \int_a^b f(x)\;dx=F(b)-F(a)=F(x)\Big\vert_a^b
+  \]
+\item[Practice] Do some
+\end{description}
+
+\section*{Group Work}
+\begin{description}
+\item[Section 6.2] Various definite and indefinite integrals
+\end{description}
+\end{document}
