@@ -8,7 +8,7 @@
 
 \renewcommand{\theclass}{\textsc{math}1300: calculus I}
 \renewcommand{\theauthor}{Tyson Gern}
-\renewcommand{\theassignment}{Fundamental Theorem of Calculus}
+\renewcommand{\theassignment}{FTOC and Average Value}
 \renewcommand{\dateinfo}{section 5.3}
 
 \newcommand{\ds}{\displaystyle}
@@ -20,44 +20,54 @@
 \begin{description}
 
 \item[Units] of $\ds\int_a^b f(x)\;dx$.  Think
-  $(f\text{-units})\cdot(x\text{-units})$, use the ``$dx$'' as a clue.
+  $(f\text{-units})\cdot(x\text{-units})$.  Look at units of area.
 \item[Example] How do we interpret $\ds\int_a^b f(x)\;dx$, say, in a
   word problem?
   \begin{itemize}
-  \item Let $f(t)=v(t)=\text{velocity}$.
-  \item Then $\int_a^b f(t)\;dt$ is the distance traveled between
+  \item Let $v(t)=\text{velocity}$, $s(t)=\text{position}$. Note that $s'(t) = v(t)$.
+  \item Then $\int_a^b v(t)\;dt = s(b) - s(a)$ is the distance traveled between
     $t=a$ and $t=b$.
-  \item How else could we write this?  Let
-    $F(t)=s(t)=\text{position}$.  Then distance traveled is
-    $F(b)-F(a)$.
-  \item Note that $F'(t)=f(t)$, and in this case
-    \[
-    \int_a^b f(t)\;dt = F(b)-F(a).
-    \]
   \end{itemize}
 
 \end{description}
 
 \section*{In General}
 \begin{description}
-\item[Arbitrary Function] If $f(x)$ is any function, we can use the
-  above example to say something about $\ds\int_a^b f(x)\;dx$.
+\item[Arbitrary Function] We can use the above example to say
+  something about $\int_a^b f(x)\;dx$.
 \item[Fundamental Theorem] If $f(x)$ is continuous on the interval
-  $[a,b]$ and $F(x)$ is a function such that $F'(x)=f(x)$ then
+  $[a,b]$ and $F(x)$ is a function such that $F'(x)=f(x)$
+  (\textit{antiderivative}) then
   \[
   \int_a^b f(x)\;dx = F(b)-F(a).
   \]
 \end{description}
 
-\section*{Example}
+\section*{Average Value}
+
+\begin{description}
+\item[Finite Average] If we have a finite number of points then we
+  know how to find average.
+\item[Approximate] Average value of a function $f$
+  \begin{align*}
+    \text{average} &\approx \frac{f(x_1) + f(x_2) + \cdots + f(x_n)}{n}\\
+    &\approx \left(f(x_1) + f(x_2) + \cdots + f(x_n)\right)\cdot\frac{1}{n}
+  \end{align*}
+
+\item[Exact] Average value of a function $f$
+  \[
+  \text{average} = \lim_{n\to\infty} \sum_{i=1}^n f(x_i)\cdot\frac{1}{n}
+  = \frac{1}{b-a}\lim_{n\to\infty}\sum_{i=1}^n f(x_i)\cdot\frac{b-a}{n}
+  = \frac{1}{b-a}\int_a^b f(x)\; dx
+  \]
+\end{description}
+
+\section*{Examples}
 \begin{description}
 \item[Water Tank] water leaking. Volume changing at rate of
   $f(t)=-\dfrac{t}{10}$ gal/hr.  How much water is lost after one day?
+\item[Storage costs]  Warehouse, cost of storage on day $x$ is
+  $C(x)=300-10x$.  What is the average daily storage cost?
 \end{description}
 
-
-\section*{Group Work}
-\begin{description}
-\item[Section 5.3] 4-7, 27, 38
-\end{description}
 \end{document}
