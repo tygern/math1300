@@ -1,0 +1,64 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{The Definite Integral}
+\renewcommand{\dateinfo}{sections 5.1 \& 5.2}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\section*{Introduction}
+\begin{description}
+\item[Example] 60 mph for 2 hours.  How far did you travel?
+\item[Abstract] Draw velocity curve with labels (total 4
+  sec). Estimate every 2, then 1 second.
+\item[Area] More rectangles $\Rightarrow$ better estimate.  Infinite
+  gives area under the curve.
+\item[Rule] If velocity is positive, then the area under the curve is
+  total distance traveled.
+\item[Negative?] Talk about displacement.  Show picture.
+\item[Sum]
+  \[
+  \text{Distance Traveled} = \lim_{n\to\infty}\sum_{i=0}^{n-1}f(t_i)\Delta t
+  = \lim_{n\to\infty}\sum_{i=1}^{n}f(t_i)\Delta t
+  \]
+\end{description}
+
+\section*{Generalize}
+\begin{description}
+\item[General function] $f(x)$ on $[a,b]$.
+  \[
+  \text{Area under curve} = \int_a^b f(x)\; dx.
+  \]
+\item[Negative] Count area under the $x$-axis as negative.
+\item[Sum]
+  \[
+  \int_{a}^{b}f(t)\;dt = \lim_{n\to\infty}\sum_{i=0}^{n-1}f(t_i)\Delta t
+  = \lim_{n\to\infty}\sum_{i=1}^{n}f(t_i)\Delta t
+  \]
+\item[Accuracy] Difference between upper and lower small $\Rightarrow$ more
+  accurate.  Draw picture, stack rectangles, then
+  \[
+  |f(b)-f(a)|\cdot\Delta t.
+  \]
+\end{description}
+
+\section*{Computing}
+\begin{description}
+\item[Approximation] Example: $\ds\int_{1}^{5}\dfrac{1}{x} \; dx$ with
+  $n=4$.
+\item[Computer]
+\item[Area] Talk about when positive or negative.  Compute
+  \begin{align*}
+    \int_1^8 (2x-6)\; dx &&& \int_{-3}^3 \sqrt{9-x^2}\; dx
+  \end{align*}
+\end{description}
+\end{document}
