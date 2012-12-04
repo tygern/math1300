@@ -1,0 +1,72 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+%\usepackage{mathpazo}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Properties of Definite Integrals}
+\renewcommand{\dateinfo}{section 5.4}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\begin{enumerate}
+\item Suppose that $f(x)$ is a function with the following properties:
+  \begin{align*}
+    \int_3^5 f(x)\;dx = 4 &&& \int_5^7 f(x)\;dx = -2
+  \end{align*}
+  Calculate the values of
+  \begin{enumerate}
+  \item $\displaystyle \int_3^5 2\cdot f(x)\;dx$
+    \vfill
+  \item $\displaystyle \int_7^5 f(x)\;dx$
+    \vfill
+  \item $\displaystyle \int_3^7 f(x)\;dx$
+    \vfill
+  \item $\displaystyle \int_5^7 (f(x) + 4)\;dx$
+    \vfill
+  \end{enumerate}
+
+\newpage
+
+\item Suppose that $g(x)$ is an odd function with the following properties:
+  \begin{align*}
+    \int_4^{11} g(x)\;dx = 6 &&& \int_0^{11} g(x)\;dx = 13
+  \end{align*}
+  Calculate the values of
+  \begin{enumerate}
+  \item $\displaystyle \int_0^4 g(x)\;dx$
+    \vfill
+  \item $\displaystyle \int_0^{-4} g(x)\;dx$
+    \vfill
+  \item $\displaystyle \int_{-4}^4 g(x)\;dx$
+    \vfill
+
+    \newpage
+
+  \item $\displaystyle \int_{-4}^{-11} g(x)\;dx$
+    \vfill
+  \item $\displaystyle \int_{-4}^{11} g(x)\;dx$
+    \vfill
+  \end{enumerate}
+
+  \newpage
+
+\item Find the area between $f(x) = x+1$ and $g(x) = 2x+3$ on the interval $[1,6]$.
+
+  \vfill
+
+\item Set up an integral that finds the area between $f(x) = x^2 - 6$
+  and $g(x) = x$.  You do not need to evaluate the integral.
+
+  \vfill
+
+\end{enumerate}
+
+\end{document}
