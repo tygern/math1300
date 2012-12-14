@@ -1,0 +1,99 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{September 4, 2012}
+\renewcommand{\theassignment}{Quiz 1}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][3.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item What is the domain of the function
+  $f(x)=\displaystyle\frac{1}{\sqrt{x^2-9}}$? Is $\dfrac{1}{4}$ in the
+  range?
+
+  \vfill \color{blue} We know that we can neither divide by zero nor
+  take the square root of a negative number.  Then $x\neq \pm 3$ and
+  $x$ cannot be between $-3$ and $3$.  Then the domain of $f$ is
+  $(-\infty, -3) \cup (3,\infty)$.
+
+  We see that
+  \[
+  f(5) = \frac{1}{\sqrt{25-9}} = \frac{1}{\sqrt{16}} = \frac{1}{4},
+  \]
+  so $\dfrac{1}{4}$ is in the range of $f$.
+
+  \vfill
+
+\end{enumerate}
+%\begin{flushright}
+%Problem on the back $\longrightarrow$
+%\end{flushright}
+
+
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][5.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{itemize}
+\item[2.] Find the exponential function $P(t)$ satisfying $P(3) = 30$
+  and $P(7) = 6$.
+
+\vfill
+\color{blue} We know than an exponential equation must be of the form $P(t) = P_0 a^t$.  Given the two points above we know that
+\begin{align*}
+  30 &= P_0 a^3 & 6 &= P_0 a^7\\
+  30a^{-3} &= P_0  & 6a^{-7} &= P_0\\
+\end{align*}
+so
+\begin{align*}
+  30 a^{-3} &= 6a^{-7}\\
+  a^4 &= \frac{1}{5}\\
+  a &= \left(\frac{1}{5}\right)^{\frac{1}{4}} = 5^{-\frac{1}{4}}.
+\end{align*}
+Then $\displaystyle 30 =
+P_0\left(5^{-\frac{1}{4}}\right)^3=5^{-\frac{3}{4}}$, so $P_0 =
+30\cdot 5^{\frac{3}{4}}$.  Then we have
+\[
+P(t) = 30\cdot 5^{\frac{3}{4}}\cdot\left(5^{-\frac{1}{4}}\right)^t.
+\]
+
+\vfill
+
+
+\end{itemize}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizback}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

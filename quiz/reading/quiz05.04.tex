@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{November 30, 2012}
+\renewcommand{\theassignment}{Quiz 5.4}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Suppose $\displaystyle\int_0^2 f(x)\;dx = 3$ and
+  $\displaystyle\int_2^5 f(x)\;dx = 1$. Which of the following is
+  true?
+
+  \vfill
+
+  \begin{itemize}
+  \item[\textbigcircle] $\displaystyle\int_0^5 f(x)\;dx = 1$
+    \vfill
+  \item[\textbigcircle] $\displaystyle\int_0^5 f(x)\;dx = 2$
+    \vfill
+  \item[\textbigcircle] $\displaystyle\int_0^5 f(x)\;dx = 3$
+    \vfill
+  \item[\textbigcircle] $\displaystyle\int_0^5 f(x)\;dx = 4$
+    \vfill
+  \end{itemize}
+
+
+
+\end{enumerate}
+%\begin{flushright}
+%Problem on the back $\longrightarrow$
+%\end{flushright}
+
+
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{itemize}
+\item[2.] Solve the following equation for $x$:
+  \[
+  3^x = 5\cdot 2^x.
+  \]
+
+
+\end{itemize}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizfront}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

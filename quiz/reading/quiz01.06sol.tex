@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{September 7, 2012}
+\renewcommand{\theassignment}{Quiz 1.6}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item On the axes below, draw the graph of a cubic polynomial (degree 3)
+  with zeros at $x=-2$, $x=1$, and $x=2$.
+
+  \vfill
+  
+  \begin{center}
+    \begin{tikzpicture}[scale = 1.5]
+      \draw[<->] (-3.5,0) -- (3.5,0);
+      \draw[<->] (0,-2.25) -- (0,2.25);
+      \foreach \i in {-3,...,3}
+      {
+        \ifnum\i=0
+        {
+        }
+        \else
+        {
+          \draw[-] (\i,.1) -- (\i,-.1) node[below] {$\i$};
+        }
+        \fi
+      }
+      \draw[thick, domain=-2.5:3, <->, color=blue] plot[samples=31]
+        function{.25*(x+2)*(x-1)*(x-2)};
+    \end{tikzpicture}
+  \end{center}
+  \vfill
+
+\end{enumerate}
+%\begin{flushright}
+%Problem on the back $\longrightarrow$
+%\end{flushright}
+
+
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{itemize}
+ \item[3.] Find $\ln(e)$. 
+
+
+\end{itemize}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+%\noindent \usebox{\quizfront}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

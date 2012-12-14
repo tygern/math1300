@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, pgfplots}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{October 9, 2012}
+\renewcommand{\theassignment}{Quiz 5}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Given the function $f(x) = \dfrac{4}{x} - 3 + 2x -x^2$,   
+  find $f'(x)$.
+
+  \vfill
+  {\color{blue}
+    \[
+    f'(x) = -4x^{-2}+2-2x.
+    \]
+  }
+  \vfill
+
+\end{enumerate}
+%\hfill\textsc{over} $\longrightarrow$
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{enumerate}
+\item[2.] Given the function $f(x) = 3^x - x^3 + 2(\pi^x)$, find
+  $f'(x)$.
+  \vfill
+  {\color{blue}
+    \[
+    f'(x) = \ln(3)\cdot 3^x - 3x^2 + 2\ln(\pi)\cdot\pi^x
+    \]
+  }
+  \vfill
+
+\end{enumerate}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizback}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

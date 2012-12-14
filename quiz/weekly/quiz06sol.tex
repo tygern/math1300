@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, pgfplots}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{October 23, 2012}
+\renewcommand{\theassignment}{Quiz 6}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Given the function $\displaystyle y = e^{\arcsin{x}}$, find $\dfrac{dy}{dx}$.
+
+\vfill
+{\color{blue}
+  \[
+  \frac{dy}{dx} = \frac{1}{\sqrt{1-x^2}}\cdot e^{\arcsin{x}}
+  \]
+}
+\vfill
+\end{enumerate}
+
+
+%\hfill\textsc{over} $\longrightarrow$
+
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{enumerate}
+\item[2.] Differentiate implicitly and solve for $\dfrac{dy}{dx}$:
+$$ x^2\sin{y} - y^2 \sin{x} = 3.$$
+
+\vfill
+{\color{blue}
+
+  \begin{align*}
+    \left(2x\sin{y} + x^2\cos{y} \frac{dy}{dx}\right) - \left(2y\frac{dy}{dx}\sin{x} + y^2\cos{x}\right) &= 0\\
+    2x\sin{y}+x^2\cos{y}\frac{dy}{dx} - 2y\frac{dy}{dx}\sin{x} - y^2\cos{x} &= 0\\
+    x^2\cos{y}\frac{dy}{dx} - 2y\frac{dy}{dx}\sin{x} &= y^2\cos{x} - 2x\sin{y}\\
+    \frac{dy}{dx}\left(x^2\cos{y} - 2y\sin{x}\right) &= y^2\cos{x} - 2x\sin{y}\\
+    \frac{dy}{dx} &= \frac{y^2\cos{x} - 2x\sin{y}}{x^2\cos{y} - 2y\sin{x}}
+  \end{align*}
+
+}
+\vfill
+
+\end{enumerate}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizback}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

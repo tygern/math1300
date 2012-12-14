@@ -1,0 +1,92 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{September 14, 2012}
+\renewcommand{\theassignment}{Quiz 2.2}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Given the function $f(x)$ below, indicate whether $f'(2)$ is
+  positive or negative.
+
+  \vfill
+  
+  \begin{center}
+    \begin{tikzpicture}[scale = 1.5]
+      \draw[<->] (-3.5,0) -- (3.5,0);
+      \draw[<->] (0,-2.25) -- (0,2.25);
+      \foreach \i in {-3,...,3}
+      {
+        \ifnum\i=0
+        {
+        }
+        \else
+        {
+          \draw[-] (\i,.1) -- (\i,-.1) node[below] {$\i$};
+        }
+        \fi
+      }
+      \draw[thick, domain=-3:3, <->] plot[samples=200]
+      function{sin(x)} node[right]{$f(x)$};
+      \draw[thick, domain=.5:3, <->, blue] plot[samples=200]
+      function{cos(2)*(x-2)+sin(2)};
+    \end{tikzpicture}
+    \vfill
+
+    \textbigcircle\; positive\hspace{1.5in}
+    \textcircled{{\color{blue}$\checkmark$}}\; negative
+  \end{center}
+  \vfill
+
+\end{enumerate}
+%\begin{flushright}
+%Problem on the back $\longrightarrow$
+%\end{flushright}
+
+
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{itemize}
+ \item[3.] Find $\ln(e)$. 
+
+
+\end{itemize}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+%\vfill
+%\noindent \usebox{\quizfront}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

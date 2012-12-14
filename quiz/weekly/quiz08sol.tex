@@ -1,0 +1,105 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, pgfplots}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{November 6, 2012}
+\renewcommand{\theassignment}{Quiz 8}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Find constants $a$ and $b$ such that $f(x)=x^2+ax+b$ has a
+  critical point at $(7,10)$, and classify that critical point.
+
+  \vfill
+  {\color{blue}
+
+    Since $f(x)$ has a critical point at $(7,10)$ we know that
+    $f(7)=10$ and $f'(7)=0$.  Then
+    \begin{align*}
+      f'(x) &= 2x+a\\
+      0 &= 2\cdot 7+a\\
+      a &= -14,
+    \end{align*}
+    and
+    \begin{align*}
+      f(x) &= x^2-14x+b\\
+      10 &= 49-98+b\\
+      b &= 59.
+    \end{align*}
+    Furthermore, $f''(x) = 2$, so $f''(7)=2$, thus the critical point
+    is a local minimum.
+
+  }
+
+\end{enumerate}
+
+\vfill
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{enumerate}
+\item[2.] Find the global maximum and minimum for the function
+  $f(x)=\frac{x+1}{x^2+3}$ on the interval $[-1,2]$.
+
+
+  \vfill
+  {\color{blue}
+
+    We see that $f(x)$ is continuous on $[-1,2]$, so by the extreme
+    value theorem we know that both a global maximum and the global
+    minimum must exist on this interval.  We see that
+    \[
+    f'(x)=\frac{x^2+3-2x(x+1)}{(x^2+3)^2} = \frac{-x^2-2x+3}{(x^2+3)^2}.
+    \]
+    Now $(x^2+3)^2$ is never zero, so the critical points of $f(x)$
+    occur when $-x^2-2x+3=0$. This happens when $x=-3$ and when $x=1$,
+    but $x=3$ is not in our interval, so our only critical point is at
+    $x=1$.  Then
+    \begin{align*}
+      f(-1) &= 0\\
+      f(1) &= \frac{1}{2}\\
+      f(2) &= \frac{3}{7},
+    \end{align*}
+    so $f(x)$ has a global max or $\frac{1}{2}$ at $x=1$ and a global
+    min of $0$ at $x=-1$.
+
+  }
+
+\vfill
+
+\end{enumerate}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizback}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

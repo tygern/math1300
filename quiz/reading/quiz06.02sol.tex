@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{December 7, 2012}
+\renewcommand{\theassignment}{Quiz 6.2}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Let $f(x)$ be a continuous function. What is the difference
+  between $\int_a^b f(x) \; dx$ and $\int f(x)\; dx$?
+
+  \vfill
+
+  \begin{itemize}
+  \item[\textcircled{{\color{blue}$\checkmark$}}] $\int_a^b f(x)\;dx$
+    is a number while $\int f(x)\; dx$ is a family of functions.
+    \vfill
+  \item[\textbigcircle] $\int_a^b f(x)\;dx$ is a family of functions
+    while $\int f(x)\; dx$ is a number.
+    \vfill
+  \item[\textbigcircle] There is no difference.  They are both
+    families of functions.
+    \vfill
+  \item[\textbigcircle] There is no difference.  They are both
+    numbers.
+    \vfill
+  \end{itemize}
+
+
+
+\end{enumerate}
+%\begin{flushright}
+%Problem on the back $\longrightarrow$
+%\end{flushright}
+
+
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{itemize}
+\item[2.] Solve the following equation for $x$:
+  \[
+  3^x = 5\cdot 2^x.
+  \]
+
+
+\end{itemize}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+%\noindent \usebox{\quizfront}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

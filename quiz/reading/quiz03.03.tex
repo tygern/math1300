@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{October 5, 2012}
+\renewcommand{\theassignment}{Quiz 3.3}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Let $h(x) = \dfrac{f(x)}{g(x)}$.  Which of the following is true?
+  \vfill
+  \begin{itemize}
+  \item[\textbigcircle] $h'(x) = \dfrac{f(x)g'(x)-f'(x)g(x)}{(g(x))^2}$.
+    \vfill
+  \item[\textbigcircle] $h'(x) = \dfrac{f(x)g'(x)+f'(x)g(x)}{(g(x))^2}$.
+    \vfill
+  \item[\textbigcircle] $h'(x) = \dfrac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}$.
+    \vfill
+  \item[\textbigcircle] $h'(x) = \dfrac{f'(x)g(x)+f(x)g'(x)}{(g(x))^2}$.
+    \vfill
+  \end{itemize}
+\end{enumerate}
+%\begin{flushright}
+%Problem on the back $\longrightarrow$
+%\end{flushright}
+
+
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{itemize}
+ \item[3.] Find $\ln(e)$. 
+
+
+\end{itemize}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizfront}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

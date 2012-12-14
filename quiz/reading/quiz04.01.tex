@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp, pgfplots}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{October 26, 2012}
+\renewcommand{\theassignment}{Quiz 4.1}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item List the $x$-values of all critical points of the function $f(x)$ given below
+
+  \vfill
+  \begin{center}
+    \begin{tikzpicture}[xscale=1.5]
+      \draw[<->] (-2.5,0) -- (6.5,0);
+      \draw[<->] (0,-4) -- (0,3.5);
+
+      \foreach \i in {-2,...,6} { \ifnum\i=0 { } \else { \draw[-]
+          (\i,.1) -- (\i,-.1) node[below] {$\i$}; } \fi }
+      \node at (-.25,-.34) {$0$};
+
+      \draw[domain=-2.5:-.15, thick, <->, samples = 100] plot(\x,{1/(\x*(\x-2))});
+      \draw[domain=.15:1.85, thick, <->, samples = 100] plot(\x,{1/(\x*(\x-2))});
+
+      \draw[domain=2.15:5.85, thick, <->, samples = 100]
+      plot(\x,{(\x-4)/((\x-6)*(\x-2))}) node[right] {$f(x)$};
+
+    \end{tikzpicture}
+    \vfill
+    \textbigcircle\; $x=0$\hspace{.7in} \textbigcircle\; $x=1$\hspace{.7in}
+    \textbigcircle\; $x=2$\hspace{.7in} \textbigcircle\; $x=4$
+  \end{center}
+  \vfill
+
+
+\end{enumerate}
+%\begin{flushright}
+%Problem on the back $\longrightarrow$
+%\end{flushright}
+
+
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{itemize}
+ \item[3.] Find $\ln(e)$. 
+
+
+\end{itemize}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizfront}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}
