@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{January 22, 2013}
+\renewcommand{\theassignment}{Quiz 1}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Find the equation of a line that passes through the $(x, y)$
+  points $(1, 2)$ and $(3, 8)$.
+
+  {\color{blue}
+    We know that the line must be of the form $y= mx + b$.  Then
+    \[
+    m = \text{slope} = \frac{\text{rise}}{\text{run}} = \frac{8 - 2}{3
+      - 1} = 3.
+    \]
+    We can find $b$ by plugging in a point
+    \begin{align*}
+      y & = 3x + b\\
+      2 & = 3\cdot 1 + b\\
+      b & = -1.
+    \end{align*}
+    Then the equation for the line is
+    \[
+    y = 3x - 1.
+    \]
+  }
+  \vfill
+
+\end{enumerate}
+
+%\hfill \textsc{over} $\longrightarrow$
+
+
+
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{itemize}
+\item[2.] A town has a population of 2000 people at time $t = 0$.  In
+  each of the following cases, write a formula for the population $P$,
+  of the town as a function of the year $t$.
+  \begin{itemize}
+  \item[(a)] The population increases by $50$ people per year.
+    \vfill
+    {\color{blue}
+
+      Since the population is growing by the same absolute amount per
+      year the population is growing linearly.  Then
+      \[
+      P = 50t + 2000.
+      \]
+
+    }
+    \vfill
+  \item[(b)] The population increases by 3\% a year.
+    \vfill
+    {\color{blue}
+
+      Since the population is growing by the same relative amount per
+      year the population is growing exponentially.  Then
+      \[
+      P = 2000(1.03)^t.
+      \]
+
+    }
+    \vfill
+  \end{itemize}
+
+
+\end{itemize}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizback}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

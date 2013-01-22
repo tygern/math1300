@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{January 22, 2013}
+\renewcommand{\theassignment}{Quiz 1}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Find the equation of a line that passes through the $(x, y)$
+  points $(1, 2)$ and $(3, 8)$.
+
+  \vfill
+
+\end{enumerate}
+
+\hfill \textsc{over} $\longrightarrow$
+
+
+
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{itemize}
+\item[2.] A town has a population of 2000 people at time $t = 0$.  In
+  each of the following cases, write a formula for the population $P$,
+  of the town as a function of the year $t$.
+  \begin{itemize}
+  \item[(a)] The population increases by $50$ people per year.
+    \vfill
+  \item[(b)] The population increases by 3\% a year.
+    \vfill
+  \end{itemize}
+
+
+\end{itemize}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizfront}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+\pagebreak
+\noindent \usebox{\quizback}
+\vfill
+\noindent \usebox{\quizback}
+\end{document}
