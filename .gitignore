@@ -15,6 +15,9 @@
 *.blg
 .#*
 *~
+*.synctex.gz
+*.log
 accomodations
 policies
 textbook
+notes/exams
