@@ -1,0 +1,95 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{February 12, 2013}
+\renewcommand{\theassignment}{Quiz 3}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Given the function $f(x)$ below, draw a graph of $f'(x)$ on the
+  same set of axes.
+
+  \vfill
+  
+  \begin{center}
+    \begin{tikzpicture}[xscale = 3, yscale = 2.5]
+      \draw[<->] (-1.5,0) -- (1.5,0);
+      \draw[<->] (0,-1) -- (0,2);
+      \draw[thick, domain=-1.25:1.6, <->] plot[samples=200]
+      function{(x-1)*(x-1)*x*(x+1)} node[right]{$f(x)$};
+      \draw[thick, color=blue, domain=-.77:1.25, <->] plot[samples=200]
+      function{4*x*x*x-3*x*x-2*x+1} node[left]{$f'(x)$};
+    \end{tikzpicture}
+  \end{center}
+  \vfill
+
+\end{enumerate}
+
+\hfill \textsc{over} $\longrightarrow$
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{enumerate}
+\item[2.] Let $g(v)$ be the fuel efficiency, in miles per gallon, of a car
+  traveling at a velocity of $v$ miles per hour. Answer the following
+  questions using complete sentences.
+  \begin{enumerate}
+  \item What is the practical meaning of the statement $g(60) = 30$?
+
+    \vfill
+    
+    {\color{blue} When you are traveling at 60 miles per hour your
+      fuel efficiency is 30 miles per gallon.}
+
+    \vfill
+    
+  \item What is the practical meaning of the statement $g'(60) = -1.2$?
+
+    \vfill
+    
+    {\color{blue} If you increase your speed from 60 to 61 miles per
+      hour your fuel efficiency will drop by approximately $1.2$ miles
+      per gallon.}
+
+    \vfill
+    
+  \end{enumerate}
+\end{enumerate}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizfront}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+\pagebreak
+\noindent \usebox{\quizback}
+\vfill
+\noindent \usebox{\quizback}
+\end{document}

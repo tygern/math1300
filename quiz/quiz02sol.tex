@@ -1,0 +1,85 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{January 29, 2013}
+\renewcommand{\theassignment}{Quiz 2}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Let $f(x) = \sqrt[3]{2x+7}$.  Find $f^{-1}(x)$.
+
+  \vfill
+  {\color{blue}
+
+    \begin{align*}
+      y &= \sqrt[3]{2x+7}\\
+      x &= \sqrt[3]{2y+7}\\
+      x^3 &= 2y + 7\\
+      x^3 - 7 &= 2y\\
+      y &= \frac{x^3 - 7}{2}\\
+      f^{-1}(x) &= \frac{x^3 - 7}{2}
+    \end{align*}
+
+  }
+  \vfill
+
+\end{enumerate}
+
+%\hfill \textsc{over} $\longrightarrow$
+
+
+
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{itemize}
+\item[2.] A population of animals oscillates sinusoidally between a low of 100 on January 1 and a high of 700 on July 1. Graph the population against time and use your graph to find a formula for the population $P$ as a function of time $t$, in months since the start of the year. Assume that the period of $P$ is twelve months. 
+
+  \vfill
+  {\color{blue}
+  
+  \[
+  P = -300\cos\left(\frac{\pi}{6}t\right)+400
+  \]
+  
+  }
+  \vfill
+
+
+\end{itemize}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizback}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

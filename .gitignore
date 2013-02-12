@@ -1,4 +1,5 @@
 *.aux
+*.fls
 *.pdf
 *.thm
 *.out
