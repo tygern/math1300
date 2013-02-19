@@ -1,0 +1,110 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={2.6 Worksheet},colorlinks=true,urlcolor=red]{hyperref}
+\usepackage{tikz,array}
+
+\renewcommand{\theclass}{\textsc{math} 1300-003: Calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Differentiability}
+\renewcommand{\dateinfo}{Spring 2013}
+
+\def\ww{WeBWorK }
+
+\begin{document}
+\drawtitle
+\begin{enumerate}
+
+\item Decide if the following functions are differentiable at $x=0$.
+  You may either graph the function or calculate the derivative
+  $f'(0)$ using the limit definition of the derivative.
+  \begin{enumerate}
+  \item $\displaystyle f(x) = \begin{cases} 3x &\mbox{if } x\leq 0\\
+      6x &\mbox{if } x > 0 \end{cases}$
+    \vfill
+    {\color{blue}
+
+      The function is continuous but not differentiable at $x=0$ since the two
+      pieces have different derivatives at $x=0$.
+
+    }
+    \vfill
+  \item $f(x) = x^{\frac{2}{7}}$
+    \vfill
+    {\color{blue}
+      
+      We see that
+      \begin{align*}
+        f'(0) &= \lim_{h\to 0} \frac{h^{\frac{2}{7}}}{h}\\
+        &= \lim_{h\to 0} \frac{1}{h^{\frac{5}{7}}}\\
+        & \text{Does not exist}
+      \end{align*}
+      so $f(x)$ is not differentiable at $x=0$.
+    }
+    \vfill
+  \item $\displaystyle f(x) = \begin{cases}
+      x+3 &\mbox{if } x\neq 2\\
+      6 &\mbox{if } x = 2 \end{cases}$
+    \vfill
+    {\color{blue}
+
+      The function $f(x)$ is not continutous at $x=2$, so is not
+      differentiable at $x=2$.
+
+    }
+    \vfill
+  \item $\displaystyle f(x) = \begin{cases}
+      \cos(x) &\mbox{if } x\geq 2\pi\\
+      1 &\mbox{if } x < 2\pi \end{cases}$
+    \vfill
+    {\color{blue}
+      
+      \begin{center}
+        \begin{tikzpicture}[xscale = 7/13, yscale = 5/3]
+          \draw[<->] (-1,0) -- (13,0);
+          \draw[<->] (0,-1.5) -- (0,1.5);
+          \draw[thick, domain=-.5:6.28, <-] plot[samples=200]
+          function{cos(x)};
+          \draw[thick, domain=6.28:12.5, ->] plot[samples=200]
+          function{1} node[above] {$f(x)$};
+        \end{tikzpicture}
+      \end{center}
+      Looking at the above graph we see that there are no
+      discontinuities, corners, or vertical tangent lines, so the
+      function is differentiable.
+      
+    }
+    \vfill
+  \end{enumerate}
+
+\newpage
+
+\item Find constants $m$ and $b$ so that the function
+  \[
+  f(x) = \begin{cases} x^2 &\mbox{if } x\geq 2\\
+    mx+b &\mbox{if } x < 2 \end{cases}
+  \]
+  is differentiable.
+  \vfill
+  {\color{blue}
+    
+    We know that to be differentiable, the two pieces of the function
+    must have the same derivative at $x=2$. The dervative of the top
+    piece is $2x$, so at $x=2$ it has a derivative of $4$. The
+    derivative of the bottom piece is $m$, so we must have $m = 4$.
+
+    Then we know that the function must be continuous.  The top piece
+    has a $y$-value of $2^2 = 4$ at $x = 2$, so the bottom piece must
+    hacve a $y$-value of $4$ as well: $4 = 4(2) + b$.  Then if $m = 4$
+    and $b = -4$ the function will be differentiable.
+    
+    Check out an interactive graph of this function at
+  }
+  \begin{center}
+    \url{http://goo.gl/5ey02}
+  \end{center}
+
+  \vfill
+\end{enumerate}
+\end{document}
