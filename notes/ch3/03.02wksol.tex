@@ -1,0 +1,147 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{verbatim}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Derivatives of Exponential Functions}
+\renewcommand{\dateinfo}{section 3.2}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\begin{enumerate}
+\item Find the derivatives of the following functions using the rule
+  \[
+  \frac{d}{dx}\left(a^x\right)=\ln(a)\cdot a^x
+  \]
+  and any other derivative rules that we have discussed in class.
+  \begin{enumerate}
+  \item $\displaystyle f(x)=e^x$ \vfill
+    {\color{blue}
+
+      \[
+      f'(x) = e^x\cdot\ln(e) = e^x
+      \]
+
+    }
+    \vfill
+
+  \item $\displaystyle f(x)=10^x$ \vfill
+    {\color{blue}
+
+      \[
+      f'(x) = 10^x\cdot\ln(10)
+      \]
+
+    }
+    \vfill
+
+    \newpage
+  \item $\displaystyle f(x)=\frac{3^x}{5^x}+2^4$ \vfill 
+    {\color{blue}
+
+      We can simplify to obtain $f(x) = \left(\frac{3}{5}\right)^x +
+      2^4$, so
+      \[
+      f'(x) = \left(\frac{3}{5}\right)^x\cdot \ln\left(\frac{3}{5}\right).
+      \]
+
+    }
+    \vfill
+
+  \item $\displaystyle f(x)=4\cdot 7^x+\frac{1}{x}$ \vfill
+    {\color{blue}
+
+      We can simplify to obtain $f(x) = 4\cdot 7^x + x^{-1}$, so
+      \[
+      f'(x) = 4\cdot7^x\cdot\ln(7) - x^{-2}.
+      \]
+
+    }
+    \vfill
+
+    \newpage
+  \item $\displaystyle f(x)=4^{x+2}+x^{2e}$ \vfill
+    {\color{blue}
+
+      We can simplify to obtain $f(x) = 4^x\cdot 4^2 + x^{2e}$, so
+      \[
+      f'(x) = 4^x\cdot\ln(4)\cdot 4^2 + 2ex^{2e-1}.
+      \]
+
+    }
+    \vfill
+
+  \item $\displaystyle f(x)=4e^{x+7}+(\ln 4)^x$\vfill
+    {\color{blue}
+
+      We can simplify to obtain $f(x) = 4e^xe^7+(\ln 4)^x$, so
+      \[
+      f'(x) = 4e^xe^7 + (\ln 4)^x\cdot\ln\left(\ln 4\right).
+      \]
+
+    }
+    \vfill
+
+  \end{enumerate}
+  \newpage
+
+\item The population of the world in billions of people can be modeled
+  by the function $P(t) = 6.115(1.0113)^t$, where $t$ is years since 2000.
+  \begin{enumerate}
+  \item Find $P(12)$, $P'(12)$, $P(30)$, and $P'(30)$.
+    \vfill
+    {\color{blue}
+
+      We see that $P'(t) = 6.115(1.0113)^t\cdot \ln(1.0113)$, so
+      \begin{align*}
+        P(12) &= 6.115(1.0113)^{12} \approx 6.998\\
+        P'(12) &= 6.115(1.0113)^{12}\cdot \ln(1.0113) \approx .0786\\
+        P(30) &= 6.115(1.0113)^{30} \approx 8.566\\
+        P'(30) &= 6.115(1.0113)^{30}\cdot \ln(1.0113) \approx .0963
+      \end{align*}
+
+    }
+    \vfill
+
+  \item Using units, explain what each answer tells you about the
+    population of the world.
+    \vfill
+    {\color{blue}
+
+      In 2012 the world's population was 6.998 billion people.\\
+      Between 2012 and 2013 the world's population rose by approximately 78.6 million people.\\
+      In 2030 the world's population will be 8.566 billion people.
+      Between 2030 and 2031 the world's population will rise by approximately 96.3 million people.\\
+
+
+    }
+    \vfill
+
+  \item What is the sign of $P''(t)$?  What does this tell you about
+    the world's population, and why might this be worrying?
+    \vfill
+    {\color{blue}
+
+      We see that $P''(t) = 6.115(1.0113)^t\cdot
+      \ln(1.0113)\cdot\ln(1.0113) > 0$, so the graph of the world's
+      population is concave up. This means that the population is
+      growing at an increasing rate, so population growth will become
+      more and more of a problem.
+
+    }
+    \vfill
+
+  \end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}
