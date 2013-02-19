@@ -1,0 +1,105 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{February 19, 2013}
+\renewcommand{\theassignment}{Quiz 4}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Find the derivative of the following functions.
+  \begin{enumerate}
+  \item $\displaystyle y=\frac{3}{x^3}$
+    \vfill
+    {\color{blue}
+
+      We can use exponent rules to see that $y=3x^{-3}$, so
+      \[
+      \frac{dy}{dx} = 3\cdot -3\cdot x^{-4}.
+      \]
+
+    }
+    \vfill
+    
+  \item $f(x)=x^{3}(6x-4)$
+    \vfill
+    {\color{blue}
+
+      If we use the distributive property we obtain $f(x) = 6x^4 - 4x^3$
+      so
+      \[
+      f'(x) = 6\cdot 4\cdot x^3 - 4\cdot 3\cdot x^2.
+      \]
+
+    }
+    \vfill
+    
+  \end{enumerate}
+
+\end{enumerate}
+
+%\hfill \textsc{over} $\longrightarrow$
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{enumerate}
+\item[2.] Find constants $m$ and $b$ so that the function
+  \[
+  f(x) = \begin{cases} x^2 &\mbox{if } x\geq 3\\
+    mx+b &\mbox{if } x < 3 \end{cases}
+  \]
+  is differentiable.
+
+  \vfill
+  {\color{blue}
+    
+    We know that to be differentiable, the two pieces of the function
+    must have the same derivative at $x=3$. The dervative of the top
+    piece is $2x$, so at $x=3$ it has a derivative of $6$. The
+    derivative of the bottom piece is $m$, so we must have $m = 6$.
+
+    Then we know that the function must be continuous.  The top piece
+    has a $y$-value of $3^2 = 9$ at $x = 3$, so the bottom piece must
+    hacve a $y$-value of $9$ as well: $9 = 6(3) + b$.  Then if $m = 6$
+    and $b = -9$ the function will be differentiable.
+    
+  }
+  \vfill
+\end{enumerate}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizback}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}
