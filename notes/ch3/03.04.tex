@@ -20,29 +20,36 @@
 \item[Goal] Derivatives of composed functions: $f(x)=3^{x^2}$
 \item[Idea] $\ds\frac{d}{dx}(f(g(x)))$.  As $x$ changes $g(x)$
   changes.  As $g(x)$ changes $f(g(x))$ changes.
-\item[Sketchy Proof] Call $z=g(x)$, then $y=f(z)$.
-  \[
-  \begin{array}{rcl}
-    \ds\frac{\Delta y}{\Delta x} &=&
-    \ds\frac{\Delta y}{\Delta z}\cdot \frac{\Delta z}{\Delta x}\\
-    \\
-    \ds\frac{dy}{dx} &=&
-    \ds\frac{dy}{dz}\cdot \frac{dz}{dx}\\
-    \\
-    &=& f'(z)\cdot g'(x)
-  \end{array}
-  \]
-  so $\ds\frac{d}{dx}(f(g(x)))=f'(g(x))\cdot g'(x)$.
+\item[Sketchy Proof] Compose tangent lines.
 \end{description}
 
 \section*{Examples}
 \begin{description}
 \item[Only Chain Rule] one or two
+\item[Table]   Let $h(x) = f'(g(x))$. Find $h'(1)$ and $h'(2)$.
+  \[
+  \begin{array}{cccc}
+    x & 1 & 2 & 3\\ \hline\hline
+    f & 8 & 4 & 6\\ \hline
+    g & 3 & 1 & 5\\ \hline
+    f' & -4 & 3 & 2\\ \hline
+    g' & -7 & 11 & 1\\ \hline
+  \end{array}
+  \]
 \item[Combined] at least two
 \end{description}
 
 \section*{Group Work}
 \begin{description}
 \item[On Board] Some easy ones, also combinations.
+  \[
+  \begin{array}{cccc}
+    e^{-x} & (x^2 + 3x)^9 & 7^{x^2} & 2^{\left(\dfrac{x+2}{3x+7}\right)} \\
+    \\
+    \sqrt{\dfrac{4^x}{x^2+8}} & (6x+1)^2 & \dfrac{3x^2 - 7x}{5^{x^3}} & e^{7x}(5x^8+2x)\\
+    \\
+    \dfrac{1}{x^2+2x+4} & xe^{-x} & \left(6^x\right)^2 + 3\left(6^x\right) + 1 & (9^x)^{-7} 
+  \end{array}
+  \]
 \end{description}
 \end{document}
