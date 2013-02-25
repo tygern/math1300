@@ -1,0 +1,95 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Derivatives of Inverse Functions}
+\renewcommand{\dateinfo}{section 3.6}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\noindent \textbf{Recall} that for an invertible and differentiable
+function $f(x)$ we have
+
+\begin{center}
+  \begin{tabular}{ccc}
+    $f(a) = b \; \Leftrightarrow \; f^{-1}(b) =
+    a$ & and & $\displaystyle (f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))}.$
+  \end{tabular}
+\end{center}
+
+\vspace{.25in}
+
+\begin{enumerate}
+\item Find $f'(-1)$ if $f(x) = \arctan(x) + 3x^2$.
+  
+  \vfill
+  
+\item Find $f'(1)$ if $f(x) = x^2\sin^{-1}(x)$.
+  
+  \vfill
+  
+  \newpage
+
+\item The table below contains values of $f(x)$ and $f'(x)$. Fill in
+  the empty rows with values of $f^{-1}(x)$ and $(f^{-1})'(x)$.
+  
+  \begin{center}
+    {
+      \renewcommand{\arraystretch}{2}
+    \begin{tabular}{ c | c c c c c}
+      $x$ &	$-2$ & $-1$ & 0 & 1 & 2 \\ \hline\hline
+      $f(x)$	& 2 & 0 & $-2$ & $-1$ & 1  \\ 
+      $f'(x)$	& $-3$ & 1 & 4 & $-2$ & 0   \\
+      $f^{-1}(x)$	&  &  &  &  &   \\
+      $(f^{-1})'(x)$	&  & & & &   \\
+    \end{tabular}
+    }
+    
+  \end{center}
+  
+  \vfill
+  
+\item Suppose that $f(3)=4$, $f(5)=3$, $f'(3)=-1$, $f'(4)=3$, and $f'(5) = 2$.
+  
+  \begin{enumerate}
+    
+  \item Find $h'(3)$ if $h(x) = 4f^{-1}(x)$.
+    \vfill\vfill
+    
+  \item Find $j'(4)$ if $j(x) = f(x) + f^{-1}(x)$.
+    \vfill\vfill
+    
+  \end{enumerate}
+
+\newpage
+
+\item Take the derivative of the following functions.
+  \begin{enumerate}
+  \item $f(x) = \ln(3x-2) $
+    \vfill
+    
+  \item $f(x) = \cos\left(\ln(x)\right)$
+    \vfill
+    
+    \newpage
+
+  \item $f(x) = 3\ln(x) \sin(x^2)$
+    \vfill
+    
+  \item $f(x) = 5^x \cdot \arctan(x)$
+    \vfill
+    
+  \end{enumerate}
+  
+  
+\end{enumerate}
+
+\end{document}
