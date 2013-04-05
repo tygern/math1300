@@ -1,0 +1,121 @@
+\documentclass[11pt]{article} 
+\usepackage{calc, tikz}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Marginal Analysis}
+\renewcommand{\dateinfo}{section 4.5}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\begin{enumerate}
+\item A company estimates that the total revenue, $R$, in dollars,
+  received from the sale of $q$ items is
+  \[
+  R = \ln(1 + 1000q^2).
+  \]
+  Calculate and interpret the marginal revenue if $q = 10$.
+
+  \vfill
+
+\item The graph below shows cost and revenue. Illustrate the following
+  quantities on the graph.
+  \begin{enumerate}
+  \item Fixed cost.
+  \item The quantity that maximizes profit.
+  \item The maximum profit.
+  \end{enumerate}
+  \begin{center}
+    \begin{tikzpicture}[xscale = 4/5, yscale = 16/25]
+      \draw[->] (0,0) -- (9,0);
+      \draw[->] (0,0) -- (0,11);
+      
+      \draw[thick, domain=0:6.6, ->] plot[samples=200]
+      function{.1*((x-3)**3+(x-3)) + 5} node[above] {$C$};
+
+      \draw[thick, domain=0:8, ->] plot[samples=200]
+      function{4*log(x+1)} node[below] {$R$};
+    \end{tikzpicture}
+
+  \end{center}
+
+  \newpage
+
+\item The revenue from selling $q$ items is $R(q) = 500q - q^2$, and
+  the total cost is $C(q) = 10000 + 3q^2$.
+  \begin{enumerate}
+  \item At what quantity is profit maximized?
+
+    \vfill
+    
+  \item What is the total profit at this production level?
+
+    \vfill
+    
+  \end{enumerate}
+  
+  \newpage
+
+\item The table below shows cost, $C(q)$ and revenue, $R(q)$.
+  \begin{center}
+    \begin{tabular}{l|rrrrrrr}
+      $q$ & 0 & 500 & 1000 & 1500 & 2000 & 2500 & 3000\\ \hline
+      $R(q)$ & 0 & 1500 & 3000 & 4500 & 6000 & 7500 & 9000\\
+      $C(q)$ & 3000 & 3800 & 4200 & 4500 & 4800 & 5500 & 7400
+    \end{tabular}
+  \end{center}
+  \begin{enumerate}
+  \item At approximately what production level, $q$, is profit
+    maximized?
+
+    \vfill
+
+  \item What is the price of the product?
+
+    \vfill
+
+  \item What are the fixed costs?
+
+    \vfill
+    
+  \end{enumerate}
+
+\item If $C'(500) = 75$ and $R'(500) = 100$, should the quantity
+  produced be increased or decreased from $q = 500$ in order to
+  increase profits?
+
+  \vfill\vfill
+
+  \newpage
+
+\item The total cost of producing $q$ goods is given by:
+  \[
+  C(q) = 0.01q^3 - 0.6q^2 + 13q.
+  \]
+  \begin{enumerate}
+  \item What is the fixed cost?
+
+    \vfill
+
+  \item What is the maximum profit if each item is sold for \$7?
+
+    \vfill
+
+  \item Suppose exactly 34 goods are produced. They all sell when the
+    price is \$7 each, but for each \$1 increase in price, 2 fewer
+    goods are sold. Should the price be raised, and if so by how much?
+
+    \vfill
+    
+  \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

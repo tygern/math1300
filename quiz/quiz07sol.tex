@@ -1,0 +1,107 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{March 19, 2013}
+\renewcommand{\theassignment}{Quiz 7}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][3.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Find and classify all local extrema of $f(x) = x^3-3x+1$.
+
+  \vfill
+  {\color{blue}
+
+    We see that $f'(x) = 3x^2-3$. Since $f'(x)$ is a polynomial, it is
+    defined everywhere, so critical points occur where $f'(x) =
+    0$. Then we have critical points at
+    \begin{align*}
+      3x^2 - 3 &= 0\\
+      3(x^2-1) &= 0\\
+      (x+1)(x-1) &= 0\\
+      x = \pm 1.
+    \end{align*}
+    We see that $f''(x) = 6x$, so $f''(1) > 0$ and $f''(-1) <
+    0$. Then, by the second derivative test, $f(x)$ has a local max of
+    $f(-1) = 3$ at $x= -1$ and a local min of $f(1) = -1$ at $x = 1$.
+
+  }
+  \vfill
+
+\end{enumerate}
+
+%\hfill \textsc{over} $\longrightarrow$
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][5.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{enumerate}
+\item[2.] Find all global extrema, if they exist, for $f(x) = x +
+  \dfrac{1}{x}$ on $(0, \infty)$.
+ 
+  \vfill
+  {\color{blue}
+
+    We see that $f'(x) = 1-x^{-2}$. Then $f'(x)$ does not exist at $x
+    = 0$, but $x=0$ is not in the domain of $f(x)$, so it cannot be a
+    critical point. Thus, critical points of $f(x)$ only occur where
+    $f'(x) = 0$. Then
+    \begin{align*}
+      f'(x) &= 0\\
+      1-x^{-2} & = 0\\
+      1 &= x^{-2}\\
+      x^2 &= 1\\
+      x &= \pm 1.
+    \end{align*}
+    Again, since $x=-1$ is not in our domain, it cannot be a critical
+    point, so the only critical point for $f(x)$ occurs at $x =
+    1$. Now we can compare the $y$-values at the critical point and
+    endpoints:
+    \begin{align*}
+      \lim_{x\to 0} f(x) &= \infty\\
+      f(1) &= 2\\
+      \lim_{x\to\infty} f(x) &= \infty.
+    \end{align*}
+    Then $f(x)$ has a global min of $2$ at $x=1$ and has no global
+    max.
+
+  }
+  \vfill
+
+\end{enumerate}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizback}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

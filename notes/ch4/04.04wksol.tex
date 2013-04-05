@@ -8,7 +8,7 @@
 
 \renewcommand{\theclass}{\textsc{math}1300: calculus I}
 \renewcommand{\theauthor}{Tyson Gern}
-\renewcommand{\theassignment}{Optimiztion}
+\renewcommand{\theassignment}{Optimization}
 \renewcommand{\dateinfo}{section 4.4}
 
 \newcommand{\ds}{\displaystyle}
@@ -17,6 +17,43 @@
 \drawtitle
 
 \begin{enumerate}
+
+\item A rectangular stock pen is to be built using a total of 600 ft
+  of fencing. Part of this fencing will be used to build a fence
+  across the middle of the rectangle. Find the length and width of the
+  rectangle that give the maximum total area.
+
+  \vfill
+  {\color{blue}
+
+    If we call the width and length $x$ and the height $y$ then we
+    have
+    \[
+    600 = 3x + 2y.
+    \]
+    We can easily find the area of the rectangle in terms of $x$ and
+    $y$:
+    \[
+    A = xy.
+    \]
+    We can solve the first equation above for $y$ to obtain
+    \[
+    y = 300 -\frac{3}{2} x,
+    \]
+    then substitute this into the area equation
+    \[
+    A = x\left(300-\frac{3}{2}x\right) = 300x - \frac{3}{2} x^2.
+    \]
+    We see that $x$ is a length, so it must be larger than
+    zero. Furthermore, we have 3 sides of length $x$ and 600 feet of
+    fencing, so the largest $x$ can be is $200$. Then we must maximize
+    $A = 300x - \frac{3}{2} x$ on the interval $[0,200]$.
+
+  }
+  \vfill
+  
+  \newpage
+
 \item A rectangular box with a square base and no top is to be made of
   a total of $120\rm{cm}^2$ of cardboard.  Find the dimensions of the
   box of maximum volume.

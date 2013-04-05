@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{March 19, 2013}
+\renewcommand{\theassignment}{Quiz 7}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Find and classify all local extrema of $f(x) = x^3-3x+1$.
+
+  \vfill
+
+\end{enumerate}
+
+\hfill \textsc{over} $\longrightarrow$
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{enumerate}
+\item[2.] Find all global extrema, if they exist, for $f(x) = x +
+  \dfrac{1}{x}$ on $(0, \infty)$.
+
+\end{enumerate}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizfront}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+\pagebreak
+\noindent \usebox{\quizback}
+\vfill
+\noindent \usebox{\quizback}
+\end{document}

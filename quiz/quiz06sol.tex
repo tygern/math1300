@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{March 12, 2013}
+\renewcommand{\theassignment}{Quiz 6}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Find $\frac{dy}{dx}$ in terms of $x$ and $y$ if $x^5+4xy+y^2 = 13$.
+
+  \vfill
+  {\color{blue}
+
+    We can differentiate both sides to get
+    \[
+    5x^4 + 4y + 4x\frac{dy}{dx} + 2y\frac{dy}{dx} = 0.
+    \]
+    Then
+    \begin{align*}
+      4x\frac{dy}{dx} + 2y\frac{dy}{dx} &= -5x^4 - 4y\\ 
+      \frac{dy}{dx}(4x + 2y) &= -5x^4 - 4y\\ 
+      \frac{dy}{dx} &= \frac{-5x^4 - 4y}{4x+2y}.\\ 
+    \end{align*}
+
+  }
+  \vfill
+
+\end{enumerate}
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{enumerate}
+\item[2.] Find the local linearization of $\displaystyle f(x) =
+  \frac{1}{1+3x}$ near $x = 0$.
+  \vfill
+  {\color{blue}
+    
+    We see that $f'(x) = -3(1+3x)^{-2}$, so $f'(0) = -3(1+3\cdot0)^{-2}
+    = -3$. Then the local linearization is given by
+    \begin{align*}
+      \ell(x) &= f(0) + f'(0)(x-0)\\
+      &= 1 + -3(x-0)\\
+      &= -3x + 1.
+    \end{align*}
+
+  }
+  \vfill
+
+\end{enumerate}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizback}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

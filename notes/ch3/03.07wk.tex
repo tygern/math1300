@@ -23,10 +23,12 @@
   worksheet.}
 
 \noindent \textbf{Problem 3.7.34:} Sketch the circles
-\begin{align*}
+\begin{align}
+  \label{circ1}
   y^2+x^2 &= 1\\
+  \label{circ2}
   y^2 + (x-3)^2 & = 4
-\end{align*}
+\end{align}
 There is a line with positive slope that is tangent to both circles.
 Determine the points at which this tangent line touches each circle.
 
@@ -38,18 +40,18 @@ Determine the points at which this tangent line touches each circle.
   
   \vfill 
   
+  \newpage
+  
   We can relate $a$ with $b$ and $c$ with $d$ as shown below.
   \begin{align}
-    \label{circ1}
+    \label{circ1ab}
     b^2+a^2 &= 1\\
-    \label{circ2}
+    \label{circ2cd}
     d^2 + (c-3)^2 & = 4
   \end{align}
   
-  \newpage
-  
-\item Use equation \ref{circ1} to find $b$ in terms of $a$. Use
-  equation \ref{circ2} to find $d$ in terms of $c$.
+\item Use equation \ref{circ1ab} to solve for $b$ in terms of $a$. Use
+  equation \ref{circ2cd} to solve for $d$ in terms of $c$.
   
   \vfill
   \begin{align}
@@ -59,28 +61,37 @@ Determine the points at which this tangent line touches each circle.
     d &= \hspace{3in}
   \end{align}
   
-\item Find $\dfrac{dy}{dx}$ for equations \ref{circ1} and \ref{circ2}.
+  \newpage
+
+\item Find $\dfrac{dy}{dx}$ for equations \ref{circ1} and
+  \ref{circ2}. Use these to find the slope of the tangent line to circle 1
+  at $(a,b)$ and to circle 2 at $(c,d)$.
   
   \vfill
   
   \begin{align}
     \label{slope1}
-    \dfrac{dy}{dx} &= \hspace{3in}\\ 
+    \left.\dfrac{dy}{dx}\right|_{(a,b)} &= \hspace{3in}\\ 
     \label{slope2}
-    \dfrac{dy}{dx} &= \hspace{3in}
+    \left.\dfrac{dy}{dx}\right|_{(c,d)} &= \hspace{3in}
   \end{align}
   
   \newpage
   
-\item From our picture, we know that slope of the first circle at
-  $(a,b)$ must equal the slope of the second circle at $(c,d)$.  Set
-  up an equation that describes this.  Using this equation and
-  equations \ref{ba} and \ref{dc}, solve for $c$ in terms of
-  $a$. 
-  
-  \textit{Hint: Use your picture to resolve problems with absolute
-    value.}
-  
+\item From our picture, we know that slope of the tangent line to
+  circle 1 at $(a,b)$ must equal the slope of the tangent line to
+  circle 2 at $(c,d)$. Using equations~\ref{slope1} and~\ref{slope2},
+  set up an equation that describes this.
+
+  \begin{align}
+    \label{slopeequal}
+    &=
+  \end{align}
+
+
+
+\item Using equation~\ref{slopeequal} and equations \ref{ba} and \ref{dc},
+  solve for $c$ in terms of $a$.
   
   \vfill
   
@@ -91,16 +102,16 @@ Determine the points at which this tangent line touches each circle.
   \newpage
   
 \item Use equation \ref{ca} to substitute for $c$ in equation
-  \ref{circ2} to find $d$ in terms of a.  Then use equation \ref{ba}
+  \ref{circ2cd} to find $d$ in terms of a.  Then use equation \ref{ba}
   to find $d$ in terms of $b$.
   \vfill
   \begin{equation}\label{db}
     d =\hspace{3in}
   \end{equation}
-\item Calculate the slope between the two points, $(a,b)$ and
-  $(c,d)$.  We know that this must be equal to the slope of the
-  tangent line to circle \ref{circ1} at $(a,b)$.  Use equation
-  \ref{slope1} to help set up this equality.
+\item Calculate the slope between the two points, $(a,b)$ and $(c,d)$
+  using $\frac{\text{rise}}{\text{run}}$.  We know that this must be
+  equal to the slope of the tangent line to circle \ref{circ1} at
+  $(a,b)$.  Use equation \ref{slope1} to help set up this equality.
   \vfill
   \begin{equation}\label{slopes}
     =

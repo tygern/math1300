@@ -1,0 +1,104 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{April 2, 2013}
+\renewcommand{\theassignment}{Quiz 8}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item The revenue from selling $q$ items is $R(q) = 500q - q^2$, and
+  the total cost is $C(q) = 10000 + 3q^2$. At what quantity is profit
+  maximized?
+
+  \vfill
+  {\color{blue}
+
+    We know that $\pi(q) = R(q) - C(q)$, so
+    \[
+    \pi(q) = 500q - q^2 - (10000 + 3q^2) = -4q^2 + 500q - 10000.
+    \]
+    Then $\pi'(q) = -8q + 500$, so $\pi(q)$ has a critical point at $q
+    = 62.5$. We know this critical point is a global maximum since
+    $\pi(q)$ is a parabola with a negative leading coefficient. Then
+    producing $62.5$ items will maximize out profit.
+
+  }
+  \vfill
+
+\end{enumerate}
+
+%\hfill \textsc{over} $\longrightarrow$
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{enumerate}
+\item[2.] If you have 100 meters of fencing and want to enclose a
+  rectangular area up against a long, straight wall, what dimensions
+  maximize the area you can enclose?
+
+  \vfill
+  {\color{blue}
+
+    We know that the area of a rectangular fence of length $\ell$ and
+    width $w$ is given by
+    \[
+    A = \ell w.
+    \]
+    If the lengh of the fence is against the wall, we know that the
+    total amount of fencing is given by $2w + \ell$. Since we have 100
+    feet of fencing, we obtain
+    \[
+    100 = 2w + \ell,
+    \]
+    so $\ell = 100 - 2w$. Then we have
+    \[
+    A = (100-2w)w = 100w - 2w^2.
+    \]
+    Taking the derivative we see that $\frac{dA}{dw} = 100 - 4w$, so
+    we have a critical point at $w = 25$. We know this critical point
+    is a global maximum since $A$ is a parabola with a negative
+    leading coefficient. Then a fence with a width of 25 feet and a
+    length of 50 feet will maximize the area we can enclose.
+
+  }
+  \vfill
+
+\end{enumerate}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizback}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}
