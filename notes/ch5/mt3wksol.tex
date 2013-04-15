@@ -8,8 +8,8 @@
 
 \renewcommand{\theclass}{\textsc{math}1300: calculus I}
 \renewcommand{\theauthor}{Tyson Gern}
-\renewcommand{\theassignment}{Practice Midterm 3}
-\renewcommand{\dateinfo}{spring 2012}
+\renewcommand{\theassignment}{Chapter 3 \& 4 Worksheet}
+\renewcommand{\dateinfo}{review}
 
 \newcommand{\ds}{\displaystyle}
 
@@ -25,14 +25,14 @@ state each answer.
   $x=0$.
 
   \vfill
-
+  {\color{blue}
   If $f(x)=\sqrt{2+x}$ then $f'(x)=\frac{1}{2}\cdot(2+x)^{-1/2}$, so
   the tangent line $\ell(x)$ is given by
   \begin{align*}
     \ell(x) &= f(0) + f'(0)(x - 0) \\
     &= \sqrt(2) + \frac{1}{2\sqrt{2}}x.
   \end{align*}
-
+  }
   \vfill
 
 \item A voltage $V$ across a resistance $R$ generates a current
@@ -42,7 +42,7 @@ state each answer.
   changing?  Include units in your answer.
 
   \vfill
-
+  {\color{blue}
   Since the voltage is always constant we have
   \[
   I=\frac{6}{R}=6\cdot R^{-1}.
@@ -56,7 +56,7 @@ state each answer.
   \[
   \frac{dI}{dt} = 6\cdot (-1)3^{-2}\cdot (.7) = -\frac{7}{15}.
   \]
-
+  }
   \vfill
   \newpage
   
@@ -65,7 +65,7 @@ state each answer.
   maximum area.
 
   \vfill
-
+  {\color{blue}  
   Using the following picture
   \begin{center}
     \begin{tikzpicture}[scale=2.5]
@@ -114,7 +114,7 @@ state each answer.
   so we have a global maximum area of 1 when $x=1$.  Then the vertices
   of the rectangle with maximum area are $(1,0)$, $(1,.5)$, $(-1.0)$,
   and $(-1,-5)$.
-
+  }
   \vfill
   
   \newpage
@@ -127,7 +127,7 @@ state each answer.
   \item If $k=-7$ do the particles ever collide?
 
     \vfill
-
+    {\color{blue}
     We see that the $x$-coordinates are equal when
     \begin{align*}
       5t-5 &= 4t\\
@@ -138,13 +138,13 @@ state each answer.
     (-7)= 17$ and the $y$-coordinate of particle $B$ is
     $y(5)=5^2-2\cdot 5 -1 = 14$, so the particles do not collide,
     since they are never in the same place at the same time.
-
+    }
     \vfill
     
   \item Find $k$ so that the two particles are certain to collide.
 
     \vfill
-
+    {\color{blue}
     From the discussion above we see that the $x$-coordinates of the
     two particles are the same when $t=5$.  If the particles are to
     collide, we need the $y$-coordinates to be equal at $t=5$, so
@@ -153,14 +153,14 @@ state each answer.
       10-k &= 14\\
       k &= -4
     \end{align*}
-
+    }
     \vfill
     
   \item At the time the particles collide in part (b), which is moving
     faster?
 
     \vfill
-
+    {\color{blue}
     The speed of particle $A$ is given by
     \[
     \text{speed} = \sqrt{(5)^2+(2)^2}=\sqrt{29}\approx 5.38516.
@@ -170,7 +170,7 @@ state each answer.
     \text{speed} = \sqrt{(4^2)+(2t-2)^2} = \sqrt{16+64} \approx 8.94427,
     \]
     So particle $B$ is moving faster when they collide.
-
+    }
     \vfill
   \end{enumerate}
   \newpage
@@ -181,7 +181,7 @@ state each answer.
   \item $\displaystyle\lim_{x\to \pi}\frac{\sin^2(x)}{x-\pi}$
 
     \vfill
-
+    {\color{blue}
     If we try to plug in $x=\pi$ to the above equation we get
     $\frac{0}{0}$, so we can use l'Hopital's rule to solve the limit.
     Taking derivatives we obtain
@@ -190,13 +190,13 @@ state each answer.
       &= \frac{2\cos(\pi)\sin(\pi)}{1}\\
       &= 0.
     \end{align*}
-
+    }
     \vfill
     
   \item $\displaystyle\lim_{n\to \infty}\sqrt[n]{n}$
 
     \vfill
-
+    {\color{blue}
     We rewrite the above limit as $\displaystyle\lim_{n\to
       \infty}n^{\frac{1}{n}}$. If we try to plug in $n=\infty$ we get
     $\infty^0$, an indeterminate form.  We now need to get the limit
@@ -218,7 +218,7 @@ state each answer.
       &= 0,
     \end{align*}
     so $L=e^0=1$.
-    
+    }
     \vfill
   \end{enumerate}
   \newpage
@@ -227,23 +227,24 @@ state each answer.
 \item Let $f(x)=x-\ln(x)$ for $0.1\leq x\leq 2$. Find the value(s) of
   $x$ for which:
   \begin{enumerate}
-  \item $f(x)$ has a local maximum or local minimum. Indicate which
-    ones are maxima and which are minima.
+  \item $f(x)$ has a critical point. Indicate which ones are maxima
+    and which are minima.
 
     \vfill
-
-    We see that $f'(x) = 1-\frac{1}{x}$.  Then $f'(x)$ does not exist
-    when $x=0$ and is zero when $x=1$.  Since $x=0$ is not in the
-    above interval, the only critical point of $f$ occurs at $x=1$.
-    We see that $f'(.5)=-1$ and $f'(2)=.5$, so $f$ has a local minimum
-    at $x=1$ by the first derivative test.
-
+    {\color{blue}    
+      We see that $f'(x) = 1-\frac{1}{x}$.  Then $f'(x)$ does not exist
+      when $x=0$ and is zero when $x=1$.  Since $x=0$ is not in the
+      above interval, the only critical point of $f$ occurs at $x=1$.
+      We see that $f'(.5)=-1$ and $f'(2)=.5$, so $f$ has a local minimum
+      at $x=1$ by the first derivative test.
+    }
     \vfill
     
   \item $f(x)$ has a global maximum or global minimum.
 
     \vfill
-
+    
+    {\color{blue}
     Since $f$ continuous on $[.1,2]$ we know that $f$ has both a
     global max and a global min on the interval.  We see that
     \begin{align*}
@@ -253,23 +254,24 @@ state each answer.
     \end{align*}
     so $f$ has a global max of 2.40259 at $x=.1$ and a global min of 0
     at $x=1$.
-
+    }
     \vfill
   \end{enumerate}
   \newpage
   
-\item Let $f(x)$ be a differentiable function.  Use the racetrack
-  principle to prove that if $f'(x)\leq 1$ for all $x$ and $f(0)=0$,
-  then $f(x)\leq x$ for all $x\geq 0$.
+\item State the Mean Value Theorem.
 
   \vfill
 
-  Consider the functions $f(x)$ and $g(x)=x$ on the interval $[0,x]$.
-  From the information above we know that $f(0)=g(0)=0$, so the
-  functions ``start'' in the same place.  Also $f'(x)\leq 1=g'(x)$, so
-  we know that $g(x)$ is ``faster'' than $f(x)$.  Then by the
-  racetrack principle, $g$ must have ``traveled farther'' than $f$, or
-  $f(x)\leq g(x) = x$.
+  {\color{blue}
+
+    If $f$ is continuous on $a\leq x\leq b$ and differentiable on $a<
+    x < b$, then there exists a number $c$, with $a< c < b$, such that
+    \[
+    f'(c) = \frac{f(b)-f(a)}{b-a}.
+    \]
+    
+  }
 
   \vfill
 
