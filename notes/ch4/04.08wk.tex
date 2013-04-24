@@ -17,6 +17,53 @@
 
 \begin{enumerate}
 
+\item Suppose that a particle in the $xy$-plane moves according to the
+  parametric equation:
+  \begin{align*}
+    x(t) &= \cos(t)\\
+    y(t) &= \sin(t),
+  \end{align*}
+  where $0\leq t\leq 2\pi$.
+  \begin{enumerate}
+  \item Give the position of the particle at the following times.
+    \begin{enumerate}
+    \item $t = 0$
+      \vfill
+    \item $t = \frac{\pi}{4}$
+      \vfill
+    \item $t = \pi$
+      \vfill
+    \item $t = \frac{3\pi}{2}$
+      \vfill
+    \end{enumerate}
+
+  \item Sketch a graph of the path of the particle and indicate the
+    direction of motion.
+    \vfill\vfill\vfill\vfill
+    
+    \newpage
+
+  \item Suppose that we instead restrict the time interval to
+    $-\frac{\pi}{4}\leq t \leq \frac{5\pi}{4}$. Sketch a graph of the
+    path of the particle and indicate the direction of motion.
+    \vfill
+
+  \item Consider the parametric equation:
+    \begin{align*}
+      x(t) &= \cos(2t)\\
+      y(t) &= \sin(2t).
+    \end{align*}
+    where $0\leq t\leq 2\pi$. Graph this parametric equation and
+    describe its motion. Compare this to your answer in part (b).
+
+    \vfill\vfill
+
+
+  \end{enumerate}
+
+
+  \newpage
+
 \item Write the parameterizations of the following lines.
   \begin{enumerate}
   \item The line through the points $(2,-1)$ and $(1,3)$
@@ -50,33 +97,12 @@
   \end{enumerate}
   \newpage
   
-\item The motion of a particle on the $xy$-plane is given by
-  \begin{align*}
-    x(t) &= t^3 - \frac{3}{2}t^2 - 6t\\
-    y(t) &= t^3 - \frac{9}{2}t^2 + 6t.\\
-  \end{align*}
-
-  \begin{enumerate}
-  \item Does the particle ever come to a complete stop?  If so, when
-    and where?
-    \vfill
-  \item Is the particle ever moving straight up or down?  If so, when
-    and where?
-    \vfill
-  \item Is the particle ever moving straight horizontally right or
-    left?  If so, when and where?
-    \vfill
-  \end{enumerate}
-  \newpage
-  
 \item Two particles move in the $xy$-plane.  At time $t$, the position
   of a particle $A$ is given by
   \begin{align*}
-    x(t) &= 4t - 4\\
-    y(t) &= 2t - k,\\
+    x(t) &= 4t-4 & y(t) &= 2t-k,\\
     \intertext{and the position of particle $B$ is given by}
-    x(t) &= 3t\\
-    y(t) &= t^2 - 2t - 1.
+    x(t) &= 3t & y(t) &= t^2-2t-1.
   \end{align*}
 
   \begin{enumerate}
@@ -84,47 +110,7 @@
     \vfill
   \item Find $k$ so that the two particles do collide.
     \vfill
-  \item At the time that the particles collide in part (b), which
-    particle is moving faster?
-    \vfill
   \end{enumerate}
-  \newpage
-
-\item The figure below shows the graph of the parametric curve
-  \begin{align*}
-    x(t) &= f(t)\\
-    y(t) &= f'(t),
-  \end{align*}
-  for a function $f(t)$.
-    \begin{center}
-      \begin{tikzpicture}
-        \def\xmin{-0}\def\xmax{5} \def\ymin{-5}\def\ymax{0} 
-        \foreach \i in {\xmin,...,4} {\ifnum\i=0{}
-          \else{\draw
-            (\i,-.1) -- (\i,.1) node[above] {$\i$};}\fi}
-        \foreach \i in {-4,...,\ymax} {\ifnum\i=0{}
-          \else{\draw
-            (.1, \i) -- (-.1, \i) node[left] {$\i$};}\fi}
-        
-        \draw[thick] (\xmin,0) -- (4.5,0) node[right] {$x$}; \draw[thick] (0,0) --
-        (0,-4.5) node[below] {$y$};
-        
-        \draw[very thick] (1,-4) -- (4,-1);
-        \draw [thick, fill=black] (1,-4) circle [radius=0.085] node[left]{$A$};
-        \draw [thick, fill=black] (4,-1) circle [radius=0.085] node[right]{$B$};
-    \end{tikzpicture}
-  \end{center}
-
-  \begin{enumerate}
-  \item Is $f(t)$ an increasing or decreasing function?
-    \vfill
-  \item As $t$ increases, is the curve traced from $A$ to $B$ or from
-    $B$ to $A$?
-    \vfill
-  \item Is $f(t)$ concave up or concave down?
-    \vfill
-  \end{enumerate}
-
 
 \end{enumerate}
 

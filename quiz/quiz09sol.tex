@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{April 16, 2013}
+\renewcommand{\theassignment}{Quiz 9}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Suppose a car moves with a velocity of $v(t) = 16 - 4t$ meters
+  per second.  What is the total displacement of the car between $t =
+  1$ and $t = 6$?
+
+    \vfill
+    {\color{blue}
+      
+      We know that the displacement of the car is given by
+      \[
+      \int_1^6 (16-4t)\; dt.
+      \]
+      Using geometry, we see that
+      \[
+      \int_1^6 (16-4t)\; dt = \frac{1}{2}\cdot 3\cdot 12 -
+      \frac{1}{2}\cdot 2\cdot 8 = 10,
+      \]
+      so the total displacement of the car between $t=1$ and $t=6$ is
+      $10$ meters.
+      
+    }
+  \vfill
+
+\end{enumerate}
+
+%\hfill \textsc{over} $\longrightarrow$
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{enumerate}
+\item[2.] If you have 100 meters of fencing and want to enclose a
+  rectangular area up against a long, straight wall, what dimensions
+  maximize the area you can enclose?
+
+\end{enumerate}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+%\noindent \usebox{\quizfront}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

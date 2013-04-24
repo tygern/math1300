@@ -1,0 +1,115 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{April 23, 2013}
+\renewcommand{\theassignment}{Quiz 10}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][3.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Given the graph of $f(x)$, below, sketch the graph of
+  \emph{two} different antiderivatives for $f$.
+  \vfill
+  \begin{center}
+    \begin{tikzpicture}[scale=1.15]
+      \def\xmin{-4}
+      \def\xmax{4}
+      \def\ymin{-3}
+      \def\ymax{3}
+      \draw[<->] (\xmin,0) -- (\xmax,0);
+      \draw[<->] (0,\ymin) -- (0,\ymax);
+      \draw[thick, domain=\xmin:\xmax] plot[samples=100]
+      function{-1.5*sin(x)};
+      \draw[thick, domain=\xmin:\xmax, color=blue] plot[samples=100]
+      function{1.5*cos(x)+1};
+      \draw[thick, domain=\xmin:\xmax, color=blue] plot[samples=100]
+      function{1.5*cos(x)-1};
+    \end{tikzpicture}
+  \end{center}
+
+  \vfill
+
+\end{enumerate}
+
+%\hfill \textsc{over} $\longrightarrow$
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][5.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{enumerate}
+\item[2.] Suppose that $f(x)$ is a function with the following properties:
+  \begin{align*}
+    \int_1^5 f(x)\;dx = 11 &&& \int_3^5 f(x)\;dx = 7
+  \end{align*}
+  Calculate the values of
+  \begin{enumerate}
+  \item $\displaystyle \int_1^5 2\cdot f(x)\;dx$
+    \vfill
+    {\color{blue}
+
+      \[
+      \int_1^5 2\cdot f(x)\;dx = 2\int_1^5 f(x)\;dx = 22
+      \]
+
+    }
+    \vfill
+  \item $\displaystyle \int_1^3 f(x)\;dx$
+    \vfill
+    {\color{blue}
+
+      \[
+      \int_1^3 f(x)\;dx = \int_1^5 f(x)\;dx + \int_5^3 f(x)\;dx
+      = \int_1^5 f(x)\;dx - \int_3^5 f(x)\;dx = 11 - 7 = 4
+      \]
+
+    }
+    \vfill
+  \item $\displaystyle \int_3^5 (f(x) + 3)\;dx$
+    \vfill
+    {\color{blue}
+
+      \[
+      \int_3^5 (f(x) + 3)\;dx = \int_3^5 f(x)\; dx + \int_3^5 3\; dx = 7 + 6 = 13
+      \]
+
+    }
+    \vfill
+  \end{enumerate}
+
+\end{enumerate}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizback}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}

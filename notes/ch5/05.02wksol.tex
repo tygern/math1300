@@ -1,0 +1,205 @@
+\documentclass[11pt]{article} 
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{The Definite Integral}
+\renewcommand{\dateinfo}{section 5.2}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\begin{enumerate}
+\item Compute the following definite integrals using geometry.
+  \begin{enumerate}
+  \item $\ds\int_{-7}^{12} (-2)\;dx$
+    \vfill
+    {\color{blue}
+      
+      This integral corresponds to the area of a rectangle with width
+      19 and height 2. Since the rectangle is below the $x$-axis, the
+      integral is negative, so
+      \[
+      \int_{-7}^{12} (-2)\;dx = -38.
+      \]
+
+    }
+     \vfill
+  \item $\ds\int_1^5 6x \;dx$
+    \vfill
+    {\color{blue}
+      
+      This integral corresponds to the area of a rectangle with width
+      4 and height 6, and triangle with width 4 and height 24. Since
+      all area is above the $x$-axis, the integral is positive, so
+      \[
+      \int_{1}^{5} 6x\;dx = 4\cdot 6 + \frac{1}{2}\cdot 4\cdot 24 = 72.
+      \]
+     
+
+    }
+     \vfill
+    \newpage
+  \item $\ds\int_{-4}^4 \sqrt{16-x^2}\;dx$ \textit{(Hint: draw a picture)}
+    \vfill
+    {\color{blue}
+      
+      This integral corresponds to the area of a half-circle with
+      radius 4. Since all area is above the $x$-axis, the integral is
+      positive, so
+      \[
+      \int_{-4}^4 \sqrt{16-x^2}\;dx = \frac{1}{2}\pi\cdot 4^2 = 8\pi.
+      \]
+     
+
+    }
+     \vfill
+  \end{enumerate}
+
+\item Suppose a car moves with a velocity of $v(t) = 16 - 4t$ meters
+  per second.  What is the total displacement of the car between $t =
+  1$ and $t = 6$?
+    \vfill
+    {\color{blue}
+      
+      We know that the displacement of the car is given by
+      \[
+      \int_1^6 (16-4t)\; dt.
+      \]
+      Using geometry, we see that
+      \[
+      \int_1^6 (16-4t)\; dt = \frac{1}{2}\cdot 3\cdot 12 -
+      \frac{1}{2}\cdot 2\cdot 8 = 10.
+      \]
+      
+    }
+   \vfill
+
+  \newpage
+
+\item Use the table below to estimate $\ds\int_0^{8} f(x)\;dx$
+  \[
+  \begin{array}{c|c|c|c|c|c}
+    \hline
+    x&0&2&4&6&8\\
+    \hline
+    f(x)&-4&-2&1&6&7\\
+    \hline
+  \end{array}
+  \]
+  \vfill
+  {\color{blue}
+    
+    We can use rectangles to find that
+    \begin{align*}
+      \text{LH} &= -4\cdot 2 + -2\cdot 2 + 1\cdot 2 + 6\cdot 2 = 2,\\
+      \text{RH} &= -2\cdot 2 + 1\cdot 2 + 6\cdot 2 + 7\cdot 2 = 24.\\
+    \end{align*}
+    The average of these two estimates should give us a decent
+    estimate for the integral so
+    \[
+    \int_0^8 f(x)\; dx \approx \frac{2+24}{2} = 13.
+    \]
+
+  }
+  \vfill
+  \newpage
+
+\item Use a left hand sum with $n=3$ to approximate
+  $\ds\int_1^4\dfrac{1}{x}\;dx$.  Is your estimate an overestimate or
+  an underestimate?
+
+  \vfill
+  {\color{blue}
+
+    We have
+    \[
+    LH = \frac{1}{1}\cdot 1 + \frac{1}{2}\cdot 1 + \frac{1}{3}\cdot 1
+    = \frac{11}{6}.
+    \]
+
+  }
+  \vfill
+
+\item Find, but do not compute, an integral that describes the area of
+  the region under the curve $f(x)=9-x^2$ and above the $x$-axis.
+
+  \vfill
+  {\color{blue}
+
+    If we look at a graph of $f$, we see that the function is positive
+    when $-3\leq x\leq 3$. Then
+    \[
+    \text{area} = \int_{-3}^3 (9-x^2)\; dx.
+    \]
+
+  }
+  \vfill
+
+  \newpage
+
+\item Without directly computing the sums, find the differences between
+  the left- and right-hand Riemann sums if we use $n=200$ to
+  approximate $\ds\int_1^{27}\sqrt[3]{x}\;dx$.
+
+  \vfill
+  {\color{blue}
+
+    We know that
+    \[
+    \left|\text{LH} - \text{RH}\right| = \left|f(b) - f(a)\right|
+    \cdot \left(\frac{b-a}{n}\right).
+    \]
+    when estimating an integral using $n$ rectangles on the interval
+    $[a,b]$. Then 
+    \[
+    \left|\text{LH} - \text{RH}\right| = \left|f(27) - f(1)\right|
+    \cdot \left(\frac{27-1}{200}\right) = |3 - 1|\cdot\frac{26}{200} =
+    \frac{13}{50}.
+    \]
+    Since this number is small, this probably gives us a good
+    estimate.
+
+  }
+  \vfill
+
+  \newpage
+
+\item Let $f(x)$ be an even function.  Using the fact that
+  $\ds\int_0^3 f(x)\;dx = 4$ find the following definite integrals.
+  \begin{enumerate}
+  \item $\ds\int_{-3}^3 f(x)\;dx$
+    \vfill
+    {\color{blue}
+
+      We know that $f$ is symmetric about the $y$-axis because it is
+      even. Then
+      \[
+      \int_{-3}^3 f(x)\;dx = 2\int_{0}^3 f(x)\;dx = 8.
+      \]
+      
+    }
+    \vfill
+  \item $\ds\int_{-3}^0 f(x)\;dx$
+    \vfill
+    {\color{blue}
+
+      We know that $f$ is symmetric about the $y$-axis because it is
+      even. Then
+      \[
+      \int_{-3}^0 f(x)\;dx = \int_{0}^3 f(x)\;dx = 4.
+      \]
+      
+    }
+     \vfill
+  \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
