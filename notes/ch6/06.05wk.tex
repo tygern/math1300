@@ -4,8 +4,7 @@
 \usepackage[hwkhandout]{hwk}
 \usepackage[pdftitle={Calc 1
   Notes},colorlinks=true,urlcolor=blue]{hyperref}
-%\usepackage{mathpazo}
-\usepackage{multicol}
+\usepackage{multicol, enumerate, graphicx, tikz, etex}
 
 \renewcommand{\theclass}{\textsc{math}1300: calculus I}
 \renewcommand{\theauthor}{Tyson Gern}
@@ -17,9 +16,15 @@
 \begin{document}
 \drawtitle
 
+\vspace{-.55in}
+
+\hfill {\tiny(and review)}
+
+\vspace{.1in}
+
 \begin{enumerate}
 \item A ball that is dropped from a window hits the ground in five
-  seconds. How high is the window?
+  seconds. How high is the window? (Give your answer in feet.)
 
   \vfill
   
@@ -28,79 +33,80 @@
   ft/sec.  How high does he go? How long is the astronaut off the
   ground?
 
-  \vfill\newpage
+  \vfill
 
-\item While attempting to understand the motion of bodies under
-  gravity, Galileo stated that:
+  \newpage
 
-  \begin{quote}
-    The time in which any space is traversed by a body starting at
-    rest and uniformly accelerated is equal to the time in which the
-    same space would be traversed by the same body moving at a uniform
-    speed whose value is the mean of the highest velocity and the
-    velocity just before acceleration began.
-  \end{quote}
+\item Use the linear approximation of $f(x)=\sqrt{x}$ near $x=9$ to
+  estimate $\sqrt{9.2}$.
 
+  \vfill
+
+\item Suppose that the marginal cost of producing $q$ VCRs is given by
+  \[
+  MC = 6q.
+  \]
+  What is the difference between the cost of producing 100 VCRs and
+  the cost of producing 150 VCRs?
+  \vfill
+
+  \newpage
+
+\item On the axes below, draw a graph of a function with the following
+  properties:
+  \begin{multicols}{2}
+    \begin{enumerate}[(i)]
+    \item $f(x)$ is continuous everywhere except $x=1$
+    \item $f(x)$ is differentiable everywhere except $x=1$ and $x=-1$.
+    \item $\ds\lim_{x\to\infty} f(x) = 2$.
+    \item $f(x)$ is increasing and concave down on $[-1,1]$.
+    \item $f(x)$ has a critical point at $x=-2$.
+    \item $\ds\lim_{x\to 1} f(x)$ exists.
+    \end{enumerate}
+  \end{multicols}
+  \begin{center}
+    \begin{tikzpicture}
+      \def\xmin{-7}
+      \def\xmax{7}
+      \def\ymin{-4}
+      \def\ymax{4}
+      \draw[<->] (\xmin,0) -- (\xmax,0);
+      \draw[<->] (0,\ymin) -- (0,\ymax);
+    \end{tikzpicture}
+  \end{center}
+\item Calculate the following limits.
   \begin{enumerate}
-  \item Write Galileo's statement in symbols, defining all the symbols
-    you use.
-
-    \vfill
-    
-  \item Check Galileo's statement for a body dropped off a 100-foot
-    building accelerating from rest under gravity until it hits the
-    ground.
-
-    \vfill
-    
-  \item Show why Galileo's statement is true in general.
-
-    \vfill
-    
+  \item $\ds\lim_{x\to \infty}\frac{5+6x}{e^x}$ \vfill
+  \item $\ds\lim_{x\to 2}\frac{x^2-5x+6}{x^2-3x+2}$ \vfill
   \end{enumerate}
 
   \newpage
 
-\item Newton's law of gravity says that the gravitational force
-  between two bodies is attractive and given by
-  \[
-  F=\frac{GMm}{r^2},
-  \]
-  where $G$ is the gravitational constant, $m$ and $M$ are the masses
-  of the two bodies, and $r$ is the distance between them.  According
-  to Newton's second law,
-  \[
-  \text{Force}=\text{Mass}\times\text{Acceleration}.
-  \]
-  Let $s$ be the position of an object of mass $m$ that is being acted
-  upon by gravity.  Then
-  \begin{align*}
-    m\cdot a &= -\frac{GMm}{r^2} \\
-    m\frac{d^2s}{dt^2} &= -\frac{GMm}{r^2} \\
-    \frac{d^2s}{dt^2} &= -\frac{GM}{r^2},
-  \end{align*}
-  where $r$ is the distance between the object and the center of the
-  earth.  Since in everyday life $r$ does not change significantly
-  over the course of motion we usually assume $r$ is constant.
-  However let's see what happens as $r$ varies greatly.
+\item A cone with a height of 16 meters and a radius of 8 meters at
+  the top is leaking water at a rate of $-4$ meters$^3$/hour.  When
+  the water in the cone is 8 meters deep, how fast is the height of
+  the water dropping in meters/hour? (The volume of a cone is given by
+  $V=\frac{1}{3}\pi r^2 h$)
+  
+\newpage
 
-  The acceleration due to gravity 2 meters from the ground is 9.8
-  m/sec$^2$.  What is acceleration due to gravity 100 meters from the
-  ground? At 100,000 meters? (The radius of the earth is $6.4\cdot
-  10^6$ meters)
+\item A line goes through the origin and a point on the curve $y=x^2
+  e^{-3x}$, for $x\geq 0$.  Find the maximum slope of such a line.  At
+  what $x$-values does it occur?
 
   \newpage
 
-\item On a different sheet of paper, compute the following:
+\item Find $\int_2^5 f(x)\;dx$ given the following.
   \begin{enumerate}
-  \item $\ds\frac{d}{dx}\int_3^x \frac{\ln(t)}{\sin(t)}\;dt$ \vfill
-  \item $\ds\frac{d}{dx}\int_x^6 \frac{\sqrt{t}}{\cos(t)}\;dt$ \vfill
-  \item $\ds\frac{d}{dx}\int_7^{\sin(x)} e^{t^8}\;dt$ \vfill
-  \item $\ds\frac{d}{dx}\int_{t^{-2}}^{\sin(x)} \tan(4t^2)\;dt$ \vfill
-  \item $\ds\int e^{x+1}\; dx$ \vfill
-  \item $\ds\int \sqrt{3x+4}\; dx$ \vfill
-  \item $\ds\int \frac{1}{2x-81}\; dx$ \vfill
+  \item $f(x)$ is even, $\int_{-2}^2 f(x)\;dx=7$, and $\int_{-5}^5 f(x)\;dx=15$
+
+    \vfill
+
+  \item $\int_2^5 (3f(x)+4)\;dx = 18$
+
+    \vfill
   \end{enumerate}
+  
 
 \end{enumerate}
 \end{document}

@@ -1,0 +1,266 @@
+\documentclass[11pt]{article} 
+\usepackage{etex}
+\usepackage{calc}
+\usepackage[margin={1in,1in}]{geometry} 
+\usepackage[hwkhandout]{hwk}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[pdftitle={Calc 1
+  Notes},colorlinks=true,urlcolor=blue]{hyperref}
+
+\renewcommand{\theclass}{\textsc{math}1300: calculus I}
+\renewcommand{\theauthor}{Tyson Gern}
+\renewcommand{\theassignment}{Constructing Antiderivatives}
+\renewcommand{\dateinfo}{section 6.2}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\drawtitle
+
+\begin{enumerate}
+  
+\item Compute the following indefinite integrals.
+  \begin{enumerate}
+  \item $\displaystyle\int \left( x^3 - \frac{1}{x^2} +
+      \sqrt[4]{x}\right)\;dx$
+    \vfill
+    {\color{blue}
+
+      \[
+      = \int \left( x^3 - x^{-2} + x^{1/4}\right)\;dx = \frac{x^4}{4}
+      - \frac{x^{-1}}{-1} + \frac{x^{5/4}}{5/4} + C
+      \]
+
+    }
+    \vfill
+  \item $\displaystyle\int \frac{t^4-7}{t^2}\;dt$
+    \vfill
+    {\color{blue}
+
+      \[
+      =\int \left(t^2 - 7t^{-2}\right)\; dt = \frac{t^3}{3} -
+      7\cdot\frac{t^{-1}}{-1} + C
+      \]
+
+    }
+    \vfill
+  \item $\displaystyle\int x^3\left( 1 - x\right)\;dx$
+    \vfill
+    {\color{blue}
+
+      \[
+      =\int\left(x^3-x^4\right)\; dx = \frac{x^4}{4} - \frac{x^5}{5} + C
+      \]
+
+    }
+    \vfill
+
+    \newpage
+
+  \item $\displaystyle\int \cos(3x)\;dx$
+    \vfill
+    {\color{blue}
+
+      \[
+      \frac{1}{3}\sin(3x) + C
+      \]
+
+    }
+    \vfill
+
+  \item $\displaystyle\int 2^{4t+7}\;dt$
+    \vfill
+    {\color{blue}
+
+      \[
+      \frac{1}{4}\cdot\frac{1}{\ln(2)}\cdot 2^{4t+7} + C
+      \]
+
+    }
+    \vfill
+  \end{enumerate}
+  
+  \newpage
+
+\item Use the fundamental theorem of calculus to compute the following
+  indefinite integrals.
+  \begin{enumerate}
+  \item $\displaystyle\int_{-2}^3 x^2\;dx$
+    \vfill
+    {\color{blue}
+
+      We see that $\int x^2\; dx = \frac{x^3}{3} + C$, so  
+      \[
+      \int_{-2}^3 x^2\;dx = \frac{(3)^3}{3} - \frac{(-2)^3}{3} =
+      \frac{27}{3} + \frac{8}{3} = \frac{35}{3}.
+      \]
+
+    }
+    \vfill
+  \item $\displaystyle\int_1^{e^2} \frac{1}{x}\;dx$
+    \vfill
+    {\color{blue}
+
+      We see that $\int \frac{1}{x}\; dx = \ln|x|+C$, so  
+      \[
+      \int_{1}^{e^2} \frac{1}{x}\;dx = \ln|e^2| - \ln|1| = 2 - 0 = 2.
+      \]
+
+    }
+    \vfill
+  \item $\displaystyle\int_0^{2\pi} \sin(t)\;dt$
+    \vfill
+    {\color{blue}
+
+      We see that $\int \sin(t)\; dt = -\cos(t)+C$, so  
+      \[
+      \int_{0}^{2\pi} \sin(t)\;dt = -\cos(2\pi) + \cos(0) = -1 + 1 = 0.
+      \]
+
+    }
+    \vfill
+
+    \newpage
+    
+  \item $\displaystyle\int_0^3 (t-1)^4\;dt$
+    \vfill
+    {\color{blue}
+
+      Using guess and check, we see that $\int (t-1)^4\; dt =
+      \frac{1}{5}(t-1)^5 + C$, so
+      \[
+      \int_{0}^3 (t-1)^4\;dt = \frac{1}{5}(3-1)^5 - \frac{1}{5}(0-1)^4
+      = \frac{32}{5} + \frac{1}{5} = \frac{33}{5}.
+      \]
+
+    }
+    \vfill
+
+  \item $\displaystyle\int_0^1 e^xe^x\;dx$
+    \vfill
+    {\color{blue}
+
+      We can use algebra to simplify and obtain
+      \[
+      \int_0^1 e^xe^x\;dx = \int_0^1 e^{2x}\;dx
+      \]
+      Using guess and check, we see that $\int e^{2x}\; dx =
+      \frac{1}{2}e^{2x}+C$, so
+      \[
+      \int_{0}^1 e^xe^x\;dx = \frac{1}{2}e^{2\cdot 1} -
+      \frac{1}{2}e^{2\cdot 0} = \frac{e^2}{2} - \frac{1}{2}.
+      \]
+
+    }
+    \vfill
+  \end{enumerate}
+  
+  \newpage
+  
+\item Suppose that a large pail of water is being filled at a rate of
+  $f(t) = 2+\sqrt{t}$ gallons per minute.  How much water goes into
+  the pail between $t = 1$ and $t = 9$?
+  
+  \vfill
+  {\color{blue}
+
+    If $F(t)$ is the amount of water in the pail, we can use the
+    fundamental theorem to show that the amount of water that goes
+    into the pail between $t = 1$ and $t = 9$ is given by
+    \[
+    \int_1^9 2+\sqrt{t}\; dt = \int_1^9 2+t^{1/2}\; dt.
+    \]
+    We see that $\int \left(2+t^{1/2}\right)\; dt = 2t +
+    \frac{2}{3}t^{3/2} + C$, so the amount of water that goes
+    into the pail between $t = 1$ and $t = 9$ is
+    \[
+    2\cdot 9 + \frac{2}{3}(9)^{3/2} - \left(2\cdot 1 +
+      \frac{2}{3}(1)^{3/2}\right) = 18 + 18 -2-\frac{2}{3} =
+    \frac{100}{3}\text{ gallons}.
+    \]
+
+  }
+  \vfill
+
+\item Suppose that the population of rabbits in a forest changes at a
+  rate of $r(t) = \frac{\pi}{6}\sin\left(\frac{\pi}{6}t\right) +
+  \frac{1}{3}$ thousand rabbits per month.  If $t$ represents months
+  since January 1, 2012, how much will the population grow between
+  January 1, 2012 and July 1, 2013?
+
+  \vfill
+  {\color{blue}
+
+    If $R(t)$ is the size of the population, we can use the
+    fundamental theorem to show that the population growth between
+    January 1, 2012 and July 1, 2013 is given by.
+    \[
+    \int_0^{18} \left(\frac{\pi}{6}\sin\left(\frac{\pi}{6}t\right) +
+      \frac{1}{3}\right).
+    \]
+    We see that $\int
+    \left(\frac{\pi}{6}\sin\left(\frac{\pi}{6}t\right) +
+      \frac{1}{3}\right) = -\cos\left(\frac{\pi}{6}t\right) +
+    \frac{1}{3}t + C$, so the population growth between January 1, 2012
+    and July 1, 2013 is
+    \[
+    -\cos\left(\frac{\pi}{6}\cdot 18\right) +
+    \frac{18}{3} - \left(-\cos\left(\frac{\pi}{6}\cdot 0\right) +
+    \frac{1}{3}\cdot 0\right) = 0 + 6 + 1 + 0= 7\text{ rabbits}.
+    \]
+
+  }
+  \vfill
+
+  \newpage
+  
+\item Use the fundamental theorem of calculus to find the area of the
+  region above $f(x) = x^2 - 15$ but below $g(x) = 2x$.
+  
+  \vfill
+  {\color{blue}
+
+    Draw a graph! We see that the two functions are equal when
+    \begin{align*}
+      x^2 - 15 &= 2x\\
+      x^2 - 2x - 15 &= 0\\
+      (x-5)(x+3) &= 0\\
+      x = -3\; &\text{ or }\; x = 5.
+    \end{align*}
+    From our graph, we see that $g(x) \geq f(x)$ between $x=-3$ and
+    $x=5$, so the area between the functions is given by
+    \[
+    \int_{-3}^5 (2x - x^2 + 15)\; dx.
+    \]
+    We know that $\int (2x - x^2 + 15)\; dx = x^2 - \frac{x^3}{3} +
+    15x + C$, so
+    \[
+    \int_{-3}^5 (2x - x^2 + 15)\; dx = 5^2 - \frac{5^3}{3} + 15(5) -
+    \left((-3)^2 - \frac{(-3)^3}{3} + 15(-3)\right) = \frac{256}{3}.
+    \]
+
+  }
+  \vfill
+
+\item Find all values of $c$ such that $\displaystyle\int_{1}^c 2cx\; dx = 0$.
+
+  \vfill
+  {\color{blue}
+
+    We see that $\int 2cx\; dx = cx^2 + C$, so
+    \[
+    \int_{1}^c 2cx\; dx = c(c)^2 - c(1)^2 = c^3 - c.
+    \]
+    Then $\int_{1}^c 2cx\; dx = 0$ when
+    \[
+    0 = c^3 - c = c(c^2 - 1) = c(c+1)(c-1).
+    \]
+    Then $c = 0$ or $c= \pm 1$.
+
+  }
+  \vfill
+
+\end{enumerate}
+
+\end{document}

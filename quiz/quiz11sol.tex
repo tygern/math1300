@@ -1,0 +1,118 @@
+\documentclass[11pt]{article}
+\usepackage{calc}
+\usepackage[margin={1in,0.5in},footskip=0in]{geometry}
+\usepackage[miniquiz]{hwk}
+\usepackage{tikz, textcomp}
+
+\include{mathcmds}
+
+\renewcommand{\theclass}{math 1300}
+\renewcommand{\dateinfo}{April 30, 2013}
+\renewcommand{\theassignment}{Quiz 11}
+
+\begin{document}
+\pagestyle{empty}
+\newsavebox{\quizfront}
+\begin{lrbox}{\quizfront}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\drawtitle
+\vspace{-0.5in}
+\begin{enumerate}
+
+\item Compute the following indefinite integrals.
+  \begin{enumerate}
+  \item $\displaystyle\int \left( x^3 - \frac{1}{x^2} +
+    \sqrt[4]{x}\right)\;dx$
+    
+    \vfill  
+    {\color{blue}
+
+      \[
+      = \int \left( x^3 - x^{-2} + x^{1/4}\right)\;dx = \frac{x^4}{4}
+      - \frac{x^{-1}}{-1} + \frac{x^{5/4}}{5/4} + C
+      \]
+
+    }
+    \vfill
+
+  \item $\displaystyle\int x^3\left( 1 - x\right)\;dx$
+
+    \vfill
+    {\color{blue}
+
+      \[
+      =\int\left(x^3-x^4\right)\; dx = \frac{x^4}{4} - \frac{x^5}{5} + C
+      \]
+
+    }
+    \vfill
+
+  \end{enumerate}
+
+\end{enumerate}
+
+%\hfill \textsc{over} $\longrightarrow$
+
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% This is for the back of the quiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsavebox{\quizback}
+\begin{lrbox}{\quizback}
+\begin{minipage}[top][4.5in][t]{\textwidth} \setlength{\parindent}{1.5em}
+\begin{enumerate}
+\item[2.] Use the fundamental theorem of calculus to compute the following 
+definite integrals.
+  \begin{enumerate}
+  \item $\displaystyle\int_0^{2\pi} \sin(t)\;dt$
+    
+    \vfill
+    {\color{blue}
+
+      We see that $\int \sin(t)\; dt = -\cos(t)+C$, so  
+      \[
+      \int_{0}^{2\pi} \sin(t)\;dt = -\cos(2\pi) + \cos(0) = -1 + 1 = 0.
+      \]
+
+    }
+    \vfill
+
+  \item $\displaystyle\int_1^{e^2} \frac{1}{x}\;dx$
+
+    \vfill
+    {\color{blue}
+
+      We see that $\int \frac{1}{x}\; dx = \ln|x|+C$, so  
+      \[
+      \int_{1}^{e^2} \frac{1}{x}\;dx = \ln|e^2| - \ln|1| = 2 - 0 = 2.
+      \]
+
+    }
+    \vfill
+
+  \end{enumerate}
+  
+  
+
+
+\end{enumerate}
+\end{minipage}
+\end{lrbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%% Now we make two copies of the ``quizfront'' box
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \usebox{\quizfront}
+\vfill
+\noindent \usebox{\quizback}
+
+%%%% Uncomment the rest to have a two-sided quiz.
+%\pagebreak
+%\noindent \usebox{\quizback}
+%\vfill
+%\noindent \usebox{\quizback}
+\end{document}
